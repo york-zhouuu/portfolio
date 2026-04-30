@@ -1,0 +1,50 @@
+{
+  "version": "0.1.0",
+  "terms": [
+    {
+      "canonical_en": "hyperlocal",
+      "canonical_zh": "超在地性",
+      "forbidden": ["hyper-local", "hyper local", "极在地", "超本地", "极本地"]
+    },
+    {
+      "canonical_en": "Attention-Induced Nearby Blindness",
+      "canonical_zh": "注意力诱导的附近性盲区",
+      "forbidden": ["nearby blindness", "attention blindness", "注意力盲区"]
+    },
+    {
+      "canonical_en": "wind tunnel",
+      "canonical_zh": "风洞",
+      "forbidden": ["wind-tunnel", "风通道"]
+    },
+    {
+      "canonical_en": "policy hack",
+      "canonical_zh": "政策劫持",
+      "forbidden": ["政策黑客", "策略 hack", "策略劫持"]
+    },
+    {
+      "canonical_en": "sand table",
+      "canonical_zh": "沙盘",
+      "forbidden": ["sandtable", "沙盘模型"]
+    },
+    {
+      "canonical_en": "rival hypothesis",
+      "canonical_zh": "rival 假说",
+      "forbidden": ["对手假说", "敌对假说"]
+    },
+    {
+      "canonical_en": "mirror experiment",
+      "canonical_zh": "镜像实验",
+      "forbidden": ["反向实验", "对照镜像"]
+    },
+    {
+      "canonical_en": "A' Global Distraction",
+      "canonical_zh": "A' 全球分散注意",
+      "forbidden": ["A prime distraction", "globaldistraction"]
+    },
+    { "canonical_en": "H_info" },
+    { "canonical_en": "H_pull" },
+    { "canonical_en": "H_meaning" },
+    { "canonical_en": "H_structure" }
+  ],
+  "forbidden_personas": ["chen_daye", "alex", "mei", "aisha"]
+}

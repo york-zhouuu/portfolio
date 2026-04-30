@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "seeds": 2,
+  "preliminary": true,
+  "target": {
+    "atLocation": 50,
+    "of": 50,
+    "percent": 100
+  },
+  "control": {
+    "atLocation": 7,
+    "of": 50,
+    "percent": 14
+  },
+  "treatmentEffectPp": 86,
+  "trajectoryDeltaMetersMedian": 356.2669015349815,
+  "trajectoryDeltaMetersIqr": [
+    349.07479322323934,
+    363.4590098467237
+  ],
+  "trajectoryDeltaMetersCi95": [
+    342.6018957426714,
+    369.93190732729164
+  ],
+  "encounterMedian": 194,
+  "encounterBaselineMedian": 194,
+  "contestRow": {
+    "variant_name": "hyperlocal_push",
+    "hypothesis": "H_info",
+    "primary_metric": "trajectory_deviation_m",
+    "primary_effect_size": 356.2669015349815,
+    "primary_effect_ci": [
+      342.6018957426714,
+      369.93190732729164
+    ],
+    "baseline_reference": null,
+    "evidence_alignment": "inconclusive",
+    "mirror_delta": null,
+    "paired_variant": null,
+    "notes": "inconclusive: CI overlap between variant and reference for trajectory_deviation_m [preliminary—seed count < 30]"
+  },
+  "sourceSuite": "20260423_022122_metrics_smoke2"
+}

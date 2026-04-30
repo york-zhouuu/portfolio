@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-04-27T15:21:31.740Z",
+  "sourceSha": "fb95b495d33b21bb4cb6222d533ec70cb5b9b8df",
+  "sourcePath": "/Users/york_z/Desktop/IDEA地图-agent模拟/Synthetic_Socio_Wind_Tunnel",
+  "files": [
+    "cinema-score.json",
+    "fallbacks/at-a-glance.svg",
+    "fallbacks/experimental-design.svg",
+    "fallbacks/hero.svg",
+    "fallbacks/instrument.svg",
+    "fallbacks/limits.svg",
+    "fallbacks/rashomon.svg",
+    "fallbacks/resources.svg",
+    "fallbacks/signal.svg",
+    "fallbacks/symmetry.svg",
+    "fallbacks/thesis.svg",
+    "manifest.json",
+    "map-geometry.json",
+    "sampled-agents.json",
+    "signal-summary.json",
+    "trajectories.json"
+  ]
+}

@@ -1,0 +1,413 @@
+---
+slug: synthetic-socio-wind-tunnel
+title:
+  zh: Synthetic Socio Wind Tunnel
+  en: Synthetic Socio Wind Tunnel
+subtitle:
+  zh: 一台用来检验注意力边界与超在地性的研究仪器
+  en: A research instrument for testing attention boundaries and hyperlocality
+description:
+  zh: >-
+    一座 Lane Cove 沙盘，一段一镜到底。三幕：注意力边界（背景）→ 产品本体
+    （地图 / agent / 网络 / 干预）→ 探索的结论（contest in progress）。
+  en: >-
+    One Lane Cove sand table, one continuous take. Three acts:
+    attention boundary (the background phenomenon), the apparatus
+    (map / agent / network / intervention), findings (contest in progress).
+role:
+  zh: AI 产品策略 + UX 设计 + 研究装置设计
+  en: AI Product Strategy + UX Design + Research Apparatus Design
+year: 2026
+stack:
+  - Multi-agent simulation
+  - LLM agents (Claude Sonnet / Haiku tiered)
+  - OpenStreetMap + Overture
+  - Next.js · React Three Fiber · MDX
+  - Zod content schema
+links:
+  repo: https://github.com/york-zhouuu/-Synthetic-Socio-Wind-Tunnel-
+  thesis: /pdfs/sswt-thesis.pdf
+atAGlance:
+  agents: "1,000"
+  protocol: 14 d × 288 t
+  seeds: 30 seeds
+  budget: ~$4 / run
+  site: Lane Cove 2066
+cinemaScoreVersion: "0.1.6"
+acts:
+  - id: attention-boundary
+    title:
+      zh: 注意力边界
+      en: Attention Boundary
+    epigraph:
+      zh: 看不见的边界并不存在——直到我们让它显形。
+      en: An invisible boundary does not exist — until we make it visible.
+    references:
+      - label: 源项目 · docs/research/00-thesis.md
+        note:
+          zh: 主论证与机制链 chain-position 门禁的源头
+          en: Primary thesis and the mechanism-chain gating spec
+      - label: 源项目 · docs/research/13-research-design.md
+        note:
+          zh: 4+1 rival hypothesis 与 β-rigor 标准
+          en: Rival hypothesis framework and β-rigor protocol
+      - label: 源项目 · docs/agent_system/11-smoke-demo-report.md
+        note:
+          zh: smoke demo 的 100% / 14% / 86 pp 数字源头
+          en: Source for the 100% / 14% / 86 pp numbers
+      - label: Wu, Tim — The Attention Merchants (Knopf, 2016)
+        note:
+          zh: 注意力作为商品的资本史观
+          en: Attention-as-commodity, the canonical history
+      - label: Granovetter, M. — The Strength of Weak Ties (AJS, 1973)
+        note:
+          zh: 弱连接对社区流动性的解释力
+          en: Weak ties explain neighborhood-scale information flow
+      - label: Lane Cove demographic profile — Australian Bureau of Statistics, 2021 census
+        url: https://www.abs.gov.au/census/find-census-data/quickstats/2021/LGA13800
+    beats:
+      - id: disappearance-of-nearby
+        title:
+          zh: 附近的消失
+          en: The Disappearance of the Nearby
+        claim:
+          zh: |
+            物理空间的极度靠近，并未带来社会网络的真实连接。
+            阻碍邻里连接的不再是混凝土墙壁，而是注意力位移
+            (Attention Displacement)——通勤习惯叠加屏幕注意力捕获，
+            剥夺了人们对周边环境的感知。
+          en: |
+            Physical proximity does not produce social proximity.
+            The barrier is no longer concrete — it is attention
+            displacement: point-to-point commute habits compound with
+            screen capture to strip awareness of surroundings.
+        scenes:
+          # 1.1 — Paradox (绝对平视 / 贴地 / 真街道距离)
+          # Y=0.05 + lookAt Y=0.05 → 视线严格水平
+          # Z=3 把镜头拉到城市内部（building 0.5 高 + 街道宽度内），perspective
+          # 让建筑占据 viewport 主体而不是悬浮在远处
+          - id: scene-1-1-paradox
+            kind: title
+            rhythm: still
+            emphasis: linger
+            camera:
+              from: [0, 0.05, 3]
+              to: [0, 0.05, 3]
+              lookAt: [0, 0.05, 0]
+            enter: fade
+            exit: fade
+            text:
+              zh: |
+                物理空间的极度靠近，
+                并未带来社会网络的真实连接。
+              en: |
+                Proximity, no
+                connection.
+            mapState:
+              mode: matte
+              dim: 0.5
+
+          # 1.2 — Evidence (twin-column · 物理属性 ABS / 社会属性 Deakin)
+          # 绝对平视保持——同样 Y=0.05 街道高度 / lookAt Y=0.05
+          # 仅 Z 轴 dolly 推进 (3 → 2.2)，相当于"沿街道往前走几步"
+          # 不在此处起 lift；lift 延后到 1-3
+          - id: scene-1-2-evidence
+            kind: body-section
+            layout: twin-column
+            rhythm: tracking
+            emphasis: standard
+            camera:
+              from: [0, 0.05, 3]
+              to: [0, 0.05, 2.2]
+              lookAt: [0, 0.05, 0]
+            enter: fade
+            exit: fade
+            heading:
+              zh: 空间共享与社交孤岛
+              en: Shared space, isolated networks
+            twinColumns:
+              left:
+                heading:
+                  zh: 物理属性 · ABS 2021 census
+                  en: Physical · ABS 2021 census
+                paragraphs:
+                  - zh: |
+                      ABS 2021 census 数据显示，Lane Cove LGA 在约 11 平方公里的区域内常住居民 39,438 人，其中 56.7% 居住于 apartment / flat 类型住宅，居住密度约为 3,585 人 / km²，处于悉尼内北 LGA 的高密度区间。该 LGA 的居住形态以中高层住宅为主，私人户外空间占比有限；居民的日常活动半径在主干道、商业中心与公共绿地之间高度重叠，物理基础设施的共享在这种结构下属于结构性默认，而非个体选择的结果。
+                    en: |
+                      The 2021 ABS census records 39,438 usual residents in the Lane Cove LGA across approximately 11 km², 56.7% of whom occupy apartment or flat-type dwellings — a residential density of approximately 3,585 residents per km², placing the LGA within Sydney's high-density inner-north band. The dwelling profile is dominated by medium- to high-rise residential stock with limited private outdoor space; residents' daily activity radii overlap heavily across arterial roads, commercial centers, and public green spaces, rendering the sharing of physical infrastructure a structural default rather than an individual choice.
+                items:
+                  - key:
+                      zh: 居民
+                      en: Population
+                    value:
+                      zh: "39,438"
+                      en: "39,438"
+                  - key:
+                      zh: 公寓占比
+                      en: Apartments
+                    value:
+                      zh: 56.7%
+                      en: 56.7%
+                  - key:
+                      zh: 区域面积
+                      en: Area
+                    value:
+                      zh: ~11 km²
+                      en: ~11 km²
+                  - key:
+                      zh: 居住密度
+                      en: Density
+                    value:
+                      zh: ~3,585 / km²
+                      en: ~3,585 / km²
+              right:
+                heading:
+                  zh: 社会属性 · Deakin Photovoice (Warner & Andrews, 2019)
+                  en: Social · Deakin Photovoice (Warner & Andrews, 2019)
+                paragraphs:
+                  - zh: |
+                      Warner 与 Andrews（Deakin University, 2019）在墨尔本 City of Yarra 的高密度公寓社区开展了一项 Photovoice 研究：研究者向居住于公寓的家庭分发相机并请其撰写日常公寓生活的视觉日志，覆盖共用走廊、电梯、地下停车场、阳台等 daily-encounter 空间。研究得出的核心观察是，物理紧邻并未自动转化为社交连接——相反，在高居住流动率与缺乏共享日常的复合作用下，"匿名"成为公寓社区的默认社会属性。研究 2019 年发表于 The Conversation。下列 verbatim 引文摘自参与者的日记记录。
+                    en: |
+                      Warner & Andrews (Deakin University, 2019) conducted a Photovoice study in the high-density apartment communities of City of Yarra, Melbourne: researchers distributed cameras to apartment-dwelling families and asked them to compile visual journals of daily apartment life, covering shared corridors, lifts, underground car parks, balconies, and other daily-encounter spaces. The central observation is that physical proximity does not automatically translate into social connection — rather, under the combined effects of high residential turnover and the absence of shared daily routines, "anonymity" emerges as the default social register of the apartment community. Published in The Conversation, 2019. The verbatim excerpts below are drawn from participants' journal entries.
+                citations:
+                  - text:
+                      zh: 即使彼此住得极近，匿名感反而极高。
+                      en: "Despite being so close to each other there is a huge level of anonymity."
+                    attribution:
+                      zh: 公寓居民, City of Yarra
+                      en: Apartment resident, City of Yarra
+                  - text:
+                      zh: 这里太匿名，人员流动率也太高——从来无法真正建立任何关系。
+                      en: "It's anonymous and there's a lot of turnover — you never really form relationships."
+                    attribution:
+                      zh: 公寓居民, City of Yarra
+                      en: Apartment resident, City of Yarra
+                  - text:
+                      zh: 站在走廊与人交谈，会让人感觉怪异。
+                      en: "You cannot stand and have a conversation there — you feel weird."
+                    attribution:
+                      zh: 公寓居民, City of Yarra
+                      en: Apartment resident, City of Yarra
+            mapState:
+              mode: matte
+              dim: 0.6
+              overlay: digital_silos_heatmap
+
+          # 1.3 — Attention Displacement (隐形边界的学术概念)
+          # lift 从此开始——从贴地 [0, 0.05, 2.2] 抬升到中尺度 [3, 3, 6]
+          # lookAt 也从街道高度 [0, 0.05, 0] 切到 origin [0, 0, 0]，配合 lift 自然 tilt-down
+          # blueprint 切换 + agents_trajectories 平行直线在抬升过程中显形
+          - id: scene-1-3-attention-displacement
+            kind: body-section
+            layout: right-column
+            rhythm: tracking
+            emphasis: standard
+            camera:
+              from: [0, 0.05, 2.2]
+              to: [3, 3, 6]
+              lookAt: [0, 0, 0]
+            enter: slide-side
+            exit: fade
+            heading:
+              zh: 隐形边界 · 注意力的位移
+              en: Invisible boundary · Attention Displacement
+            paragraphs:
+              - zh: 阻碍邻里连接的不再是混凝土墙壁，而是注意力位移 (Attention Displacement)。
+                en: "Barrier: attention displacement, not concrete walls."
+              - zh: 点对点的高效通勤，配合手机屏幕对注意力的持续捕获，剥夺了人们对周边环境的感知。
+                en: Commute plus screens erase awareness of place.
+              - zh: 街道与公共空间随之被降维，沦为仅供快速穿梭的过境走廊。
+                en: Public spaces collapse to mere transit corridors.
+            mapState:
+              mode: blueprint
+              dim: 0.5
+              overlay: agents_trajectories
+
+          # 1.4 — Sandbox-reveal (引入产品 / bridge 至 Act II)
+          # bridge: 从中尺度 [3, 3, 6] 完成最终 ascent 到全局蓝图 [0, 12, 12]
+          # to = [0, 12, 12] 是 Act II.1 atlas-ledger 起点（zero-jump binding）
+          - id: scene-1-4-sandbox-reveal
+            kind: pull-quote
+            rhythm: bridge
+            emphasis: dwell
+            camera:
+              from: [3, 3, 6]
+              to: [0, 12, 12]
+              lookAt: [0, 0, 0]
+            enter: scale-in
+            exit: fade
+            text:
+              zh: |
+                面对由习惯与认知构筑的边界，
+                实体空间的改造试错成本极高。
+                我们需要一个计算社会科学沙盘，
+                来测试低成本的「算法干预」如何重建附近性。
+              en: |
+                For boundaries built of habit and cognition,
+                physical-space iteration costs too much.
+                We need a computational social-science sandbox
+                to test how low-cost algorithmic intervention can rebuild proximity.
+            mapState:
+              mode: blueprint
+              dim: 0.3
+              overlay: agents_trajectories
+        shotRef: act1.b1
+        fallbackFigure: /figures/act1-disappearance.svg
+        sources:
+          - file: docs/research/00-thesis.md
+            anchor: nearby-blindness
+          - file: docs/case-study-data-provenance.md
+            anchor: act-1-disappearance
+
+  - id: instrument
+    title:
+      zh: 产品本体
+      en: The Apparatus
+    beats:
+      - id: map
+        claim:
+          zh: |
+            实验室的"地板"是 Lane Cove。真坐标，OSM + Overture，高密度高层
+            住宅区——物理近社会远的悖论在这里最尖锐。
+          en: |
+            The lab floor is Lane Cove. Real coordinates from OSM +
+            Overture, a high-density residential district — where the
+            "physically close, socially distant" paradox is sharpest.
+        shotRef: act2.b1
+        hud:
+          kind: in-world-label
+          anchor: [0, 0, 0]
+          text:
+            zh: Lane Cove · 2066
+            en: Lane Cove · 2066
+        fallbackFigure: /figures/act2-map.svg
+        sources:
+          - file: data/lanecove_atlas.json
+      - id: agent
+        claim:
+          zh: |
+            1000 个 agent 居住在沙盘里。personality 八维 / 一日 LLM planner /
+            三层模型预算（Sonnet 10 · mid 200 · Haiku 790）。Rashomon 知觉：
+            同一座沙盘，每个 agent 看到不同的世界。
+          en: |
+            1,000 agents inhabit the sand table. 8-dim personality, daily
+            LLM planner, three-tier model budget (Sonnet 10 · mid 200 ·
+            Haiku 790). Rashomon perception — same sand table, a different
+            perceived city per agent.
+        shotRef: act2.b2
+        hud:
+          kind: hud-panel
+          slot: stats
+        fallbackFigure: /figures/act2-agent.svg
+        sources:
+          - file: synthetic_socio_wind_tunnel/agent/personality.py
+          - file: synthetic_socio_wind_tunnel/agent/planner.py
+      - id: network
+        claim:
+          zh: |
+            1000 agent 在沙盘里活动 14 天，弱连接、偶遇、third-place 行为
+            会涌现什么样的网络？社会图谱不是输入，是输出。
+          en: |
+            1,000 agents move through the sand table for 14 days. What
+            network of weak ties, chance encounters, and third-place
+            behavior emerges? The social graph is not input — it's output.
+        shotRef: act2.b3
+        hud:
+          kind: letterbox
+          subtitle:
+            zh: 1000 agents · 14 days · 288 ticks/day
+            en: 1000 agents · 14 days · 288 ticks/day
+        fallbackFigure: /figures/act2-network.svg
+        sources:
+          - file: synthetic_socio_wind_tunnel/orchestrator/multiday.py
+      - id: intervention
+        claim:
+          zh: |
+            仪器不只是看，还要拨。Policy Hack 4+1 是控制台。
+            Hyperlocal Push（超在地性 / Variant A）：feed item → 500m geo
+            filter → agent attention 响应 → 路径偏转 +302m。用魔法打败魔法。
+          en: |
+            The instrument doesn't just observe — it tunes. Policy Hack 4+1
+            is the control panel. Hyperlocal Push (hyperlocal / Variant A):
+            feed item → 500m geo filter → agent attention response → +302m
+            trajectory delta. Beat magic with magic.
+        shotRef: act2.b4
+        hud:
+          kind: hud-panel
+          slot: feed-item
+        fallbackFigure: /figures/act2-intervention.svg
+        sources:
+          - file: synthetic_socio_wind_tunnel/policy_hack/variant_a.py
+          - file: tools/smoke_experiment_demo.py
+
+  - id: findings
+    title:
+      zh: 探索的结论
+      en: Findings
+    beats:
+      - id: contest-in-progress
+        claim:
+          zh: |
+            4 + 1 variant 的比赛规则：30 seed × 5 variant，median + IQR
+            （非高斯，故不用 mean + SD），14 天协议，5 幕报告。已有证据：
+            Variant A smoke demo target 100% / control 14% / 治理效应 86 pp。
+            其他三 variant + A' 镜像即将揭晓。
+          en: |
+            Contest rules: 30 seeds × 5 variants, median + IQR (non-Gaussian,
+            so not mean + SD), a 14-day protocol, a 5-act report. Evidence
+            on hand — Variant A smoke demo: target 100% / control 14% /
+            treatment effect 86 pp. Three more variants + the A' mirror,
+            in queue.
+        shotRef: act3.b1
+        hud:
+          kind: hud-panel
+          slot: beta-rigor
+        fallbackFigure: /figures/act3-contest.svg
+        sources:
+          - file: docs/research/13-research-design.md
+          - file: docs/agent_system/11-smoke-demo-report.md
+      - id: mirror
+        claim:
+          zh: |
+            同样的基础设施反向使用，把人推向更远的孤立。A' Global
+            Distraction 已就位——这不是事后免责，是作品的最终论点：
+            杠杆是对称的。
+          en: |
+            The same infrastructure run in reverse pushes people into
+            deeper isolation. A' Global Distraction is in place — not a
+            disclaimer tacked on at the end, but the work's final claim:
+            the lever is symmetric.
+        shotRef: act3.b2
+        hud:
+          kind: hud-panel
+          slot: mirror-toggle
+        fallbackFigure: /figures/act3-mirror.svg
+        sources:
+          - file: synthetic_socio_wind_tunnel/policy_hack/mirror.py
+      - id: outro
+        claim:
+          zh: |
+            C-tier 探索性研究 + B-tier mirror 展示双面性 + 明确拒绝 A-tier
+            可部署。沙盘缩回到一个台面尺寸。
+          en: |
+            C-tier exploratory research + B-tier mirror revealing duality
+            + an explicit refusal of A-tier "deployable." The sand table
+            shrinks back to a desktop object.
+        shotRef: act3.b3
+        hud:
+          kind: letterbox
+          subtitle:
+            zh: 探索性仪器，不可部署。
+            en: Exploratory instrument. Not a deployable system.
+        fallbackFigure: /figures/act3-outro.svg
+        sources:
+          - file: docs/research/13-research-design.md
+            anchor: ethics-posture
+---
+
+{/*
+  This file is the **content side** of the design / content / form contract.
+  Every user-facing string is an I18nString ({zh, en}); the <T> component
+  picks the active language at render time. content-lint enforces both
+  branches against the glossary.
+*/}

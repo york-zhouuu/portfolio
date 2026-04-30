@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Design language v1: Studio Lamp / 研究室灯下.
+ * Cream foreground over deep blue-black field, subtle warm tint everywhere
+ * the light reaches. Sand-table material lives in lib/cinema/theme.ts;
+ * these CSS variables drive the chrome / HUD / page-level UI.
+ *
+ * OKLCH triplets stored as bare strings, composed by Tailwind via
+ * `oklch(var(--X) / <alpha-value>)` so utilities like `bg-bg/40` produce
+ * real alpha instead of dropping the modifier.
+ */
+:root {
+  --bg: 0.11 0.014 256;
+  --fg: 0.94 0.018 80;
+  --muted: 0.62 0.015 80;
+  --accent: 0.78 0.14 215;
+  --line: 0.25 0.014 80;
+  --glow: 0.6 0.1 70;
+
+  --grain-intensity: 0.045;
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: oklch(var(--bg));
+  color: oklch(var(--fg));
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/*
+ * Free scroll — no snap, no scroll-velocity damping. Apple / NN-G research:
+ * scroll hijacking destroys user trust on long content. Scene pacing comes
+ * from sticky-pinned text (see SceneAnchor) + camera HOLD on still scenes,
+ * not from snap. Per cinema-scroll-pacing D1.
+ */
+
+body {
+  min-height: 100svh;
+  /* A near-imperceptible warm vignette so the page never looks pure black */
+  background-image:
+    radial-gradient(ellipse at 70% -10%, oklch(var(--glow) / 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 0% 110%, oklch(var(--glow) / 0.04) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Subtle paper-grain overlay, fixed across viewport. Not animated; gives
+   the cream-on-blue palette some tactility without baking texture into
+   the WebGL canvas. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  opacity: var(--grain-intensity);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 0.95  0 0 0 0 0.85  0 0 0 0.4 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+/* Selection — warm amber, matches glow */
+::selection {
+  background: oklch(var(--glow) / 0.36);
+  color: oklch(var(--fg));
+}
+
+/*
+ * Z-index stacking order (cinema-scroll-pacing D4):
+ *   z=0   — .cinema-floor          (R3F Canvas, fixed, pointer-events: none)
+ *   z=10  — sticky scene text      (per <SceneAnchor>, sticky inside <article>)
+ *   z=20  — .hud-layer             (HUD chrome, fixed, interactive elements)
+ *   z=30  — body::after grain      (paper-grain overlay, fixed)
+ *
+ * The scene text anchors scroll progress while staying visually pinned to the
+ * viewport — even fast scroll inputs leave the text "钉住" rather than flying
+ * past, addressing the core complaint solved by this propose.
+ */
+
+/* Cinema canvas always sits at the floor of the stack and never scrolls. */
+.cinema-floor {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* HUD floats above cinema, never participates in scroll-translate. */
+.hud-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+.hud-layer > * {
+  pointer-events: auto;
+}
+
+/*
+ * Per-scene sticky container (cinema-scroll-pacing D4). Each scene's text
+ * "钉" the viewport while the user scrolls through the marker section.
+ *
+ * - 100vh fallback then 100svh — svh stays stable across iOS address-bar
+ *   collapse so the held text doesn't jump during scroll.
+ * - pointer-events: none so the R3F Canvas underneath remains hover/click-
+ *   addressable; any interactive UI lives in the HUD.
+ */
+.sticky-scene {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 100vh;
+  height: 100svh;
+  pointer-events: none;
+}
+
+/*
+ * Reduced motion path (cinema-scroll-pacing D8): drop sticky, give every
+ * scene a static viewport-tall slot, kill fade animations. The proper
+ * paginated reading mode is a separate propose (`cinema-reduced-motion-paging`);
+ * for now this just neutralizes the cinema motion without breaking content.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .sticky-scene {
+    position: static;
+    height: 100vh;
+    height: 100svh;
+  }
+  .sticky-scene * {
+    transition-duration: 100ms !important;
+    animation-duration: 100ms !important;
+  }
+}
+
+/* Letterbox bars use this — solid-feeling but not opaque, sits over cinema */
+.letterbox-bar {
+  background: oklch(var(--bg) / 0.92);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}

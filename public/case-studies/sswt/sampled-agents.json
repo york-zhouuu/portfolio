@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "agents": [
+    {
+      "agent_id": "a_42_0079",
+      "occupation": "writer",
+      "is_protagonist": true,
+      "home_location_type": "street-adjacent",
+      "observed_tick_range": [
+        0,
+        287
+      ],
+      "personality_traits": {
+        "extroversion": 0.947,
+        "routine_adherence": 0.729,
+        "curiosity": 0.27,
+        "risk_tolerance": 0.091
+      }
+    },
+    {
+      "agent_id": "a_42_0093",
+      "occupation": "office_worker",
+      "is_protagonist": false,
+      "home_location_type": "street-adjacent",
+      "observed_tick_range": [
+        0,
+        287
+      ],
+      "personality_traits": {
+        "extroversion": 0.722,
+        "routine_adherence": 0.047,
+        "curiosity": 0.749,
+        "risk_tolerance": 0.437
+      }
+    },
+    {
+      "agent_id": "a_42_0016",
+      "occupation": "analyst",
+      "is_protagonist": false,
+      "home_location_type": "street-adjacent",
+      "observed_tick_range": [
+        0,
+        287
+      ],
+      "personality_traits": {
+        "extroversion": 0.625,
+        "routine_adherence": 1,
+        "curiosity": 0.418,
+        "risk_tolerance": 0.208
+      }
+    },
+    {
+      "agent_id": "a_42_0023",
+      "occupation": "software_dev",
+      "is_protagonist": false,
+      "home_location_type": "street-adjacent",
+      "observed_tick_range": [
+        0,
+        287
+      ],
+      "personality_traits": {
+        "extroversion": 0,
+        "routine_adherence": 0.413,
+        "curiosity": 1,
+        "risk_tolerance": 0.366
+      }
+    }
+  ]
+}

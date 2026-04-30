@@ -1,0 +1,133 @@
+{
+  "_meta": {
+    "source": "User-supplied draft v2, 2026-04-27",
+    "purpose": "Reference script for Beat 1.1 redesign — second iteration, after design language doc additions (§2.5 World Coords, §5 tracking rhythm, §6.5 Progressive Reveal). Coordinates are now in the project's ±8 world scale.",
+    "status": "v2-fixed; ready as design brief.",
+    "fixes_applied_2026_04_27": [
+      "Bug 1: Scene 1.4 (bridge) was missing camera.to — added to=[4,15,6] so the升空 bridge has explicit motion (was: only from=[0,8,0])",
+      "Bug 2: Scene 1.4→1.5 had Δy=7 jump that spring could not absorb — by routing 1.4 from 1.3's end [2,4,3] to 1.5's start [4,15,6], the bridge itself absorbs the rise; 1.5 now starts cleanly at god-view position",
+      "All scene boundaries now have either continuous from/to chaining (1.3→1.4, 1.4→1.5) or controlled vantage jumps (1.1→1.2 push-in, 1.2→1.3 oblique re-frame) within spring tolerance"
+    ]
+  },
+  "act": "Act 1: Problem Definition",
+  "beat": "1.1 The Atomized Geography",
+  "scenes": [
+    {
+      "id": "scene-1-1-thesis",
+      "kind": "title",
+      "emphasis": "dwell",
+      "paragraphs": [
+        "物理密度逼近绝对极值，\n社会网络却呈现彻底的原子化。"
+      ],
+      "charCount": 26,
+      "rhythm": "still",
+      "camera": {
+        "from": "[0, 0.2, 12]",
+        "lookAt": "[0, 0.2, 0]",
+        "note": "【绝对平视，远景】Y=0.2 模拟行人视高，Z=12 退到外缘。此时沙盘像一堵黑色的无边高墙。"
+      },
+      "mapState": {
+        "mode": "matte",
+        "dim": 0.8,
+        "overlay": null
+      },
+      "note": "开场。3% 屏息漂移沿 Z 轴缓慢 push-in，压迫感建立。"
+    },
+    {
+      "id": "scene-1-2-data-hit",
+      "kind": "data-hit",
+      "emphasis": "dwell",
+      "paragraphs": [
+        "1,000 — 极微观半径内的常住人口",
+        "0 — 日常发生的弱连接互动"
+      ],
+      "charCount": 28,
+      "rhythm": "tracking",
+      "camera": {
+        "from": "[0, 0.5, 8]",
+        "to": "[0, 0.5, 4]",
+        "lookAt": "[0, 0, 0]",
+        "note": "【推入切面】镜头开始沿 Z 轴匀速切入沙盘内部（Tracking shot），穿过最外层的建筑。"
+      },
+      "mapState": {
+        "mode": "matte",
+        "dim": 0.8,
+        "overlay": "agents_trajectories",
+        "note": "【注入数据】发光的人车 Agent 出现，光轨在黑暗的沙盘里像电路般亮起。"
+      },
+      "note": "Tracking 节奏允许视线在「读两行数据」和「看背景光流」之间自然切换。"
+    },
+    {
+      "id": "scene-1-3-evidence",
+      "kind": "body-section",
+      "emphasis": "standard",
+      "title": "系统性的附近性抹除",
+      "paragraphs": [
+        "在悉尼 Lane Cove 的高密度沙盘中，个体共享着极度重合的物理基础设施。",
+        "但在社会拓扑学的观测下，日常轨迹呈现为严格的平行状态，非目的性的驻足几乎为零。"
+      ],
+      "charCount": 78,
+      "rhythm": "still",
+      "camera": {
+        "from": "[2, 4, 3]",
+        "lookAt": "[0, 0, 0]",
+        "note": "【斜角俯身】Y=4，模拟实验人员俯身在桌前观察沙盘。视角微微偏左(X=2)。"
+      },
+      "mapState": {
+        "mode": "matte",
+        "dim": 0.5,
+        "overlay": "agents_trajectories"
+      },
+      "note": "【重要机制：Progressive Reveal】总字数 78。在同一个 Scene 对应的 svh 内，两段文字按滚动进度错峰（staggered）淡入淡出。保持了学术段落的完整性，又绕过了 CPS 单段超限问题。"
+    },
+    {
+      "id": "scene-1-4-core-concept",
+      "kind": "pull-quote",
+      "emphasis": "linger",
+      "paragraphs": [
+        "真正的边界不再是混凝土，\n而是「注意力的位移」。"
+      ],
+      "charCount": 24,
+      "rhythm": "bridge",
+      "camera": {
+        "from": "[2, 4, 3]",
+        "to": "[4, 15, 6]",
+        "lookAt": "[0, 0, 0]",
+        "note": "【升空 bridge】接 1.3 末位 [2,4,3]，bridge 期间相机从 oblique view 升到 god-view 起点 [4,15,6]，与 1.5 起点严格连续。spring 不需要再吸收 vantage 跳变。"
+      },
+      "mapState": {
+        "mode": "blueprint",
+        "dim": 0.5,
+        "overlay": null,
+        "note": "【透视】材质从泥土突变为几何蓝图，隐喻抛开物理表象，看透社会实质。"
+      },
+      "note": "CPS=5 (linger)。字数极少 + bridge rhythm 自带 camera 大幅升空——文字钉视口让读者读 24 字金句的同时，背景剧烈换 vantage。"
+    },
+    {
+      "id": "scene-1-5-macro",
+      "kind": "body-section",
+      "emphasis": "standard",
+      "title": "算法重塑的盲区",
+      "paragraphs": [
+        "全球化信息流与手机屏幕构筑了全新的认知结界。",
+        "数字空间抽干了本地的认知带宽，将街道降维为「降噪耳机走廊」。",
+        "人们对身边的物理生态彻底失明。"
+      ],
+      "charCount": 68,
+      "rhythm": "tracking",
+      "camera": {
+        "from": "[4, 15, 6]",
+        "to": "[-4, 15, 6]",
+        "lookAt": "[0, 0, 0]",
+        "note": "【上帝视角平移】Y=15（God view）。相机在 Z=6 的轨道上，从 X=4 缓慢横移到 X=-4（经典的 Tracking Arc）。起点严格接 1.4 终点。"
+      },
+      "mapState": {
+        "mode": "blueprint",
+        "dim": 0.5,
+        "overlay": "digital_silos_heatmap",
+        "note": "【红区点亮】在上帝视角的蓝图上，代理人头上长出红色的信息茧房/飞地图示。"
+      },
+      "note": "【三段式 Progressive Reveal】在这段宏大的 tracking 扫视中，三句话依次浮现，完成第一幕所有关于痛点（Erasure）的陈述。"
+    }
+  ]
+}

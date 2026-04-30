@@ -1,0 +1,365 @@
+{
+  "version": "0.2.0",
+  "acts": [
+    {
+      "id": "attention-boundary",
+      "title": "注意力边界",
+      "range": [
+        0,
+        0.35
+      ],
+      "beats": [
+        {
+          "id": "disappearance-of-nearby",
+          "range": [
+            0,
+            0.35
+          ],
+          "shotRef": "act1.b1",
+          "hud": {
+            "kind": "letterbox",
+            "subtitle": "附近的消失"
+          },
+          "fallbackFigure": "/figures/act1-disappearance.svg"
+        }
+      ]
+    },
+    {
+      "id": "instrument",
+      "title": "产品本体",
+      "range": [
+        0.35,
+        0.78
+      ],
+      "beats": [
+        {
+          "id": "map",
+          "range": [
+            0.35,
+            0.45
+          ],
+          "shotRef": "act2.b1",
+          "hud": {
+            "kind": "in-world-label",
+            "anchor": [
+              0,
+              0,
+              0
+            ],
+            "text": "Lane Cove"
+          },
+          "fallbackFigure": "/figures/act2-map.svg"
+        },
+        {
+          "id": "agent",
+          "range": [
+            0.45,
+            0.58
+          ],
+          "shotRef": "act2.b2",
+          "hud": {
+            "kind": "hud-panel",
+            "slot": "stats"
+          },
+          "fallbackFigure": "/figures/act2-agent.svg"
+        },
+        {
+          "id": "network",
+          "range": [
+            0.58,
+            0.68
+          ],
+          "shotRef": "act2.b3",
+          "hud": {
+            "kind": "letterbox",
+            "subtitle": "1000 agents · 14 days · 288 ticks/day"
+          },
+          "fallbackFigure": "/figures/act2-network.svg"
+        },
+        {
+          "id": "intervention",
+          "range": [
+            0.68,
+            0.78
+          ],
+          "shotRef": "act2.b4",
+          "hud": {
+            "kind": "hud-panel",
+            "slot": "feed-item"
+          },
+          "fallbackFigure": "/figures/act2-intervention.svg"
+        }
+      ]
+    },
+    {
+      "id": "findings",
+      "title": "探索的结论",
+      "range": [
+        0.78,
+        1
+      ],
+      "beats": [
+        {
+          "id": "contest-in-progress",
+          "range": [
+            0.78,
+            0.86
+          ],
+          "shotRef": "act3.b1",
+          "hud": {
+            "kind": "hud-panel",
+            "slot": "beta-rigor"
+          },
+          "fallbackFigure": "/figures/act3-contest.svg"
+        },
+        {
+          "id": "mirror",
+          "range": [
+            0.86,
+            0.92
+          ],
+          "shotRef": "act3.b2",
+          "hud": {
+            "kind": "hud-panel",
+            "slot": "mirror-toggle"
+          },
+          "fallbackFigure": "/figures/act3-mirror.svg"
+        },
+        {
+          "id": "outro",
+          "range": [
+            0.92,
+            1
+          ],
+          "shotRef": "act3.b3",
+          "hud": {
+            "kind": "letterbox",
+            "subtitle": "Exploratory instrument. Not a deployable system."
+          },
+          "fallbackFigure": "/figures/act3-outro.svg"
+        }
+      ]
+    }
+  ],
+  "shots": {
+    "act1.b1": {
+      "id": "act1.b1",
+      "kind": "push-in",
+      "from": [
+        0,
+        0,
+        9.5
+      ],
+      "to": [
+        0,
+        0,
+        5
+      ],
+      "lookAt": [
+        0,
+        0,
+        0
+      ],
+      "ease": "smoothstep"
+    },
+    "act1.b2": {
+      "id": "act1.b2",
+      "kind": "pull-back",
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        -6,
+        5,
+        11
+      ],
+      "lookAt": [
+        0,
+        0,
+        0
+      ],
+      "ease": "smoothstep"
+    },
+    "act1.b3": {
+      "id": "act1.b3",
+      "kind": "establishing",
+      "orbit": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 11,
+        "degrees": [
+          -30,
+          25
+        ]
+      },
+      "ease": "smoothstep"
+    },
+    "act2.b1": {
+      "id": "act2.b1",
+      "kind": "dolly-arc",
+      "path": [
+        [
+          4.65,
+          4.4,
+          9.97
+        ],
+        [
+          -7,
+          4.4,
+          9
+        ],
+        [
+          -9,
+          5,
+          0
+        ],
+        [
+          0,
+          5.2,
+          -8.8
+        ]
+      ],
+      "lookAt": [
+        0,
+        0,
+        0
+      ],
+      "ease": "smoothstep"
+    },
+    "act2.b2": {
+      "id": "act2.b2",
+      "kind": "push-in",
+      "from": [
+        0,
+        5.2,
+        -8.8
+      ],
+      "to": [
+        1.2,
+        0.7,
+        1.4
+      ],
+      "lookAt": [
+        0,
+        0,
+        0
+      ],
+      "ease": "smoothstep"
+    },
+    "act2.b3": {
+      "id": "act2.b3",
+      "kind": "pull-back",
+      "from": [
+        1.2,
+        0.7,
+        1.4
+      ],
+      "to": [
+        3.8,
+        3.2,
+        3.8
+      ],
+      "lookAt": [
+        0,
+        0,
+        0
+      ],
+      "ease": "smoothstep"
+    },
+    "act2.b4": {
+      "id": "act2.b4",
+      "kind": "focus-rack",
+      "anchor": [
+        3.8,
+        3.2,
+        3.8
+      ],
+      "lookAt": [
+        0,
+        0,
+        0
+      ],
+      "focusFrom": 5,
+      "focusTo": 1.6,
+      "ease": "smoothstep"
+    },
+    "act3.b1": {
+      "id": "act3.b1",
+      "kind": "pull-back",
+      "from": [
+        3.8,
+        3.2,
+        3.8
+      ],
+      "to": [
+        0,
+        12.5,
+        13.5
+      ],
+      "lookAt": [
+        0,
+        0,
+        0
+      ],
+      "ease": "smoothstep"
+    },
+    "act3.b2": {
+      "id": "act3.b2",
+      "kind": "match-dissolve",
+      "from": [
+        0,
+        12.5,
+        13.5
+      ],
+      "to": [
+        0,
+        12.5,
+        13.5
+      ],
+      "lookAt": [
+        0,
+        0,
+        0
+      ],
+      "crossfade": 0.5
+    },
+    "act3.b3": {
+      "id": "act3.b3",
+      "kind": "dolly-arc",
+      "path": [
+        [
+          0,
+          12.5,
+          13.5
+        ],
+        [
+          0,
+          0,
+          9.5
+        ],
+        [
+          0,
+          0,
+          9.5
+        ],
+        [
+          0,
+          0,
+          28
+        ]
+      ],
+      "lookAt": [
+        0,
+        0,
+        0
+      ],
+      "ease": "smoothstep"
+    }
+  },
+  "_hash": "2b603f1e6a2f"
+}
