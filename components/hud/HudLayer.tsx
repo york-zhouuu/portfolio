@@ -5,6 +5,9 @@ import { useLocale } from "@/lib/i18n/LocaleProvider";
 import { pickLang } from "@/lib/i18n/types";
 import type { CameraScore } from "@/lib/cinema/types";
 import type { CaseStudyAct, CaseStudyHud } from "@/lib/content/case-study-schema";
+import { PushCardLayer } from "@/components/cinema/overlays/PushCardLayer";
+import { AgentInternalsLegend } from "@/components/cinema/overlays/AgentInternalsLegend";
+import { StreamLabelLayer } from "@/components/cinema/overlays/StreamLabelLayer";
 import {
   beatAt,
   buildBeatLayout,
@@ -59,10 +62,16 @@ export function HudLayer({
   const fmBeat = fmAct?.beats.find((b) => b.id === current.beat.id);
 
   return (
-    <div className="hud-layer" style={{ opacity, transition: "opacity 90ms linear" }}>
-      <ActMarker actTitle={fmAct?.title ?? null} fallbackActTitle={current.act.title} beatId={current.beat.id} />
-      {fmBeat?.hud ? <HudRender hud={fmBeat.hud} /> : null}
-    </div>
+    <>
+      <div className="hud-layer" style={{ opacity, transition: "opacity 90ms linear" }}>
+        <ActMarker actTitle={fmAct?.title ?? null} fallbackActTitle={current.act.title} beatId={current.beat.id} />
+        {fmBeat?.hud ? <HudRender hud={fmBeat.hud} /> : null}
+      </div>
+      {/* DOM bridge for overlays that need to surface UI outside Canvas. */}
+      <PushCardLayer />
+      <AgentInternalsLegend />
+      <StreamLabelLayer />
+    </>
   );
 }
 

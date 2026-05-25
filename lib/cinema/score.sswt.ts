@@ -36,7 +36,7 @@ const ORBIT_END: Vec3 = [4.65, 4.4, 9.97]; // Act 1.3 end (orbit r=11 deg=25°) 
 const ARC_FAR_SIDE: Vec3 = [0, 5.2, -8.8]; // Act 2.1 dolly arc far side
 const STREET_DIVE: Vec3 = [1.2, 0.7, 1.4]; // Act 2.2 push-in destination — agent POV
 const NETWORK_VIEW: Vec3 = [3.8, 3.2, 3.8]; // Act 2.3 mid-overview where ties are visible
-const FULL_OVERVIEW: Vec3 = [0, 12.5, 13.5]; // Act 3.1 contest pull-back; mirror anchor
+// FULL_OVERVIEW removed — Act 3 now uses scene-specific vantages per finding.
 // Outro loop closure: descend back to the opening-state level POV, then
 // recede along Z into fog — the camera ends on the same plane it began on,
 // 构图回环 in the most literal sense.
@@ -105,28 +105,33 @@ export const sswtCinemaScore: CameraScore = {
       title: "探索的结论",
       range: [0.78, 1.0],
       beats: [
+        // Three findings + outro, ~5.5% scroll budget each.
+        // MDX scene-level cameras override shotRef (which is fallback only).
         {
-          id: "contest-in-progress",
-          range: [0.78, 0.86],
+          id: "siphon-paradox",
+          range: [0.78, 0.835],
           shotRef: "act3.b1",
-          hud: { kind: "hud-panel", slot: "beta-rigor" },
-          fallbackFigure: "/figures/act3-contest.svg",
+          fallbackFigure: "/figures/finding-1-siphon.png",
         },
         {
-          id: "mirror",
-          range: [0.86, 0.92],
+          id: "friction-wins",
+          range: [0.835, 0.89],
           shotRef: "act3.b2",
-          hud: { kind: "hud-panel", slot: "mirror-toggle" },
-          fallbackFigure: "/figures/act3-mirror.svg",
+          fallbackFigure: "/figures/finding-2-friction.png",
         },
         {
-          // Doubled scroll budget so the user can land at OUTRO_LOOP, feel
-          // it as a held moment, then keep scrolling to drive the retreat.
-          id: "outro",
-          range: [0.92, 1.0],
+          id: "routine-cliff",
+          range: [0.89, 0.945],
           shotRef: "act3.b3",
-          hud: { kind: "letterbox", subtitle: "Exploratory instrument. Not a deployable system." },
-          fallbackFigure: "/figures/act3-outro.svg",
+          fallbackFigure: "/figures/finding-3-routine.png",
+        },
+        {
+          // 构图回环 — camera ends where Beat 1.1 started, closing the loop.
+          id: "outro",
+          range: [0.945, 1.0],
+          shotRef: "act3.b4",
+          hud: { kind: "letterbox", subtitle: "An exploratory instrument · not a deployable system" },
+          fallbackFigure: "/figures/synthesis-hero.png",
         },
       ],
     },
@@ -195,39 +200,45 @@ export const sswtCinemaScore: CameraScore = {
       ease: "smoothstep",
     },
 
-    // Act 3 — the contest, the mirror, the close. Camera pulls out and the
-    // sand table becomes an object on a desk again. 构图回环: outro ends near
-    // the orbital vantage Act 1.3 began at.
+    // Act 3 — three findings + outro. Each finding has its own vantage
+    // matched to MDX scene-level camera; these shotRefs are fallbacks.
+    // Camera path:
+    //   Act 2 end [0,11,11] →
+    //   F1 siphon  → overhead close [0, 10, 6] (push-in toward city)
+    //   F2 friction → orbit other side [4, 8, -2] (different angle)
+    //   F3 routine cliff → broad god view [0, 13, 4] (pull back, 1000 dots)
+    //   outro → OUTRO_LOOP [0, 0, 9.5] → OUTRO_FADE (构图回环 = back to intro plane)
     "act3.b1": {
       id: "act3.b1",
-      kind: "pull-back",
-      from: NETWORK_VIEW,
-      to: FULL_OVERVIEW,
+      kind: "push-in",
+      from: [0, 11, 11],
+      to: [0, 10, 6],
       lookAt: ORIGIN,
       ease: "smoothstep",
     },
     "act3.b2": {
       id: "act3.b2",
-      kind: "match-dissolve",
-      from: FULL_OVERVIEW,
-      to: FULL_OVERVIEW, // camera holds; the world's color flips around the camera
+      kind: "dolly-arc",
+      path: [[0, 10, 6], [3, 9, 2], [4.5, 8.5, -1], [4, 8, -2]],
       lookAt: ORIGIN,
-      crossfade: 0.5,
+      ease: "smoothstep",
     },
-    // Outro: 4-point path with a deliberate hold at OUTRO_LOOP. Reading
-    // along localT (after smoothstep, segments are equal-thirds):
-    //   0    → 0.39  descend from god-view down to the opening-state plane
-    //   0.39 → 0.61  hold at OUTRO_LOOP — the loop closes here, the camera
-    //                stays put while the user processes the closure
-    //   0.61 → 1.00  pure -Z retreat into the fog wall, scroll-driven
-    //
-    // The doubled hold point ([OUTRO_LOOP, OUTRO_LOOP]) is what creates the
-    // pause; lerpVec3 between identical points yields zero motion across
-    // that segment.
     "act3.b3": {
       id: "act3.b3",
+      kind: "pull-back",
+      from: [4, 8, -2],
+      to: [0, 13, 4],
+      lookAt: ORIGIN,
+      ease: "smoothstep",
+    },
+    // Outro: 4-point path with deliberate hold at OUTRO_LOOP.
+    //   0    → 0.39  descend from god-view down to the opening-state plane
+    //   0.39 → 0.61  hold at OUTRO_LOOP — loop closes, camera stays put
+    //   0.61 → 1.00  pure -Z retreat into the fog wall, scroll-driven
+    "act3.b4": {
+      id: "act3.b4",
       kind: "dolly-arc",
-      path: [FULL_OVERVIEW, OUTRO_LOOP, OUTRO_LOOP, OUTRO_FADE],
+      path: [[0, 13, 4], OUTRO_LOOP, OUTRO_LOOP, OUTRO_FADE],
       lookAt: ORIGIN,
       ease: "smoothstep",
     },

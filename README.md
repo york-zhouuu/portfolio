@@ -74,12 +74,36 @@ pnpm dev
 
 | command                | what                                                    |
 | ---------------------- | ------------------------------------------------------- |
-| `pnpm dev`             | Next.js dev                                             |
-| `pnpm build`           | production build                                        |
-| `pnpm typecheck`       | strict TS check                                         |
-| `pnpm content:lint`    | schema + glossary + score consistency                   |
-| `pnpm export:sswt`     | re-export Lane Cove assets from source research repo    |
-| `pnpm score:snapshot`  | write `cinema-score.json` artifact + version hash guard |
+| `pnpm dev`                    | Next.js dev                                             |
+| `pnpm build`                  | production build                                        |
+| `pnpm typecheck`              | strict TS check                                         |
+| `pnpm content:lint`           | schema + glossary + score consistency                   |
+| `pnpm export:sswt`            | re-export Lane Cove assets from source research repo    |
+| `pnpm sync:resident-stories`  | copy resident-story HTML from the SSWT repo (see below) |
+| `pnpm score:snapshot`         | write `cinema-score.json` artifact + version hash guard |
+
+## Resident stories
+
+The SSWT repo publishes long-read HTML case-studies of individual virtual
+residents (Hannah, Mary, Agent #0290 — each in zh + en) at
+`docs/case_studies/_published/`. These render in an in-page reader sheet
+mounted globally (no route changes) and are reachable two ways:
+
+1. **Global nav** — `Resident Stories ▾` dropdown in the top chrome.
+2. **Sand-table pickup** — when a cinema scene declares `mapState.pickup`,
+   the targeted agent on the sand table gets a glowing ring + a clickable
+   hitbox that opens the same reader sheet.
+
+Sync HTML into `public/case-studies/<study-slug>/people/` with:
+
+```bash
+pnpm sync:resident-stories /path/to/-Synthetic-Socio-Wind-Tunnel-
+```
+
+The sync is manual and single-direction; portfolio build doesn't depend on
+the SSWT repo being present. Files are committed into this repo. Declare
+each story in the case-study frontmatter (`residentStories: [...]`) so
+content-lint validates the assets exist.
 
 ## Source project
 

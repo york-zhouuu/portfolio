@@ -19,11 +19,11 @@ export function SceneTitle({
       className="pointer-events-auto absolute inset-0 flex flex-col items-center justify-center px-6 text-center"
       style={style}
     >
-      <h1 className="font-medium leading-[1.05] tracking-[-0.04em] text-fg/95 [font-size:clamp(48px,8vw,72px)] [text-shadow:_0_1px_2px_rgba(0,0,0,0.28),_0_0_20px_rgba(0,0,0,0.14)]">
+      <h1 className="font-sans font-medium leading-[1.05] tracking-[-0.035em] text-fg/95 [font-size:clamp(44px,7vw,68px)] [text-shadow:_0_1px_2px_rgba(0,0,0,0.28),_0_0_20px_rgba(0,0,0,0.14)] [text-wrap:balance]">
         <T value={scene.text} />
       </h1>
       {scene.subtitle ? (
-        <p className="mt-4 font-mono text-caption uppercase tracking-[0.28em] text-muted/95 [text-shadow:_0_1px_2px_rgba(0,0,0,0.25)]">
+        <p className="mt-5 max-w-[44ch] font-sans leading-[1.5] text-fg/70 [font-size:clamp(15px,1.3vw,19px)] [text-shadow:_0_1px_2px_rgba(0,0,0,0.25)] [text-wrap:pretty]">
           <T value={scene.subtitle} />
         </p>
       ) : null}

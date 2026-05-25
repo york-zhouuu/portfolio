@@ -1,0 +1,5834 @@
+{
+  "_meta": {
+    "source": "seed_44 (F1/F2) + seed_43 (F3) \u00b7 14 days \u00b7 4 variants",
+    "atlas": "data/lanecove_atlas.json",
+    "n_pois_total": 9979,
+    "world_bounds_meters": {
+      "min_x": -1399.9945072189398,
+      "max_x": 1247.4081096796976,
+      "min_y": -2669.448498209008,
+      "max_y": 1975.8738757908004
+    },
+    "movable_threshold_m": 100.0
+  },
+  "f1_siphon": {
+    "top_pois": [
+      {
+        "id": "plc_sydney_preschool,_lane_cove_campus",
+        "name": "PLC Sydney Preschool, Lane Cove Campus",
+        "type": "worship",
+        "x": -810.4295510566039,
+        "y": -1662.6301465622685,
+        "bl": 6870,
+        "hp": 387825,
+        "delta_ticks": 380955,
+        "ratio": 56.4
+      },
+      {
+        "id": "anytime_fitness_australia",
+        "name": "Anytime Fitness Australia",
+        "type": "entertainment",
+        "x": 324.48196383013124,
+        "y": -627.4716198093522,
+        "bl": 3888,
+        "hp": 43426,
+        "delta_ticks": 39538,
+        "ratio": 11.2
+      },
+      {
+        "id": "area_105",
+        "name": "area_105",
+        "type": "playground",
+        "x": -687.919895865207,
+        "y": -1053.568566609285,
+        "bl": 3881,
+        "hp": 36953,
+        "delta_ticks": 33072,
+        "ratio": 9.5
+      },
+      {
+        "id": "mowbray_road_seg_4",
+        "name": "Mowbray Road (4)",
+        "type": "street",
+        "x": -196.0666634122706,
+        "y": -1404.7364122092447,
+        "bl": 356,
+        "hp": 25519,
+        "delta_ticks": 25163,
+        "ratio": 71.5
+      },
+      {
+        "id": "anglican_church_of_australia_lane_cove",
+        "name": "Anglican Church of Australia Lane Cove",
+        "type": "worship",
+        "x": 135.21809781964637,
+        "y": -531.8000808246605,
+        "bl": 17035,
+        "hp": 35342,
+        "delta_ticks": 18307,
+        "ratio": 2.1
+      },
+      {
+        "id": "longueville_park",
+        "name": "Longueville Park",
+        "type": "residential",
+        "x": 317.10699846382334,
+        "y": 1811.7722201906897,
+        "bl": 26,
+        "hp": 18000,
+        "delta_ticks": 17974,
+        "ratio": 666.7
+      },
+      {
+        "id": "centennial_avenue_seg_2_1",
+        "name": "Centennial Avenue (2)",
+        "type": "street",
+        "x": -175.8632974879146,
+        "y": -1028.7308482094752,
+        "bl": 216,
+        "hp": 13354,
+        "delta_ticks": 13138,
+        "ratio": 61.5
+      },
+      {
+        "id": "7-eleven",
+        "name": "7-Eleven",
+        "type": "shop",
+        "x": 957.1136255863485,
+        "y": -883.8172552091842,
+        "bl": 5283,
+        "hp": 16076,
+        "delta_ticks": 10793,
+        "ratio": 3.0
+      },
+      {
+        "id": "1021_mediterranean",
+        "name": "1021 Mediterranean",
+        "type": "restaurant",
+        "x": 409.4192885545047,
+        "y": 513.4786205908592,
+        "bl": 6469,
+        "hp": 17096,
+        "delta_ticks": 10627,
+        "ratio": 2.6
+      },
+      {
+        "id": "karilla_avenue_seg_1_1",
+        "name": "Karilla Avenue (1)",
+        "type": "street",
+        "x": 249.77616613836403,
+        "y": -1043.4640502092159,
+        "bl": 932,
+        "hp": 11373,
+        "delta_ticks": 10441,
+        "ratio": 12.2
+      },
+      {
+        "id": "anz",
+        "name": "ANZ",
+        "type": "cafe",
+        "x": 196.58152215047548,
+        "y": -461.08790420922895,
+        "bl": 5821,
+        "hp": 15032,
+        "delta_ticks": 9211,
+        "ratio": 2.6
+      },
+      {
+        "id": "lane_cove_library",
+        "name": "Lane Cove Library",
+        "type": "community",
+        "x": 208.37263008630686,
+        "y": -363.1507946092372,
+        "bl": 15,
+        "hp": 4851,
+        "delta_ticks": 4836,
+        "ratio": 303.2
+      },
+      {
+        "id": "centennial_avenue_seg_3_1",
+        "name": "Centennial Avenue (3)",
+        "type": "street",
+        "x": -209.1070598207523,
+        "y": -950.8124142093263,
+        "bl": 116,
+        "hp": 3876,
+        "delta_ticks": 3760,
+        "ratio": 33.1
+      },
+      {
+        "id": "landers_road_seg_1",
+        "name": "Landers Road (1)",
+        "type": "street",
+        "x": -48.48359554810849,
+        "y": -887.749634209163,
+        "bl": 311,
+        "hp": 3537,
+        "delta_ticks": 3226,
+        "ratio": 11.3
+      },
+      {
+        "id": "lane_cove_tunnel_seg_4_3",
+        "name": "Lane Cove Tunnel (4)",
+        "type": "street",
+        "x": -587.5745079277837,
+        "y": -970.7999202091689,
+        "bl": 8,
+        "hp": 3172,
+        "delta_ticks": 3164,
+        "ratio": 352.6
+      },
+      {
+        "id": "gallery_lane_cove",
+        "name": "Gallery Lane Cove",
+        "type": "entertainment",
+        "x": 299.16230027603524,
+        "y": -354.25115140908827,
+        "bl": 3875,
+        "hp": 6792,
+        "delta_ticks": 2917,
+        "ratio": 1.8
+      },
+      {
+        "id": "road_3854_seg_1",
+        "name": "road_3854 (1)",
+        "type": "street",
+        "x": -121.13987511105336,
+        "y": 134.5464537909801,
+        "bl": 41,
+        "hp": 1532,
+        "delta_ticks": 1491,
+        "ratio": 36.5
+      },
+      {
+        "id": "longueville_road_seg_1_19",
+        "name": "Longueville Road (1)",
+        "type": "street",
+        "x": 357.71550407072345,
+        "y": -685.525722208996,
+        "bl": 205,
+        "hp": 1312,
+        "delta_ticks": 1107,
+        "ratio": 6.4
+      }
+    ],
+    "top_anchors": [
+      {
+        "id": "plc_sydney_preschool,_lane_cove_campus",
+        "name": "PLC Sydney Preschool, Lane Cove Campus",
+        "type": "worship",
+        "x": -810.4295510566039,
+        "y": -1662.6301465622685,
+        "bl": 6870,
+        "hp": 387825,
+        "delta_ticks": 380955,
+        "ratio": 56.4
+      },
+      {
+        "id": "anytime_fitness_australia",
+        "name": "Anytime Fitness Australia",
+        "type": "entertainment",
+        "x": 324.48196383013124,
+        "y": -627.4716198093522,
+        "bl": 3888,
+        "hp": 43426,
+        "delta_ticks": 39538,
+        "ratio": 11.2
+      },
+      {
+        "id": "area_105",
+        "name": "area_105",
+        "type": "playground",
+        "x": -687.919895865207,
+        "y": -1053.568566609285,
+        "bl": 3881,
+        "hp": 36953,
+        "delta_ticks": 33072,
+        "ratio": 9.5
+      },
+      {
+        "id": "mowbray_road_seg_4",
+        "name": "Mowbray Road (4)",
+        "type": "street",
+        "x": -196.0666634122706,
+        "y": -1404.7364122092447,
+        "bl": 356,
+        "hp": 25519,
+        "delta_ticks": 25163,
+        "ratio": 71.5
+      },
+      {
+        "id": "anglican_church_of_australia_lane_cove",
+        "name": "Anglican Church of Australia Lane Cove",
+        "type": "worship",
+        "x": 135.21809781964637,
+        "y": -531.8000808246605,
+        "bl": 17035,
+        "hp": 35342,
+        "delta_ticks": 18307,
+        "ratio": 2.1
+      }
+    ]
+  },
+  "f2_friction": {
+    "hp_anchors": [
+      {
+        "id": "plc_sydney_preschool,_lane_cove_campus",
+        "name": "PLC Sydney Preschool, Lane Cove Campus",
+        "type": "worship",
+        "x": -810.4295510566039,
+        "y": -1662.6301465622685,
+        "bl": 6870,
+        "hp": 387825,
+        "delta_ticks": 380955,
+        "ratio": 56.4
+      },
+      {
+        "id": "anytime_fitness_australia",
+        "name": "Anytime Fitness Australia",
+        "type": "entertainment",
+        "x": 324.48196383013124,
+        "y": -627.4716198093522,
+        "bl": 3888,
+        "hp": 43426,
+        "delta_ticks": 39538,
+        "ratio": 11.2
+      },
+      {
+        "id": "area_105",
+        "name": "area_105",
+        "type": "playground",
+        "x": -687.919895865207,
+        "y": -1053.568566609285,
+        "bl": 3881,
+        "hp": 36953,
+        "delta_ticks": 33072,
+        "ratio": 9.5
+      },
+      {
+        "id": "mowbray_road_seg_4",
+        "name": "Mowbray Road (4)",
+        "type": "street",
+        "x": -196.0666634122706,
+        "y": -1404.7364122092447,
+        "bl": 356,
+        "hp": 25519,
+        "delta_ticks": 25163,
+        "ratio": 71.5
+      },
+      {
+        "id": "anglican_church_of_australia_lane_cove",
+        "name": "Anglican Church of Australia Lane Cove",
+        "type": "worship",
+        "x": 135.21809781964637,
+        "y": -531.8000808246605,
+        "bl": 17035,
+        "hp": 35342,
+        "delta_ticks": 18307,
+        "ratio": 2.1
+      }
+    ],
+    "pf_anchors": [
+      {
+        "id": "anglican_church_of_australia_lane_cove",
+        "name": "Anglican Church of Australia Lane Cove",
+        "type": "worship",
+        "x": 135.21809781964637,
+        "y": -531.8000808246605,
+        "bl": 17035,
+        "hp": 408016,
+        "delta_ticks": 390981,
+        "ratio": 24.0
+      },
+      {
+        "id": "anytime_fitness_australia",
+        "name": "Anytime Fitness Australia",
+        "type": "entertainment",
+        "x": 324.48196383013124,
+        "y": -627.4716198093522,
+        "bl": 3888,
+        "hp": 47096,
+        "delta_ticks": 43208,
+        "ratio": 12.1
+      },
+      {
+        "id": "longueville_park",
+        "name": "Longueville Park",
+        "type": "residential",
+        "x": 317.10699846382334,
+        "y": 1811.7722201906897,
+        "bl": 26,
+        "hp": 39795,
+        "delta_ticks": 39769,
+        "ratio": 1473.9
+      },
+      {
+        "id": "area_105",
+        "name": "area_105",
+        "type": "playground",
+        "x": -687.919895865207,
+        "y": -1053.568566609285,
+        "bl": 3881,
+        "hp": 33771,
+        "delta_ticks": 29890,
+        "ratio": 8.7
+      },
+      {
+        "id": "anz",
+        "name": "ANZ",
+        "type": "cafe",
+        "x": 196.58152215047548,
+        "y": -461.08790420922895,
+        "bl": 5821,
+        "hp": 26969,
+        "delta_ticks": 21148,
+        "ratio": 4.6
+      }
+    ],
+    "overlap_ids": [
+      "anytime_fitness_australia",
+      "area_105",
+      "anglican_church_of_australia_lane_cove"
+    ],
+    "top_pois_hp": [
+      {
+        "id": "plc_sydney_preschool,_lane_cove_campus",
+        "name": "PLC Sydney Preschool, Lane Cove Campus",
+        "type": "worship",
+        "x": -810.4295510566039,
+        "y": -1662.6301465622685,
+        "bl": 6870,
+        "hp": 387825,
+        "delta_ticks": 380955,
+        "ratio": 56.4
+      },
+      {
+        "id": "anytime_fitness_australia",
+        "name": "Anytime Fitness Australia",
+        "type": "entertainment",
+        "x": 324.48196383013124,
+        "y": -627.4716198093522,
+        "bl": 3888,
+        "hp": 43426,
+        "delta_ticks": 39538,
+        "ratio": 11.2
+      },
+      {
+        "id": "area_105",
+        "name": "area_105",
+        "type": "playground",
+        "x": -687.919895865207,
+        "y": -1053.568566609285,
+        "bl": 3881,
+        "hp": 36953,
+        "delta_ticks": 33072,
+        "ratio": 9.5
+      },
+      {
+        "id": "mowbray_road_seg_4",
+        "name": "Mowbray Road (4)",
+        "type": "street",
+        "x": -196.0666634122706,
+        "y": -1404.7364122092447,
+        "bl": 356,
+        "hp": 25519,
+        "delta_ticks": 25163,
+        "ratio": 71.5
+      },
+      {
+        "id": "anglican_church_of_australia_lane_cove",
+        "name": "Anglican Church of Australia Lane Cove",
+        "type": "worship",
+        "x": 135.21809781964637,
+        "y": -531.8000808246605,
+        "bl": 17035,
+        "hp": 35342,
+        "delta_ticks": 18307,
+        "ratio": 2.1
+      },
+      {
+        "id": "longueville_park",
+        "name": "Longueville Park",
+        "type": "residential",
+        "x": 317.10699846382334,
+        "y": 1811.7722201906897,
+        "bl": 26,
+        "hp": 18000,
+        "delta_ticks": 17974,
+        "ratio": 666.7
+      },
+      {
+        "id": "centennial_avenue_seg_2_1",
+        "name": "Centennial Avenue (2)",
+        "type": "street",
+        "x": -175.8632974879146,
+        "y": -1028.7308482094752,
+        "bl": 216,
+        "hp": 13354,
+        "delta_ticks": 13138,
+        "ratio": 61.5
+      },
+      {
+        "id": "7-eleven",
+        "name": "7-Eleven",
+        "type": "shop",
+        "x": 957.1136255863485,
+        "y": -883.8172552091842,
+        "bl": 5283,
+        "hp": 16076,
+        "delta_ticks": 10793,
+        "ratio": 3.0
+      },
+      {
+        "id": "1021_mediterranean",
+        "name": "1021 Mediterranean",
+        "type": "restaurant",
+        "x": 409.4192885545047,
+        "y": 513.4786205908592,
+        "bl": 6469,
+        "hp": 17096,
+        "delta_ticks": 10627,
+        "ratio": 2.6
+      },
+      {
+        "id": "karilla_avenue_seg_1_1",
+        "name": "Karilla Avenue (1)",
+        "type": "street",
+        "x": 249.77616613836403,
+        "y": -1043.4640502092159,
+        "bl": 932,
+        "hp": 11373,
+        "delta_ticks": 10441,
+        "ratio": 12.2
+      },
+      {
+        "id": "anz",
+        "name": "ANZ",
+        "type": "cafe",
+        "x": 196.58152215047548,
+        "y": -461.08790420922895,
+        "bl": 5821,
+        "hp": 15032,
+        "delta_ticks": 9211,
+        "ratio": 2.6
+      },
+      {
+        "id": "lane_cove_library",
+        "name": "Lane Cove Library",
+        "type": "community",
+        "x": 208.37263008630686,
+        "y": -363.1507946092372,
+        "bl": 15,
+        "hp": 4851,
+        "delta_ticks": 4836,
+        "ratio": 303.2
+      },
+      {
+        "id": "centennial_avenue_seg_3_1",
+        "name": "Centennial Avenue (3)",
+        "type": "street",
+        "x": -209.1070598207523,
+        "y": -950.8124142093263,
+        "bl": 116,
+        "hp": 3876,
+        "delta_ticks": 3760,
+        "ratio": 33.1
+      },
+      {
+        "id": "landers_road_seg_1",
+        "name": "Landers Road (1)",
+        "type": "street",
+        "x": -48.48359554810849,
+        "y": -887.749634209163,
+        "bl": 311,
+        "hp": 3537,
+        "delta_ticks": 3226,
+        "ratio": 11.3
+      },
+      {
+        "id": "lane_cove_tunnel_seg_4_3",
+        "name": "Lane Cove Tunnel (4)",
+        "type": "street",
+        "x": -587.5745079277837,
+        "y": -970.7999202091689,
+        "bl": 8,
+        "hp": 3172,
+        "delta_ticks": 3164,
+        "ratio": 352.6
+      },
+      {
+        "id": "gallery_lane_cove",
+        "name": "Gallery Lane Cove",
+        "type": "entertainment",
+        "x": 299.16230027603524,
+        "y": -354.25115140908827,
+        "bl": 3875,
+        "hp": 6792,
+        "delta_ticks": 2917,
+        "ratio": 1.8
+      },
+      {
+        "id": "road_3854_seg_1",
+        "name": "road_3854 (1)",
+        "type": "street",
+        "x": -121.13987511105336,
+        "y": 134.5464537909801,
+        "bl": 41,
+        "hp": 1532,
+        "delta_ticks": 1491,
+        "ratio": 36.5
+      },
+      {
+        "id": "longueville_road_seg_1_19",
+        "name": "Longueville Road (1)",
+        "type": "street",
+        "x": 357.71550407072345,
+        "y": -685.525722208996,
+        "bl": 205,
+        "hp": 1312,
+        "delta_ticks": 1107,
+        "ratio": 6.4
+      }
+    ],
+    "top_pois_pf": [
+      {
+        "id": "anglican_church_of_australia_lane_cove",
+        "name": "Anglican Church of Australia Lane Cove",
+        "type": "worship",
+        "x": 135.21809781964637,
+        "y": -531.8000808246605,
+        "bl": 17035,
+        "hp": 408016,
+        "delta_ticks": 390981,
+        "ratio": 24.0
+      },
+      {
+        "id": "anytime_fitness_australia",
+        "name": "Anytime Fitness Australia",
+        "type": "entertainment",
+        "x": 324.48196383013124,
+        "y": -627.4716198093522,
+        "bl": 3888,
+        "hp": 47096,
+        "delta_ticks": 43208,
+        "ratio": 12.1
+      },
+      {
+        "id": "longueville_park",
+        "name": "Longueville Park",
+        "type": "residential",
+        "x": 317.10699846382334,
+        "y": 1811.7722201906897,
+        "bl": 26,
+        "hp": 39795,
+        "delta_ticks": 39769,
+        "ratio": 1473.9
+      },
+      {
+        "id": "area_105",
+        "name": "area_105",
+        "type": "playground",
+        "x": -687.919895865207,
+        "y": -1053.568566609285,
+        "bl": 3881,
+        "hp": 33771,
+        "delta_ticks": 29890,
+        "ratio": 8.7
+      },
+      {
+        "id": "anz",
+        "name": "ANZ",
+        "type": "cafe",
+        "x": 196.58152215047548,
+        "y": -461.08790420922895,
+        "bl": 5821,
+        "hp": 26969,
+        "delta_ticks": 21148,
+        "ratio": 4.6
+      },
+      {
+        "id": "centennial_avenue_seg_1_5",
+        "name": "Centennial Avenue (1)",
+        "type": "street",
+        "x": -343.4323913360504,
+        "y": -862.8083882091719,
+        "bl": 109,
+        "hp": 15885,
+        "delta_ticks": 15776,
+        "ratio": 144.4
+      },
+      {
+        "id": "1021_mediterranean",
+        "name": "1021 Mediterranean",
+        "type": "restaurant",
+        "x": 409.4192885545047,
+        "y": 513.4786205908592,
+        "bl": 6469,
+        "hp": 20463,
+        "delta_ticks": 13994,
+        "ratio": 3.2
+      },
+      {
+        "id": "lane_cove_plaza_seg_1",
+        "name": "Lane Cove Plaza (1)",
+        "type": "street",
+        "x": 204.01454810340203,
+        "y": -442.39171020929007,
+        "bl": 179,
+        "hp": 12082,
+        "delta_ticks": 11903,
+        "ratio": 67.1
+      },
+      {
+        "id": "road_4508_seg_1",
+        "name": "road_4508 (1)",
+        "type": "street",
+        "x": 227.79246240569574,
+        "y": 120.95428179073139,
+        "bl": 74,
+        "hp": 10028,
+        "delta_ticks": 9954,
+        "ratio": 133.7
+      },
+      {
+        "id": "akira_sushi",
+        "name": "Akira Sushi",
+        "type": "restaurant",
+        "x": 184.8480426968982,
+        "y": -472.2149566537389,
+        "bl": 5692,
+        "hp": 14204,
+        "delta_ticks": 8512,
+        "ratio": 2.5
+      },
+      {
+        "id": "rosenthal_avenue_seg_2",
+        "name": "Rosenthal Avenue (2)",
+        "type": "street",
+        "x": 161.50378066268988,
+        "y": -531.614690209452,
+        "bl": 176,
+        "hp": 7494,
+        "delta_ticks": 7318,
+        "ratio": 42.3
+      },
+      {
+        "id": "lane_cove_library",
+        "name": "Lane Cove Library",
+        "type": "community",
+        "x": 208.37263008630686,
+        "y": -363.1507946092372,
+        "bl": 15,
+        "hp": 6420,
+        "delta_ticks": 6405,
+        "ratio": 401.3
+      },
+      {
+        "id": "gallery_lane_cove",
+        "name": "Gallery Lane Cove",
+        "type": "entertainment",
+        "x": 299.16230027603524,
+        "y": -354.25115140908827,
+        "bl": 3875,
+        "hp": 9299,
+        "delta_ticks": 5424,
+        "ratio": 2.4
+      },
+      {
+        "id": "river_road_west_seg_1_14",
+        "name": "River Road West (1)",
+        "type": "street",
+        "x": 418.9221306183715,
+        "y": 492.3511977908257,
+        "bl": 270,
+        "hp": 5664,
+        "delta_ticks": 5394,
+        "ratio": 20.9
+      },
+      {
+        "id": "all_types_of_rubbish",
+        "name": "All Types of Rubbish",
+        "type": "shop",
+        "x": 293.96553779873005,
+        "y": -449.768515542613,
+        "bl": 7086,
+        "hp": 11786,
+        "delta_ticks": 4700,
+        "ratio": 1.7
+      },
+      {
+        "id": "road_4519_seg_1",
+        "name": "road_4519 (1)",
+        "type": "street",
+        "x": 231.5519809449898,
+        "y": 138.73765179091833,
+        "bl": 326,
+        "hp": 4772,
+        "delta_ticks": 4446,
+        "ratio": 14.6
+      },
+      {
+        "id": "finlayson_street_seg_2_1",
+        "name": "Finlayson Street (2)",
+        "type": "street",
+        "x": -389.94776278037955,
+        "y": -793.756592209417,
+        "bl": 1174,
+        "hp": 5576,
+        "delta_ticks": 4402,
+        "ratio": 4.7
+      },
+      {
+        "id": "stuart_street_seg_1",
+        "name": "Stuart Street (1)",
+        "type": "street",
+        "x": 171.51066641730415,
+        "y": 1640.0715297910097,
+        "bl": 61,
+        "hp": 2530,
+        "delta_ticks": 2469,
+        "ratio": 40.8
+      },
+      {
+        "id": "finlayson_street_seg_1_2",
+        "name": "Finlayson Street (1)",
+        "type": "street",
+        "x": -404.9904611913269,
+        "y": -823.8408222093954,
+        "bl": 165,
+        "hp": 2610,
+        "delta_ticks": 2445,
+        "ratio": 15.7
+      },
+      {
+        "id": "road_5086_seg_1",
+        "name": "road_5086 (1)",
+        "type": "street",
+        "x": 322.30759084423335,
+        "y": -622.4239802095636,
+        "bl": 96,
+        "hp": 2331,
+        "delta_ticks": 2235,
+        "ratio": 24.0
+      },
+      {
+        "id": "birdwood_cafe",
+        "name": "Birdwood Cafe",
+        "type": "cafe",
+        "x": 246.32369806839353,
+        "y": -518.4154778092077,
+        "bl": 4093,
+        "hp": 5474,
+        "delta_ticks": 1381,
+        "ratio": 1.3
+      }
+    ]
+  },
+  "f3_routine_cliff": {
+    "agents": [
+      {
+        "agent_id": "a_43_0001",
+        "bl_location_id": "rv_256",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0002",
+        "bl_location_id": "building_778",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0008",
+        "bl_location_id": "rv_102",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0010",
+        "bl_location_id": "building_2940",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0021",
+        "bl_location_id": "building_1103",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0029",
+        "bl_location_id": "building_89",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0041",
+        "bl_location_id": "building_5149",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0044",
+        "bl_location_id": "building_694",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0058",
+        "bl_location_id": "building_5483",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0070",
+        "bl_location_id": "rv_230",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0073",
+        "bl_location_id": "laverty_pathology",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0081",
+        "bl_location_id": "building_4392",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0083",
+        "bl_location_id": "building_5780",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0085",
+        "bl_location_id": "building_3851",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0091",
+        "bl_location_id": "building_2919",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0112",
+        "bl_location_id": "building_4015",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0120",
+        "bl_location_id": "building_3737",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0131",
+        "bl_location_id": "building_2972",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0133",
+        "bl_location_id": "building_1928",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0153",
+        "bl_location_id": "building_4303",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0155",
+        "bl_location_id": "building_1131",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0156",
+        "bl_location_id": "building_89",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0159",
+        "bl_location_id": "building_835",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0173",
+        "bl_location_id": "building_3362",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0179",
+        "bl_location_id": "building_3103",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0186",
+        "bl_location_id": "building_3737",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0188",
+        "bl_location_id": "standen_-_lower_north_shore",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0207",
+        "bl_location_id": "rv_33",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0211",
+        "bl_location_id": "building_1368",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0214",
+        "bl_location_id": "building_3498",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0215",
+        "bl_location_id": "building_5202",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0221",
+        "bl_location_id": "rv_152",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0239",
+        "bl_location_id": "building_1037",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0240",
+        "bl_location_id": "rv_241",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0263",
+        "bl_location_id": "building_4543",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0282",
+        "bl_location_id": "rv_65",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0283",
+        "bl_location_id": "building_3963",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0291",
+        "bl_location_id": "building_1183",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0311",
+        "bl_location_id": "building_838",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0316",
+        "bl_location_id": "building_4980",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0318",
+        "bl_location_id": "building_650",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0320",
+        "bl_location_id": "building_3190",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0332",
+        "bl_location_id": "building_1183",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0339",
+        "bl_location_id": "building_1202",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0340",
+        "bl_location_id": "building_518",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0348",
+        "bl_location_id": "building_5202",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0350",
+        "bl_location_id": "building_3163",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0351",
+        "bl_location_id": "building_3099",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0361",
+        "bl_location_id": "building_5291",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0370",
+        "bl_location_id": "building_4115",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0372",
+        "bl_location_id": "building_2218",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0383",
+        "bl_location_id": "building_3698",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0394",
+        "bl_location_id": "building_4531",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0413",
+        "bl_location_id": "building_4053",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0419",
+        "bl_location_id": "building_3356",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0455",
+        "bl_location_id": "building_5722",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0462",
+        "bl_location_id": "building_3548",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0472",
+        "bl_location_id": "building_1409",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0474",
+        "bl_location_id": "building_1761",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0478",
+        "bl_location_id": "building_4273",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0486",
+        "bl_location_id": "building_5441",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0536",
+        "bl_location_id": "rv_234",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0539",
+        "bl_location_id": "building_172",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0570",
+        "bl_location_id": "building_2928",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0582",
+        "bl_location_id": "building_4115",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0594",
+        "bl_location_id": "building_3218",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0599",
+        "bl_location_id": "building_1411",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0607",
+        "bl_location_id": "building_1324",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0616",
+        "bl_location_id": "building_5202",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0618",
+        "bl_location_id": "building_3897",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0626",
+        "bl_location_id": "building_1500",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0648",
+        "bl_location_id": "building_1320",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0649",
+        "bl_location_id": "building_5719",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0654",
+        "bl_location_id": "rv_152",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0657",
+        "bl_location_id": "building_2184",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0669",
+        "bl_location_id": "building_4566",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0672",
+        "bl_location_id": "building_3095",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0687",
+        "bl_location_id": "building_4980",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0688",
+        "bl_location_id": "building_1659",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0689",
+        "bl_location_id": "building_3698",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0699",
+        "bl_location_id": "building_5774",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0722",
+        "bl_location_id": "building_4532",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0732",
+        "bl_location_id": "building_3762",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0739",
+        "bl_location_id": "building_3737",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0741",
+        "bl_location_id": "building_3296",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0749",
+        "bl_location_id": "building_2145",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0757",
+        "bl_location_id": "building_835",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0770",
+        "bl_location_id": "building_1161",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0776",
+        "bl_location_id": "building_1659",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0796",
+        "bl_location_id": "building_518",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0806",
+        "bl_location_id": "rv_241",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0813",
+        "bl_location_id": "building_894",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0818",
+        "bl_location_id": "building_1161",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0820",
+        "bl_location_id": "building_838",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0822",
+        "bl_location_id": "building_894",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0826",
+        "bl_location_id": "building_1501",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0837",
+        "bl_location_id": "building_1659",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0846",
+        "bl_location_id": "building_3089",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0854",
+        "bl_location_id": "building_3897",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0864",
+        "bl_location_id": "rv_259",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0868",
+        "bl_location_id": "building_25",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0871",
+        "bl_location_id": "building_936",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0877",
+        "bl_location_id": "building_3893",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0881",
+        "bl_location_id": "building_4576",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0895",
+        "bl_location_id": "building_4566",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0912",
+        "bl_location_id": "building_1681",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0914",
+        "bl_location_id": "commonwealth_bank_lane_cove_branch",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0923",
+        "bl_location_id": "building_2389",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0933",
+        "bl_location_id": "lane_cove_orthodontics_-_dr_teriko_rex_&_dr_darin_ballard",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0951",
+        "bl_location_id": "building_5443",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0952",
+        "bl_location_id": "building_1161",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0962",
+        "bl_location_id": "building_1855",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0966",
+        "bl_location_id": "building_1026",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0970",
+        "bl_location_id": "building_3698",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0976",
+        "bl_location_id": "building_3660",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0987",
+        "bl_location_id": "building_5566",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0998",
+        "bl_location_id": "building_4016",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0999",
+        "bl_location_id": "building_1183",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0000",
+        "bl_location_id": "rv_222",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0003",
+        "bl_location_id": "building_5415",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0004",
+        "bl_location_id": "lane_cove_bowling_and_recreational_club",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0005",
+        "bl_location_id": "building_4497",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0006",
+        "bl_location_id": "building_3705",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0007",
+        "bl_location_id": "laverty_pathology",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0009",
+        "bl_location_id": "building_207",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0011",
+        "bl_location_id": "building_3312",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0012",
+        "bl_location_id": "building_1712",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0013",
+        "bl_location_id": "building_2928",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0014",
+        "bl_location_id": "building_3705",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0015",
+        "bl_location_id": "rv_65",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0016",
+        "bl_location_id": "building_4155",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0017",
+        "bl_location_id": "north_shore_transcendental_meditation_sydney",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0018",
+        "bl_location_id": "tantallon_park",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0019",
+        "bl_location_id": "building_3718",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0020",
+        "bl_location_id": "saint_michaels_catholic_church",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0022",
+        "bl_location_id": "building_4318",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0023",
+        "bl_location_id": "building_3633",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0024",
+        "bl_location_id": "building_163",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0025",
+        "bl_location_id": "building_2251",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0026",
+        "bl_location_id": "building_2192",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0027",
+        "bl_location_id": "building_3781",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0028",
+        "bl_location_id": "building_5116",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0030",
+        "bl_location_id": "coles_lane_cove_park",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0031",
+        "bl_location_id": "building_2229",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0032",
+        "bl_location_id": "building_5521",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0033",
+        "bl_location_id": "building_1411",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0034",
+        "bl_location_id": "building_4079",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0035",
+        "bl_location_id": "building_4566",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0036",
+        "bl_location_id": "building_4222",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0037",
+        "bl_location_id": "burns_bay_medical_centre_1",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0038",
+        "bl_location_id": "building_1217",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0039",
+        "bl_location_id": "anz",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0040",
+        "bl_location_id": "building_5210",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0042",
+        "bl_location_id": "building_2252",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0043",
+        "bl_location_id": "building_2049",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0045",
+        "bl_location_id": "building_711",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0046",
+        "bl_location_id": "building_4576",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0047",
+        "bl_location_id": "building_648",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0048",
+        "bl_location_id": "building_1298",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0049",
+        "bl_location_id": "building_2946",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0050",
+        "bl_location_id": "building_3633",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0051",
+        "bl_location_id": "building_5028",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0052",
+        "bl_location_id": "building_3963",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0053",
+        "bl_location_id": "building_3548",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0054",
+        "bl_location_id": "curry_lane",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0055",
+        "bl_location_id": "building_1659",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0056",
+        "bl_location_id": "building_2953",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0057",
+        "bl_location_id": "rv_102",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0059",
+        "bl_location_id": "building_1489",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0060",
+        "bl_location_id": "postmodern_art_club",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0061",
+        "bl_location_id": "building_5774",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0062",
+        "bl_location_id": "building_2940",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0063",
+        "bl_location_id": "building_1780",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0064",
+        "bl_location_id": "building_4224",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0065",
+        "bl_location_id": "building_5445",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0066",
+        "bl_location_id": "building_518",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0067",
+        "bl_location_id": "building_5116",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0068",
+        "bl_location_id": "building_1298",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0069",
+        "bl_location_id": "building_1889",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0071",
+        "bl_location_id": "rv_33",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0072",
+        "bl_location_id": "building_5355",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0074",
+        "bl_location_id": "spalding_education_australia",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0075",
+        "bl_location_id": "building_1849",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0076",
+        "bl_location_id": "building_782",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0077",
+        "bl_location_id": "area_274",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0078",
+        "bl_location_id": "building_4532",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0079",
+        "bl_location_id": "building_3781",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0080",
+        "bl_location_id": "rv_163",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0082",
+        "bl_location_id": "building_4102",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0084",
+        "bl_location_id": "building_835",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0086",
+        "bl_location_id": "building_3698",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0087",
+        "bl_location_id": "building_569",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0088",
+        "bl_location_id": "building_2983",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0089",
+        "bl_location_id": "building_5774",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0090",
+        "bl_location_id": "building_4392",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0092",
+        "bl_location_id": "building_4422",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0093",
+        "bl_location_id": "sydney_community_services",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0094",
+        "bl_location_id": "new_apostolic_church",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0095",
+        "bl_location_id": "building_5293",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0096",
+        "bl_location_id": "building_1411",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0097",
+        "bl_location_id": "building_4374",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0098",
+        "bl_location_id": "building_478",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0099",
+        "bl_location_id": "building_3498",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0100",
+        "bl_location_id": "building_835",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0101",
+        "bl_location_id": "building_5305",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0102",
+        "bl_location_id": "rv_259",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0103",
+        "bl_location_id": "building_1435",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0104",
+        "bl_location_id": "rv_199",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0105",
+        "bl_location_id": "building_3751",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0106",
+        "bl_location_id": "building_4422",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0107",
+        "bl_location_id": "rv_192",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0108",
+        "bl_location_id": "commonwealth_bank_lane_cove_branch",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0109",
+        "bl_location_id": "a_better_smile_dental_centre",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0110",
+        "bl_location_id": "area_219",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0111",
+        "bl_location_id": "area_261",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0113",
+        "bl_location_id": "building_837",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0114",
+        "bl_location_id": "rv_241",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0115",
+        "bl_location_id": "building_879",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0116",
+        "bl_location_id": "building_4576",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0117",
+        "bl_location_id": "building_4219",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0118",
+        "bl_location_id": "area_117",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0119",
+        "bl_location_id": "building_2218",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0121",
+        "bl_location_id": "building_2946",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0122",
+        "bl_location_id": "building_2940",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0123",
+        "bl_location_id": "building_1183",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0124",
+        "bl_location_id": "building_4497",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0125",
+        "bl_location_id": "building_1489",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0126",
+        "bl_location_id": "building_3112",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0127",
+        "bl_location_id": "building_827",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0128",
+        "bl_location_id": "building_5719",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0129",
+        "bl_location_id": "building_5765",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0130",
+        "bl_location_id": "building_2940",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0132",
+        "bl_location_id": "building_3746",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0134",
+        "bl_location_id": "building_2218",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0135",
+        "bl_location_id": "rv_102",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0136",
+        "bl_location_id": "building_3356",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0137",
+        "bl_location_id": "building_3781",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0138",
+        "bl_location_id": "building_3062",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0139",
+        "bl_location_id": "rv_152",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0140",
+        "bl_location_id": "building_478",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0141",
+        "bl_location_id": "building_2218",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0142",
+        "bl_location_id": "building_4053",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0143",
+        "bl_location_id": "building_5774",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0144",
+        "bl_location_id": "saint_michaels_catholic_church",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0145",
+        "bl_location_id": "building_1086",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0146",
+        "bl_location_id": "building_478",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0147",
+        "bl_location_id": "building_4497",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0148",
+        "bl_location_id": "building_3660",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0149",
+        "bl_location_id": "heavenly_choice_au",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0150",
+        "bl_location_id": "building_3356",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0151",
+        "bl_location_id": "building_1324",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0152",
+        "bl_location_id": "building_518",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0154",
+        "bl_location_id": "building_835",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0157",
+        "bl_location_id": "building_5216",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0158",
+        "bl_location_id": "building_5443",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0160",
+        "bl_location_id": "rv_230",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0161",
+        "bl_location_id": "iga",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0162",
+        "bl_location_id": "building_2357",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0163",
+        "bl_location_id": "building_1037",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0164",
+        "bl_location_id": "danae_hair_gallery",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0165",
+        "bl_location_id": "bella_bacio_cafe",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0166",
+        "bl_location_id": "road_3167_seg_2",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0167",
+        "bl_location_id": "oliver_brown",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0168",
+        "bl_location_id": "building_5780",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0169",
+        "bl_location_id": "building_632",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0170",
+        "bl_location_id": "building_2251",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0171",
+        "bl_location_id": "jack_&_co_northwood",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0172",
+        "bl_location_id": "building_4015",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0174",
+        "bl_location_id": "building_739",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0175",
+        "bl_location_id": "building_2022",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0176",
+        "bl_location_id": "building_1045",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0177",
+        "bl_location_id": "building_3897",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0178",
+        "bl_location_id": "building_1889",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0180",
+        "bl_location_id": "building_2226",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0181",
+        "bl_location_id": "building_5143",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0182",
+        "bl_location_id": "building_4015",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0183",
+        "bl_location_id": "area_257",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0184",
+        "bl_location_id": "building_4102",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0185",
+        "bl_location_id": "building_3622",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0187",
+        "bl_location_id": "building_3897",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0189",
+        "bl_location_id": "building_5566",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0190",
+        "bl_location_id": "finlayson_street_seg_1_1",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0191",
+        "bl_location_id": "rv_102",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0192",
+        "bl_location_id": "building_530",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0193",
+        "bl_location_id": "building_5473",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0194",
+        "bl_location_id": "traditional_window_cleaning_services",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0195",
+        "bl_location_id": "building_1712",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0196",
+        "bl_location_id": "building_1712",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0197",
+        "bl_location_id": "building_5780",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0198",
+        "bl_location_id": "building_1055",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0199",
+        "bl_location_id": "building_5675",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0200",
+        "bl_location_id": "building_2940",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0201",
+        "bl_location_id": "building_4374",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0202",
+        "bl_location_id": "building_671",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0203",
+        "bl_location_id": "rv_93",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0204",
+        "bl_location_id": "building_89",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0205",
+        "bl_location_id": "building_3762",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0206",
+        "bl_location_id": "rv_93",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0208",
+        "bl_location_id": "building_894",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0209",
+        "bl_location_id": "len_wallis_audio",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0210",
+        "bl_location_id": "building_1648",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0212",
+        "bl_location_id": "building_3190",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0213",
+        "bl_location_id": "postmodern_art_club",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0216",
+        "bl_location_id": "building_217",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0217",
+        "bl_location_id": "building_2134",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0218",
+        "bl_location_id": "building_4015",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0219",
+        "bl_location_id": "building_5436",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0220",
+        "bl_location_id": "building_5675",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0222",
+        "bl_location_id": "building_3749",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0223",
+        "bl_location_id": "building_2145",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0224",
+        "bl_location_id": "building_60",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0225",
+        "bl_location_id": "building_4531",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0226",
+        "bl_location_id": "building_3737",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0227",
+        "bl_location_id": "building_1489",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0228",
+        "bl_location_id": "building_782",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0229",
+        "bl_location_id": "building_3383",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0230",
+        "bl_location_id": "building_1411",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0231",
+        "bl_location_id": "building_5521",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0232",
+        "bl_location_id": "building_2181",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0233",
+        "bl_location_id": "building_650",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0234",
+        "bl_location_id": "building_1737",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0235",
+        "bl_location_id": "building_5719",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0236",
+        "bl_location_id": "rv_152",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0237",
+        "bl_location_id": "building_1778",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0238",
+        "bl_location_id": "building_3362",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0241",
+        "bl_location_id": "building_1347",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0242",
+        "bl_location_id": "goodstart_early_learning",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0243",
+        "bl_location_id": "building_3660",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0244",
+        "bl_location_id": "garfish_restaurant_crowsnest",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0245",
+        "bl_location_id": "building_217",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0246",
+        "bl_location_id": "building_936",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0247",
+        "bl_location_id": "building_1648",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0248",
+        "bl_location_id": "building_1038",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0249",
+        "bl_location_id": "building_632",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0250",
+        "bl_location_id": "building_5293",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0251",
+        "bl_location_id": "building_4040",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0252",
+        "bl_location_id": "new_apostolic_church",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0253",
+        "bl_location_id": "kennards_self_storage",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0254",
+        "bl_location_id": "building_4102",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0255",
+        "bl_location_id": "building_5780",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0256",
+        "bl_location_id": "dominos",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0257",
+        "bl_location_id": "building_1501",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0258",
+        "bl_location_id": "building_2946",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0259",
+        "bl_location_id": "area_91",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0260",
+        "bl_location_id": "building_4036",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0261",
+        "bl_location_id": "building_1889",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0262",
+        "bl_location_id": "building_4225",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0264",
+        "bl_location_id": "building_4040",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0265",
+        "bl_location_id": "building_3383",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0266",
+        "bl_location_id": "building_4150",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0267",
+        "bl_location_id": "building_163",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0268",
+        "bl_location_id": "building_5780",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0269",
+        "bl_location_id": "building_4053",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0270",
+        "bl_location_id": "building_186",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0271",
+        "bl_location_id": "building_1131",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0272",
+        "bl_location_id": "kligman_joel_dr",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0273",
+        "bl_location_id": "building_3897",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0274",
+        "bl_location_id": "building_1101",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0275",
+        "bl_location_id": "building_827",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0276",
+        "bl_location_id": "building_5286",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0277",
+        "bl_location_id": "building_217",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0278",
+        "bl_location_id": "building_2301",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0279",
+        "bl_location_id": "building_3705",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0280",
+        "bl_location_id": "building_1347",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0281",
+        "bl_location_id": "building_3015",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0284",
+        "bl_location_id": "building_3089",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0285",
+        "bl_location_id": "building_2350",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0286",
+        "bl_location_id": "building_1729",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0287",
+        "bl_location_id": "building_3383",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0288",
+        "bl_location_id": "building_5591",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0289",
+        "bl_location_id": "building_1271",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0290",
+        "bl_location_id": "road_431_seg_1",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0292",
+        "bl_location_id": "building_5291",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0293",
+        "bl_location_id": "building_89",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0294",
+        "bl_location_id": "building_3407",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0295",
+        "bl_location_id": "building_4115",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0296",
+        "bl_location_id": "area_196",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0297",
+        "bl_location_id": "building_5247",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0298",
+        "bl_location_id": "building_4104",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0299",
+        "bl_location_id": "building_778",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0300",
+        "bl_location_id": "building_4303",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0301",
+        "bl_location_id": "building_5364",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0302",
+        "bl_location_id": "building_5038",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0303",
+        "bl_location_id": "building_2251",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0304",
+        "bl_location_id": "building_4566",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0305",
+        "bl_location_id": "building_915",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0306",
+        "bl_location_id": "traditional_window_cleaning_services",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0307",
+        "bl_location_id": "building_5588",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0308",
+        "bl_location_id": "decadent_delicacies",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0309",
+        "bl_location_id": "building_3703",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0310",
+        "bl_location_id": "building_3851",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0312",
+        "bl_location_id": "building_1778",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0313",
+        "bl_location_id": "building_2022",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0314",
+        "bl_location_id": "building_5011",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0315",
+        "bl_location_id": "building_2983",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0317",
+        "bl_location_id": "atelier_green_nest",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0319",
+        "bl_location_id": "building_3190",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0321",
+        "bl_location_id": "building_1740",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0322",
+        "bl_location_id": "building_3751",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0323",
+        "bl_location_id": "building_1628",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0324",
+        "bl_location_id": "building_3095",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0325",
+        "bl_location_id": "bangkok_bar",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0326",
+        "bl_location_id": "building_648",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0327",
+        "bl_location_id": "building_5143",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0328",
+        "bl_location_id": "apollo_roof_restoration",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0329",
+        "bl_location_id": "building_3781",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0330",
+        "bl_location_id": "building_650",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0331",
+        "bl_location_id": "building_3219",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0333",
+        "bl_location_id": "building_2222",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0334",
+        "bl_location_id": "building_1518",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0335",
+        "bl_location_id": "building_3499",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0336",
+        "bl_location_id": "building_2929",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0337",
+        "bl_location_id": "building_3499",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0338",
+        "bl_location_id": "building_3762",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0341",
+        "bl_location_id": "building_3445",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0342",
+        "bl_location_id": "building_1547",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0343",
+        "bl_location_id": "building_1101",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0344",
+        "bl_location_id": "building_4303",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0345",
+        "bl_location_id": "building_1989",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0346",
+        "bl_location_id": "building_5202",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0347",
+        "bl_location_id": "building_4497",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0349",
+        "bl_location_id": "building_1889",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0352",
+        "bl_location_id": "building_1279",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0353",
+        "bl_location_id": "building_1547",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0354",
+        "bl_location_id": "building_4980",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0355",
+        "bl_location_id": "building_1131",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0356",
+        "bl_location_id": "building_1547",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0357",
+        "bl_location_id": "building_4531",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0358",
+        "bl_location_id": "building_739",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0359",
+        "bl_location_id": "decadent_delicacies",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0360",
+        "bl_location_id": "building_217",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0362",
+        "bl_location_id": "building_711",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0363",
+        "bl_location_id": "building_1500",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0364",
+        "bl_location_id": "rv_87",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0365",
+        "bl_location_id": "building_3851",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0366",
+        "bl_location_id": "building_650",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0367",
+        "bl_location_id": "building_3499",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0368",
+        "bl_location_id": "building_728",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0369",
+        "bl_location_id": "building_3095",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0371",
+        "bl_location_id": "building_1217",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0373",
+        "bl_location_id": "building_3112",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0374",
+        "bl_location_id": "building_4374",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0375",
+        "bl_location_id": "building_2983",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0376",
+        "bl_location_id": "building_324",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0377",
+        "bl_location_id": "building_3705",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0378",
+        "bl_location_id": "building_3893",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0379",
+        "bl_location_id": "jack_&_co_northwood",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0380",
+        "bl_location_id": "building_5657",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0381",
+        "bl_location_id": "building_4531",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0382",
+        "bl_location_id": "hydronic_heating_services",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0384",
+        "bl_location_id": "djanaba_park",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0385",
+        "bl_location_id": "building_879",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0386",
+        "bl_location_id": "lane_cove_market_square",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0387",
+        "bl_location_id": "building_5436",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0388",
+        "bl_location_id": "kingsford_smith_oval_2",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0389",
+        "bl_location_id": "building_4036",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0390",
+        "bl_location_id": "rv_65",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0391",
+        "bl_location_id": "building_4015",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0392",
+        "bl_location_id": "building_1712",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0393",
+        "bl_location_id": "building_4346",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0395",
+        "bl_location_id": "building_1409",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0396",
+        "bl_location_id": "building_1409",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0397",
+        "bl_location_id": "rv_65",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0398",
+        "bl_location_id": "building_967",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0399",
+        "bl_location_id": "building_5774",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0400",
+        "bl_location_id": "building_5011",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0401",
+        "bl_location_id": "cafe_osheare",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0402",
+        "bl_location_id": "building_4645",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0403",
+        "bl_location_id": "building_172",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0404",
+        "bl_location_id": "building_1513",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0405",
+        "bl_location_id": "building_2022",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0406",
+        "bl_location_id": "building_3059",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0407",
+        "bl_location_id": "building_538",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0408",
+        "bl_location_id": "patchai_thai_restaurant",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0409",
+        "bl_location_id": "road_3135_seg_2",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0410",
+        "bl_location_id": "building_3751",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0411",
+        "bl_location_id": "building_3362",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0412",
+        "bl_location_id": "building_1054",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0414",
+        "bl_location_id": "building_5443",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0415",
+        "bl_location_id": "building_3219",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0416",
+        "bl_location_id": "building_5370",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0417",
+        "bl_location_id": "grilld",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0418",
+        "bl_location_id": "sydney_community_services",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0420",
+        "bl_location_id": "building_4273",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0421",
+        "bl_location_id": "building_2049",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0422",
+        "bl_location_id": "building_5403",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0423",
+        "bl_location_id": "tim_holgate_team",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0424",
+        "bl_location_id": "building_3946",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0425",
+        "bl_location_id": "piccolo_bar_cafe",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0426",
+        "bl_location_id": "building_5247",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0427",
+        "bl_location_id": "building_3737",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0428",
+        "bl_location_id": "marie_ramos_photography_sydney",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0429",
+        "bl_location_id": "building_25",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0430",
+        "bl_location_id": "iga",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0431",
+        "bl_location_id": "building_2022",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0432",
+        "bl_location_id": "building_5569",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0433",
+        "bl_location_id": "building_5028",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0434",
+        "bl_location_id": "building_711",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0435",
+        "bl_location_id": "building_4566",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0436",
+        "bl_location_id": "danae_hair_gallery",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0437",
+        "bl_location_id": "building_894",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0438",
+        "bl_location_id": "building_2018",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0439",
+        "bl_location_id": "building_3499",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0440",
+        "bl_location_id": "building_3633",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0441",
+        "bl_location_id": "building_5116",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0442",
+        "bl_location_id": "building_3622",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0443",
+        "bl_location_id": "rv_152",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0444",
+        "bl_location_id": "building_3660",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0445",
+        "bl_location_id": "building_1101",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0446",
+        "bl_location_id": "building_4634",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0447",
+        "bl_location_id": "building_3703",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0448",
+        "bl_location_id": "building_5780",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0449",
+        "bl_location_id": "building_3131",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0450",
+        "bl_location_id": "building_2252",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0451",
+        "bl_location_id": "building_4543",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0452",
+        "bl_location_id": "building_5657",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0453",
+        "bl_location_id": "building_4538",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0454",
+        "bl_location_id": "building_2213",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0456",
+        "bl_location_id": "building_2018",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0457",
+        "bl_location_id": "building_5780",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0458",
+        "bl_location_id": "building_5569",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0459",
+        "bl_location_id": "lane_cove_post_shop",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0460",
+        "bl_location_id": "building_5143",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0461",
+        "bl_location_id": "saint_michaels_catholic_church",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0463",
+        "bl_location_id": "building_933",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0464",
+        "bl_location_id": "building_4318",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0465",
+        "bl_location_id": "building_2169",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0466",
+        "bl_location_id": "central_105",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0467",
+        "bl_location_id": "building_4357",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0468",
+        "bl_location_id": "building_5062",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0469",
+        "bl_location_id": "building_3897",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0470",
+        "bl_location_id": "building_3095",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0471",
+        "bl_location_id": "gambino_hair",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0473",
+        "bl_location_id": "building_4357",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0475",
+        "bl_location_id": "building_1761",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0476",
+        "bl_location_id": "building_2940",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0477",
+        "bl_location_id": "building_1737",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0479",
+        "bl_location_id": "building_3633",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0480",
+        "bl_location_id": "building_2252",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0481",
+        "bl_location_id": "building_3851",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0482",
+        "bl_location_id": "building_1513",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0483",
+        "bl_location_id": "building_1843",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0484",
+        "bl_location_id": "building_4282",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0485",
+        "bl_location_id": "building_5569",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0487",
+        "bl_location_id": "building_5202",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0488",
+        "bl_location_id": "building_4016",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0489",
+        "bl_location_id": "building_5149",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0490",
+        "bl_location_id": "building_5359",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0491",
+        "bl_location_id": "building_2251",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0492",
+        "bl_location_id": "swimming_pool_&_spa_warehouse",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0493",
+        "bl_location_id": "building_3131",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0494",
+        "bl_location_id": "building_806",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0495",
+        "bl_location_id": "farleigh_court_1",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0496",
+        "bl_location_id": "building_1500",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0497",
+        "bl_location_id": "building_5130",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0498",
+        "bl_location_id": "building_2380",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0499",
+        "bl_location_id": "kennards_self_storage",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0500",
+        "bl_location_id": "building_5028",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0501",
+        "bl_location_id": "building_4109",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0502",
+        "bl_location_id": "building_3660",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0503",
+        "bl_location_id": "building_4987",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0504",
+        "bl_location_id": "rv_192",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0505",
+        "bl_location_id": "building_4126",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0506",
+        "bl_location_id": "building_5355",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0507",
+        "bl_location_id": "building_2919",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0508",
+        "bl_location_id": "building_1514",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0509",
+        "bl_location_id": "building_5364",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0510",
+        "bl_location_id": "building_2357",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0511",
+        "bl_location_id": "building_4008",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0512",
+        "bl_location_id": "building_3660",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0513",
+        "bl_location_id": "building_5400",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0514",
+        "bl_location_id": "goodstart_early_learning",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0515",
+        "bl_location_id": "building_2192",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0516",
+        "bl_location_id": "building_1411",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0517",
+        "bl_location_id": "building_1855",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0518",
+        "bl_location_id": "building_4168",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0519",
+        "bl_location_id": "building_5783",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0520",
+        "bl_location_id": "guzman_y_gomez",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0521",
+        "bl_location_id": "building_4015",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0522",
+        "bl_location_id": "building_2970",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0523",
+        "bl_location_id": "building_5738",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0524",
+        "bl_location_id": "building_648",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0525",
+        "bl_location_id": "shinnyo_australia",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0526",
+        "bl_location_id": "building_2928",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0527",
+        "bl_location_id": "building_5434",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0528",
+        "bl_location_id": "building_2192",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0529",
+        "bl_location_id": "building_3652",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0530",
+        "bl_location_id": "rv_256",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0531",
+        "bl_location_id": "area_91",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0532",
+        "bl_location_id": "building_4987",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0533",
+        "bl_location_id": "building_5473",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0534",
+        "bl_location_id": "building_5011",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0535",
+        "bl_location_id": "building_3111",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0537",
+        "bl_location_id": "building_2218",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0538",
+        "bl_location_id": "rv_33",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0540",
+        "bl_location_id": "building_3095",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0541",
+        "bl_location_id": "building_89",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0542",
+        "bl_location_id": "building_5521",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0543",
+        "bl_location_id": "building_4566",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0544",
+        "bl_location_id": "building_5657",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0545",
+        "bl_location_id": "building_1101",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0546",
+        "bl_location_id": "australia_post",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0547",
+        "bl_location_id": "building_5774",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0548",
+        "bl_location_id": "building_5569",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0549",
+        "bl_location_id": "building_667",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0550",
+        "bl_location_id": "building_794",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0551",
+        "bl_location_id": "building_3548",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0552",
+        "bl_location_id": "building_2983",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0553",
+        "bl_location_id": "building_4543",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0554",
+        "bl_location_id": "building_5566",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0555",
+        "bl_location_id": "building_1368",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0556",
+        "bl_location_id": "building_4168",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0557",
+        "bl_location_id": "building_5436",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0558",
+        "bl_location_id": "building_4033",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0559",
+        "bl_location_id": "building_1059",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0560",
+        "bl_location_id": "building_806",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0561",
+        "bl_location_id": "building_3660",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0562",
+        "bl_location_id": "building_4008",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0563",
+        "bl_location_id": "building_3660",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0564",
+        "bl_location_id": "building_3095",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0565",
+        "bl_location_id": "building_2972",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0566",
+        "bl_location_id": "building_835",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0567",
+        "bl_location_id": "building_3311",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0568",
+        "bl_location_id": "building_5591",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0569",
+        "bl_location_id": "building_1411",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0571",
+        "bl_location_id": "harold_a_brown_&_associates",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0572",
+        "bl_location_id": "building_1038",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0573",
+        "bl_location_id": "building_3762",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0574",
+        "bl_location_id": "building_3131",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0575",
+        "bl_location_id": "building_4964",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0576",
+        "bl_location_id": "building_951",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0577",
+        "bl_location_id": "building_3963",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0578",
+        "bl_location_id": "area_229",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0579",
+        "bl_location_id": "anz",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0580",
+        "bl_location_id": "building_3218",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0581",
+        "bl_location_id": "rv_234",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0583",
+        "bl_location_id": "building_3737",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0584",
+        "bl_location_id": "building_2022",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0585",
+        "bl_location_id": "building_1648",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0586",
+        "bl_location_id": "building_3746",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0587",
+        "bl_location_id": "rv_102",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0588",
+        "bl_location_id": "building_4115",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0589",
+        "bl_location_id": "building_3062",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0590",
+        "bl_location_id": "building_273",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0591",
+        "bl_location_id": "building_2020",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0592",
+        "bl_location_id": "building_4532",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0593",
+        "bl_location_id": "building_2184",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0595",
+        "bl_location_id": "building_2018",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0596",
+        "bl_location_id": "building_1279",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0597",
+        "bl_location_id": "building_2020",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0598",
+        "bl_location_id": "building_89",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0600",
+        "bl_location_id": "fitness_revelation",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0601",
+        "bl_location_id": "building_2218",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0602",
+        "bl_location_id": "building_4053",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0603",
+        "bl_location_id": "building_186",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0604",
+        "bl_location_id": "new_apostolic_church",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0605",
+        "bl_location_id": "building_1055",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0606",
+        "bl_location_id": "building_2226",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0608",
+        "bl_location_id": "building_2229",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0609",
+        "bl_location_id": "building_2018",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0610",
+        "bl_location_id": "building_4422",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0611",
+        "bl_location_id": "rv_192",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0612",
+        "bl_location_id": "lane_cove_swim_club",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0613",
+        "bl_location_id": "building_879",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0614",
+        "bl_location_id": "area_80",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0615",
+        "bl_location_id": "building_4209",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0617",
+        "bl_location_id": "building_1298",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0619",
+        "bl_location_id": "building_5305",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0620",
+        "bl_location_id": "building_5591",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0621",
+        "bl_location_id": "building_696",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0622",
+        "bl_location_id": "goodstart_early_learning",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0623",
+        "bl_location_id": "building_1161",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0624",
+        "bl_location_id": "building_4531",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0625",
+        "bl_location_id": "building_1681",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0627",
+        "bl_location_id": "building_4303",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0628",
+        "bl_location_id": "building_89",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0629",
+        "bl_location_id": "building_835",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0630",
+        "bl_location_id": "building_4305",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0631",
+        "bl_location_id": "building_3015",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0632",
+        "bl_location_id": "building_3660",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0633",
+        "bl_location_id": "box_catering",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0634",
+        "bl_location_id": "building_1690",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0635",
+        "bl_location_id": "building_951",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0636",
+        "bl_location_id": "rv_192",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0637",
+        "bl_location_id": "area_189",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0638",
+        "bl_location_id": "building_1217",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0639",
+        "bl_location_id": "bp_shop_1",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0640",
+        "bl_location_id": "building_3751",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0641",
+        "bl_location_id": "danae_hair_gallery",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0642",
+        "bl_location_id": "building_3897",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0643",
+        "bl_location_id": "building_4126",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0644",
+        "bl_location_id": "building_172",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0645",
+        "bl_location_id": "tres_jolie_hair_face_body",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0646",
+        "bl_location_id": "building_1271",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0647",
+        "bl_location_id": "building_2940",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0650",
+        "bl_location_id": "building_3897",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0651",
+        "bl_location_id": "building_1411",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0652",
+        "bl_location_id": "building_1514",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0653",
+        "bl_location_id": "building_4620",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0655",
+        "bl_location_id": "go_vita_lane_cove",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0656",
+        "bl_location_id": "building_3407",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0658",
+        "bl_location_id": "building_696",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0659",
+        "bl_location_id": "len_wallis_audio",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0660",
+        "bl_location_id": "building_3897",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0661",
+        "bl_location_id": "building_2050",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0662",
+        "bl_location_id": "building_3296",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0663",
+        "bl_location_id": "area_196",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0664",
+        "bl_location_id": "building_5569",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0665",
+        "bl_location_id": "building_806",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0666",
+        "bl_location_id": "building_4282",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0667",
+        "bl_location_id": "building_1855",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0668",
+        "bl_location_id": "building_3356",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0670",
+        "bl_location_id": "building_3749",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0671",
+        "bl_location_id": "building_4374",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0673",
+        "bl_location_id": "building_5566",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0674",
+        "bl_location_id": "building_1916",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0675",
+        "bl_location_id": "sydney_community_services",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0676",
+        "bl_location_id": "building_4357",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0677",
+        "bl_location_id": "building_3526",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0678",
+        "bl_location_id": "building_1147",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0679",
+        "bl_location_id": "building_1628",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0680",
+        "bl_location_id": "1021_mediterranean",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0681",
+        "bl_location_id": "building_3751",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0682",
+        "bl_location_id": "spalding_education_australia",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0683",
+        "bl_location_id": "building_4109",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0684",
+        "bl_location_id": "building_4213",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0685",
+        "bl_location_id": "building_4255",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0686",
+        "bl_location_id": "rv_152",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0690",
+        "bl_location_id": "building_4225",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0691",
+        "bl_location_id": "gloria_jeans_coffees",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0692",
+        "bl_location_id": "building_518",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0693",
+        "bl_location_id": "building_1368",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0694",
+        "bl_location_id": "building_3893",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0695",
+        "bl_location_id": "building_1737",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0696",
+        "bl_location_id": "building_324",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0697",
+        "bl_location_id": "building_3686",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0698",
+        "bl_location_id": "building_3746",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0700",
+        "bl_location_id": "building_1005",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0701",
+        "bl_location_id": "building_3705",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0702",
+        "bl_location_id": "the_village_shopping_centre",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0703",
+        "bl_location_id": "building_5296",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0704",
+        "bl_location_id": "building_835",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0705",
+        "bl_location_id": "building_767",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0706",
+        "bl_location_id": "rv_152",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0707",
+        "bl_location_id": "building_2296",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0708",
+        "bl_location_id": "building_3131",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0709",
+        "bl_location_id": "building_3127",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0710",
+        "bl_location_id": "building_4653",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0711",
+        "bl_location_id": "building_4422",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0712",
+        "bl_location_id": "building_3101",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0713",
+        "bl_location_id": "building_1648",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0714",
+        "bl_location_id": "building_4102",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0715",
+        "bl_location_id": "building_4531",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0716",
+        "bl_location_id": "area_219",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0717",
+        "bl_location_id": "area_18",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0718",
+        "bl_location_id": "building_1005",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0719",
+        "bl_location_id": "building_3034",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0720",
+        "bl_location_id": "building_4033",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0721",
+        "bl_location_id": "building_4015",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0723",
+        "bl_location_id": "building_574",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0724",
+        "bl_location_id": "building_4566",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0725",
+        "bl_location_id": "building_1987",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0726",
+        "bl_location_id": "road_2501_seg_1",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0727",
+        "bl_location_id": "building_5028",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0728",
+        "bl_location_id": "anytime_fitness_australia",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0729",
+        "bl_location_id": "building_4669",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0730",
+        "bl_location_id": "building_1648",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0731",
+        "bl_location_id": "building_172",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0733",
+        "bl_location_id": "traditional_window_cleaning_services",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0734",
+        "bl_location_id": "building_4015",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0735",
+        "bl_location_id": "building_1217",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0736",
+        "bl_location_id": "building_3604",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0737",
+        "bl_location_id": "evolvere",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0738",
+        "bl_location_id": "building_2145",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0740",
+        "bl_location_id": "building_1681",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0742",
+        "bl_location_id": "patchai_thai_restaurant",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0743",
+        "bl_location_id": "gazman_lane_cove",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0744",
+        "bl_location_id": "building_4115",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0745",
+        "bl_location_id": "building_1103",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0746",
+        "bl_location_id": "building_4566",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0747",
+        "bl_location_id": "building_2145",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0748",
+        "bl_location_id": "building_632",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0750",
+        "bl_location_id": "building_2013",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0751",
+        "bl_location_id": "building_538",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0752",
+        "bl_location_id": "building_1298",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0753",
+        "bl_location_id": "building_89",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0754",
+        "bl_location_id": "building_3218",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0755",
+        "bl_location_id": "building_4213",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0756",
+        "bl_location_id": "building_3660",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0758",
+        "bl_location_id": "building_5566",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0759",
+        "bl_location_id": "building_1740",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0760",
+        "bl_location_id": "building_1131",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0761",
+        "bl_location_id": "building_1147",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0762",
+        "bl_location_id": "building_1887",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0763",
+        "bl_location_id": "building_2218",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0764",
+        "bl_location_id": "building_5011",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0765",
+        "bl_location_id": "building_3163",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0766",
+        "bl_location_id": "building_2169",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0767",
+        "bl_location_id": "building_3705",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0768",
+        "bl_location_id": "building_3781",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0769",
+        "bl_location_id": "building_3787",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0771",
+        "bl_location_id": "building_4067",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0772",
+        "bl_location_id": "rv_93",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0773",
+        "bl_location_id": "building_5441",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0774",
+        "bl_location_id": "building_1737",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0775",
+        "bl_location_id": "building_3015",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0777",
+        "bl_location_id": "building_1500",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0778",
+        "bl_location_id": "building_3190",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0779",
+        "bl_location_id": "building_1890",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0780",
+        "bl_location_id": "building_4980",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0781",
+        "bl_location_id": "building_3897",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0782",
+        "bl_location_id": "building_3383",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0783",
+        "bl_location_id": "building_3407",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0784",
+        "bl_location_id": "building_3805",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0785",
+        "bl_location_id": "rv_87",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0786",
+        "bl_location_id": "building_4543",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0787",
+        "bl_location_id": "building_1489",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0788",
+        "bl_location_id": "building_3604",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0789",
+        "bl_location_id": "building_4225",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0790",
+        "bl_location_id": "riverview_1b",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0791",
+        "bl_location_id": "standen_-_lower_north_shore",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0792",
+        "bl_location_id": "building_5483",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0793",
+        "bl_location_id": "building_711",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0794",
+        "bl_location_id": "building_5122",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0795",
+        "bl_location_id": "building_3851",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0797",
+        "bl_location_id": "rv_93",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0798",
+        "bl_location_id": "building_5566",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0799",
+        "bl_location_id": "building_3208",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0800",
+        "bl_location_id": "building_4634",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0801",
+        "bl_location_id": "building_827",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0802",
+        "bl_location_id": "building_1045",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0803",
+        "bl_location_id": "building_1298",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0804",
+        "bl_location_id": "building_3131",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0805",
+        "bl_location_id": "building_1411",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0807",
+        "bl_location_id": "building_2928",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0808",
+        "bl_location_id": "building_3290",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0809",
+        "bl_location_id": "building_4576",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0810",
+        "bl_location_id": "building_4113",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0811",
+        "bl_location_id": "building_478",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0812",
+        "bl_location_id": "building_4222",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0814",
+        "bl_location_id": "rv_199",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0815",
+        "bl_location_id": "building_1217",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0816",
+        "bl_location_id": "building_3660",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0817",
+        "bl_location_id": "building_5291",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0819",
+        "bl_location_id": "building_3062",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0821",
+        "bl_location_id": "building_478",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0823",
+        "bl_location_id": "building_5011",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0824",
+        "bl_location_id": "building_207",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0825",
+        "bl_location_id": "laing+simmons_lane_cove",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0827",
+        "bl_location_id": "building_5657",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0828",
+        "bl_location_id": "building_2213",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0829",
+        "bl_location_id": "building_1347",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0830",
+        "bl_location_id": "building_1049",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0831",
+        "bl_location_id": "building_4303",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0832",
+        "bl_location_id": "rv_87",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0833",
+        "bl_location_id": "building_5216",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0834",
+        "bl_location_id": "building_2252",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0835",
+        "bl_location_id": "i_love_pizza_lane_cove",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0836",
+        "bl_location_id": "building_1517",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0838",
+        "bl_location_id": "building_5569",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0839",
+        "bl_location_id": "building_835",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0840",
+        "bl_location_id": "building_1045",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0841",
+        "bl_location_id": "sutton_gardens",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0842",
+        "bl_location_id": "building_5316",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0843",
+        "bl_location_id": "building_341",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0844",
+        "bl_location_id": "building_207",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0845",
+        "bl_location_id": "area_32",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0847",
+        "bl_location_id": "building_3781",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0848",
+        "bl_location_id": "building_4377",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0849",
+        "bl_location_id": "rv_199",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0850",
+        "bl_location_id": "building_5291",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0851",
+        "bl_location_id": "building_3028",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0852",
+        "bl_location_id": "building_1101",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0853",
+        "bl_location_id": "building_1324",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0855",
+        "bl_location_id": "building_4126",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0856",
+        "bl_location_id": "building_2350",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0857",
+        "bl_location_id": "building_2301",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0858",
+        "bl_location_id": "area_124",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0859",
+        "bl_location_id": "building_3095",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0860",
+        "bl_location_id": "traditional_window_cleaning_services",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0861",
+        "bl_location_id": "building_4377",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0862",
+        "bl_location_id": "the_alcott_lane_cove",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0863",
+        "bl_location_id": "building_2953",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0865",
+        "bl_location_id": "building_1161",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0866",
+        "bl_location_id": "building_3787",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0867",
+        "bl_location_id": "building_4987",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0869",
+        "bl_location_id": "building_2013",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0870",
+        "bl_location_id": "building_4273",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0872",
+        "bl_location_id": "building_5436",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0873",
+        "bl_location_id": "rv_102",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0874",
+        "bl_location_id": "building_4964",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0875",
+        "bl_location_id": "coles_lane_cove_park",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0876",
+        "bl_location_id": "building_5028",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0878",
+        "bl_location_id": "building_1045",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0879",
+        "bl_location_id": "building_5443",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0880",
+        "bl_location_id": "building_4273",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0882",
+        "bl_location_id": "building_1021",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0883",
+        "bl_location_id": "building_3383",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0884",
+        "bl_location_id": "building_4987",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0885",
+        "bl_location_id": "building_5028",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0886",
+        "bl_location_id": "building_1513",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0887",
+        "bl_location_id": "building_1737",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0888",
+        "bl_location_id": "building_2113",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0889",
+        "bl_location_id": "building_1435",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0890",
+        "bl_location_id": "building_1740",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0891",
+        "bl_location_id": "building_3737",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0892",
+        "bl_location_id": "building_5316",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0893",
+        "bl_location_id": "uniting_church",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0894",
+        "bl_location_id": "building_3099",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0896",
+        "bl_location_id": "building_2192",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0897",
+        "bl_location_id": "building_4634",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0898",
+        "bl_location_id": "building_3383",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0899",
+        "bl_location_id": "toni&guy",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0900",
+        "bl_location_id": "building_1759",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0901",
+        "bl_location_id": "building_5143",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0902",
+        "bl_location_id": "anytime_fitness_australia",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0903",
+        "bl_location_id": "harold_a_brown_&_associates",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0904",
+        "bl_location_id": "building_2134",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0905",
+        "bl_location_id": "sutton_gardens",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0906",
+        "bl_location_id": "building_2301",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0907",
+        "bl_location_id": "building_4225",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0908",
+        "bl_location_id": "building_1409",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0909",
+        "bl_location_id": "building_650",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0910",
+        "bl_location_id": "building_2251",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0911",
+        "bl_location_id": "building_5718",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0913",
+        "bl_location_id": "sydney_community_services",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0915",
+        "bl_location_id": "the_junction_coffee_co",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0916",
+        "bl_location_id": "building_2090",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0917",
+        "bl_location_id": "building_3851",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0918",
+        "bl_location_id": "building_4155",
+        "movable": true
+      },
+      {
+        "agent_id": "a_43_0919",
+        "bl_location_id": "building_5441",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0920",
+        "bl_location_id": "building_1675",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0921",
+        "bl_location_id": "building_4115",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0922",
+        "bl_location_id": "land_rover_retailer_alto",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0924",
+        "bl_location_id": "building_1324",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0925",
+        "bl_location_id": "building_3394",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0926",
+        "bl_location_id": "building_1411",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0927",
+        "bl_location_id": "alto",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0928",
+        "bl_location_id": "building_3737",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0929",
+        "bl_location_id": "building_1369",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0930",
+        "bl_location_id": "building_4305",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0931",
+        "bl_location_id": "rv_33",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0932",
+        "bl_location_id": "area_53",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0934",
+        "bl_location_id": "building_1648",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0935",
+        "bl_location_id": "building_4987",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0936",
+        "bl_location_id": "building_2919",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0937",
+        "bl_location_id": "building_478",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0938",
+        "bl_location_id": "new_apostolic_church",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0939",
+        "bl_location_id": "building_5591",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0940",
+        "bl_location_id": "building_1103",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0941",
+        "bl_location_id": "building_1409",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0942",
+        "bl_location_id": "building_1778",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0943",
+        "bl_location_id": "building_1055",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0944",
+        "bl_location_id": "building_3296",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0945",
+        "bl_location_id": "building_3015",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0946",
+        "bl_location_id": "area_124",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0947",
+        "bl_location_id": "building_2252",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0948",
+        "bl_location_id": "rv_87",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0949",
+        "bl_location_id": "building_5202",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0950",
+        "bl_location_id": "building_186",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0953",
+        "bl_location_id": "rv_3",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0954",
+        "bl_location_id": "building_25",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0955",
+        "bl_location_id": "building_569",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0956",
+        "bl_location_id": "building_518",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0957",
+        "bl_location_id": "iga",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0958",
+        "bl_location_id": "building_25",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0959",
+        "bl_location_id": "patchai_thai_restaurant",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0960",
+        "bl_location_id": "rv_222",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0961",
+        "bl_location_id": "building_3897",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0963",
+        "bl_location_id": "building_207",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0964",
+        "bl_location_id": "building_1648",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0965",
+        "bl_location_id": "building_4964",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0967",
+        "bl_location_id": "building_2266",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0968",
+        "bl_location_id": "rv_152",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0969",
+        "bl_location_id": "building_5473",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0971",
+        "bl_location_id": "building_4126",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0972",
+        "bl_location_id": "building_632",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0973",
+        "bl_location_id": "building_4070",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0974",
+        "bl_location_id": "building_5291",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0975",
+        "bl_location_id": "building_2013",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0977",
+        "bl_location_id": "building_767",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0978",
+        "bl_location_id": "building_5473",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0979",
+        "bl_location_id": "traditional_window_cleaning_services",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0980",
+        "bl_location_id": "building_1780",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0981",
+        "bl_location_id": "building_636",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0982",
+        "bl_location_id": "building_3737",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0983",
+        "bl_location_id": "building_4224",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0984",
+        "bl_location_id": "building_3751",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0985",
+        "bl_location_id": "building_2218",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0986",
+        "bl_location_id": "building_1849",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0988",
+        "bl_location_id": "building_5011",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0989",
+        "bl_location_id": "building_495",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0990",
+        "bl_location_id": "building_2946",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0991",
+        "bl_location_id": "building_4027",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0992",
+        "bl_location_id": "building_4987",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0993",
+        "bl_location_id": "decadent_delicacies",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0994",
+        "bl_location_id": "building_3805",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0995",
+        "bl_location_id": "building_3394",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0996",
+        "bl_location_id": "building_5296",
+        "movable": false
+      },
+      {
+        "agent_id": "a_43_0997",
+        "bl_location_id": "building_5738",
+        "movable": false
+      }
+    ],
+    "n_movable": 310,
+    "n_locked": 690,
+    "threshold_m": 100.0
+  }
+}

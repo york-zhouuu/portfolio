@@ -1,0 +1,325 @@
+{
+  "schema": "push-moment.v1",
+  "variant": "hyperlocal_push",
+  "day_index": 4,
+  "push_time_iso": "T09:00:00",
+  "target_location_id": "st_aidans_anglican_church",
+  "target_location_name": "St Aidan's Anglican Church",
+  "hyperlocal_radius_m": 1000,
+  "content_templates": [
+    "距离你不到 500 米的 {location} 今晚 7:30 有社区即兴音乐会，进场免费。",
+    "{location} 街角的老烘焙店今晚最后一天营业，全场八折。",
+    "听说有人在 {location} 藏了一张关于这条街历史的便签——有人找到了吗？",
+    "{location} 附近今晚有邻居自发办的读书分享，主题是《村上春树》。",
+    "刚听说 {location} 周围有几只走失的橘猫，遛狗的邻居们在协助找。"
+  ],
+  "example_content": "距离你不到 500 米的 St Aidan's Anglican Church 今晚 7:30 有社区即兴音乐会，进场免费。",
+  "agents": [
+    {
+      "agent_id": "a_45_0000",
+      "day_start_location_id": "road_2810_seg_1",
+      "day_end_location_id": "huxtable_avenue_seg_2_1",
+      "movement_ticks": 81
+    },
+    {
+      "agent_id": "a_45_0001",
+      "day_start_location_id": "phoenix_street_seg_1_1",
+      "day_end_location_id": "birdwood_avenue_seg_2_1",
+      "movement_ticks": 121
+    },
+    {
+      "agent_id": "a_45_0002",
+      "day_start_location_id": "mary_street_seg_5",
+      "day_end_location_id": "kenneth_street_seg_1_2",
+      "movement_ticks": 125
+    },
+    {
+      "agent_id": "a_45_0003",
+      "day_start_location_id": "road_4107_seg_5",
+      "day_end_location_id": "centennial_avenue_seg_1_2",
+      "movement_ticks": 107
+    },
+    {
+      "agent_id": "a_45_0004",
+      "day_start_location_id": "road_3160_seg_1",
+      "day_end_location_id": "road_2758_seg_2",
+      "movement_ticks": 76
+    },
+    {
+      "agent_id": "a_45_0005",
+      "day_start_location_id": "road_4875_seg_2",
+      "day_end_location_id": "christina_street_seg_1_1",
+      "movement_ticks": 4
+    },
+    {
+      "agent_id": "a_45_0006",
+      "day_start_location_id": "nott_lane_seg_1",
+      "day_end_location_id": "christina_street_seg_2_1",
+      "movement_ticks": 76
+    },
+    {
+      "agent_id": "a_45_0007",
+      "day_start_location_id": "antoinette_rees",
+      "day_end_location_id": "road_4473_seg_1",
+      "movement_ticks": 175
+    },
+    {
+      "agent_id": "a_45_0008",
+      "day_start_location_id": "road_2699_seg_4",
+      "day_end_location_id": "road_3604_seg_2",
+      "movement_ticks": 114
+    },
+    {
+      "agent_id": "a_45_0009",
+      "day_start_location_id": "river_road_west_seg_1_10",
+      "day_end_location_id": "road_3615_seg_1",
+      "movement_ticks": 121
+    },
+    {
+      "agent_id": "a_45_0010",
+      "day_start_location_id": "road_3413_seg_1",
+      "day_end_location_id": "road_2658_seg_1",
+      "movement_ticks": 80
+    },
+    {
+      "agent_id": "a_45_0011",
+      "day_start_location_id": null,
+      "day_end_location_id": null,
+      "movement_ticks": 0
+    },
+    {
+      "agent_id": "a_45_0012",
+      "day_start_location_id": "moore_street_seg_4",
+      "day_end_location_id": "christina_street_seg_1_1",
+      "movement_ticks": 5
+    },
+    {
+      "agent_id": "a_45_0013",
+      "day_start_location_id": "road_4107_seg_5",
+      "day_end_location_id": "castle_driving_school",
+      "movement_ticks": 121
+    },
+    {
+      "agent_id": "a_45_0014",
+      "day_start_location_id": "building_4357",
+      "day_end_location_id": "road_3933_seg_2",
+      "movement_ticks": 165
+    },
+    {
+      "agent_id": "a_45_0015",
+      "day_start_location_id": "phoenix_street_seg_1_1",
+      "day_end_location_id": "phoenix_street_seg_1_3",
+      "movement_ticks": 102
+    },
+    {
+      "agent_id": "a_45_0016",
+      "day_start_location_id": "road_3101_seg_1",
+      "day_end_location_id": "coolaroo_road_seg_2",
+      "movement_ticks": 106
+    },
+    {
+      "agent_id": "a_45_0017",
+      "day_start_location_id": "dorritt_street_seg_1",
+      "day_end_location_id": "building_5478",
+      "movement_ticks": 90
+    },
+    {
+      "agent_id": "a_45_0018",
+      "day_start_location_id": "road_3157_seg_1",
+      "day_end_location_id": "rosenthal_avenue_seg_2",
+      "movement_ticks": 159
+    },
+    {
+      "agent_id": "a_45_0019",
+      "day_start_location_id": "road_3101_seg_1",
+      "day_end_location_id": "dalrymple_avenue_seg_4",
+      "movement_ticks": 107
+    },
+    {
+      "agent_id": "a_45_0020",
+      "day_start_location_id": "longueville_road_seg_1",
+      "day_end_location_id": "longueville_road_seg_1_37",
+      "movement_ticks": 86
+    },
+    {
+      "agent_id": "a_45_0021",
+      "day_start_location_id": "road_3846_seg_5",
+      "day_end_location_id": "trouve_street_seg_1_1",
+      "movement_ticks": 81
+    },
+    {
+      "agent_id": "a_45_0022",
+      "day_start_location_id": "richardson_street_west_seg_1",
+      "day_end_location_id": "burns_bay_road_seg_1_56",
+      "movement_ticks": 120
+    },
+    {
+      "agent_id": "a_45_0023",
+      "day_start_location_id": "beaconsfield_road_seg_2_2",
+      "day_end_location_id": "mowbray_road_seg_1_29",
+      "movement_ticks": 106
+    },
+    {
+      "agent_id": "a_45_0024",
+      "day_start_location_id": "river_road_west_seg_1_2",
+      "day_end_location_id": "river_road_west_seg_1_2",
+      "movement_ticks": 0
+    },
+    {
+      "agent_id": "a_45_0025",
+      "day_start_location_id": "willandra_street_seg_2",
+      "day_end_location_id": "tantallon_road_seg_1",
+      "movement_ticks": 122
+    },
+    {
+      "agent_id": "a_45_0026",
+      "day_start_location_id": "road_3111_seg_1",
+      "day_end_location_id": "mindarie_street_seg_1_1",
+      "movement_ticks": 116
+    },
+    {
+      "agent_id": "a_45_0027",
+      "day_start_location_id": "avian_crescent_seg_1_1",
+      "day_end_location_id": "river_road_west_seg_1_4",
+      "movement_ticks": 275
+    },
+    {
+      "agent_id": "a_45_0028",
+      "day_start_location_id": "rv_189",
+      "day_end_location_id": "road_2699_seg_4",
+      "movement_ticks": 235
+    },
+    {
+      "agent_id": "a_45_0029",
+      "day_start_location_id": "building_211",
+      "day_end_location_id": "lane_cove_tunnel_seg_14_2",
+      "movement_ticks": 156
+    },
+    {
+      "agent_id": "a_45_0030",
+      "day_start_location_id": "longueville_road_seg_1_32",
+      "day_end_location_id": "longueville_road_seg_1_32",
+      "movement_ticks": 103
+    },
+    {
+      "agent_id": "a_45_0031",
+      "day_start_location_id": null,
+      "day_end_location_id": null,
+      "movement_ticks": 0
+    },
+    {
+      "agent_id": "a_45_0032",
+      "day_start_location_id": "goodchap_road_seg_3_1",
+      "day_end_location_id": "norton_lane_seg_2",
+      "movement_ticks": 120
+    },
+    {
+      "agent_id": "a_45_0033",
+      "day_start_location_id": null,
+      "day_end_location_id": null,
+      "movement_ticks": 0
+    },
+    {
+      "agent_id": "a_45_0034",
+      "day_start_location_id": "road_3446_seg_1",
+      "day_end_location_id": "building_469",
+      "movement_ticks": 105
+    },
+    {
+      "agent_id": "a_45_0035",
+      "day_start_location_id": "road_3160_seg_2",
+      "day_end_location_id": "road_1280_seg_1",
+      "movement_ticks": 120
+    },
+    {
+      "agent_id": "a_45_0036",
+      "day_start_location_id": "road_3778_seg_6",
+      "day_end_location_id": "burns_bay_road_seg_1_27",
+      "movement_ticks": 103
+    },
+    {
+      "agent_id": "a_45_0037",
+      "day_start_location_id": "road_3644_seg_3",
+      "day_end_location_id": "dorritt_street_seg_1",
+      "movement_ticks": 120
+    },
+    {
+      "agent_id": "a_45_0038",
+      "day_start_location_id": "finlayson_street_seg_1",
+      "day_end_location_id": "road_4507_seg_1",
+      "movement_ticks": 270
+    },
+    {
+      "agent_id": "a_45_0039",
+      "day_start_location_id": "riverview_street_seg_1_1",
+      "day_end_location_id": "riverview_street_seg_1_1",
+      "movement_ticks": 122
+    },
+    {
+      "agent_id": "a_45_0040",
+      "day_start_location_id": "road_2521_seg_1",
+      "day_end_location_id": "road_3574_seg_3",
+      "movement_ticks": 93
+    },
+    {
+      "agent_id": "a_45_0041",
+      "day_start_location_id": "road_2896_seg_1",
+      "day_end_location_id": "road_2896_seg_1",
+      "movement_ticks": 114
+    },
+    {
+      "agent_id": "a_45_0042",
+      "day_start_location_id": null,
+      "day_end_location_id": null,
+      "movement_ticks": 0
+    },
+    {
+      "agent_id": "a_45_0043",
+      "day_start_location_id": "kellys_esplanade_seg_3",
+      "day_end_location_id": "rv_85",
+      "movement_ticks": 78
+    },
+    {
+      "agent_id": "a_45_0044",
+      "day_start_location_id": "kariola_street_seg_1",
+      "day_end_location_id": "building_3944",
+      "movement_ticks": 124
+    },
+    {
+      "agent_id": "a_45_0045",
+      "day_start_location_id": "dalrymple_avenue_seg_5",
+      "day_end_location_id": "christina_street_seg_1_1",
+      "movement_ticks": 171
+    },
+    {
+      "agent_id": "a_45_0046",
+      "day_start_location_id": "cobden_avenue_seg_1",
+      "day_end_location_id": "road_4021_seg_1",
+      "movement_ticks": 2
+    },
+    {
+      "agent_id": "a_45_0047",
+      "day_start_location_id": null,
+      "day_end_location_id": null,
+      "movement_ticks": 0
+    },
+    {
+      "agent_id": "a_45_0048",
+      "day_start_location_id": "road_2659_seg_1",
+      "day_end_location_id": "arabella_street_seg_1",
+      "movement_ticks": 1
+    },
+    {
+      "agent_id": "a_45_0049",
+      "day_start_location_id": null,
+      "day_end_location_id": null,
+      "movement_ticks": 0
+    }
+  ],
+  "source": {
+    "repo": "Synthetic-Socio-Wind-Tunnel",
+    "run": "20260522_212423_publishable_v7_day4to13_fork_seed45_BACKUP_20260523_022549_FULL_ALLVARIANTS",
+    "variant_dir": "variant_hyperlocal_push",
+    "generated_at": "2026-05-24T17:56:56.963Z"
+  }
+}

@@ -13,17 +13,32 @@ import { beatAt } from "@/lib/cinema/scrollCinema";
  * act mood. Each frame we compute the interpolated mood for the current
  * (act, localT) and apply it to the three.js scene.
  *
+ * Schematic-mode override (added per Act-3 finding visual redesign):
+ * when mapMode === "schematic", scene.background flips to v7 paper cream
+ * and ambient/key light intensities ramp up — so the cream sand-table
+ * materials render bright instead of looking dark under cinema lighting.
+ * `modeFade` (0..1) drives the crossfade between matte and schematic
+ * lighting environments.
+ *
  * Iteration seam: post-fx (tilt-shift, grain, vignette) tokens are reserved
  * in `theme.postFx`. When the shader stack lands, mount it here.
  */
+
+const PAPER_BG = new THREE.Color("#FCFAF6");
+const PAPER_FOG_COLOR = new THREE.Color("#E8E2D2");
+
 export function Atmosphere({
   theme,
   score,
   tRef,
+  mapMode,
+  modeFade,
 }: {
   theme: CinemaTheme;
   score: CameraScore;
   tRef: React.MutableRefObject<number>;
+  mapMode?: string;
+  modeFade?: number;
 }) {
   const { scene } = useThree();
   const fog = useMemo(
@@ -36,6 +51,9 @@ export function Atmosphere({
 
   const directionalRef = useRef<THREE.DirectionalLight>(null);
   const ambientRef = useRef<THREE.AmbientLight>(null);
+  // Scratch colors so we don't allocate per frame.
+  const tmpBg = useMemo(() => new THREE.Color(), []);
+  const tmpFog = useMemo(() => new THREE.Color(), []);
 
   // Compute initial light placement (azimuth/elevation are static; intensity
   // and color move with the act mood).
@@ -60,17 +78,45 @@ export function Atmosphere({
     const actLocalT = (t - aStart) / Math.max(0.0001, aEnd - aStart);
     const mood = actMoodAtT(theme, current.act.id, actLocalT);
 
-    fog.color.set(mood.fogColor);
-    fog.near = mood.fogNear;
-    fog.far = mood.fogFar;
-    bgColor.set(mood.background);
+    // Schematic blend factor: how strongly to flip to paper-mode environment.
+    // mapMode === "schematic" with modeFade=1 → full paper. Crossfade respects
+    // modeFade so transitions matte↔schematic feel like a sheet of paper
+    // fading in over the dark cinema floor.
+    const schematicBlend =
+      mapMode === "schematic" ? Math.max(0, Math.min(1, modeFade ?? 1)) : 0;
+
+    // Base atmospheric values from mood.
+    tmpBg.set(mood.background);
+    tmpFog.set(mood.fogColor);
+    let fogNear = mood.fogNear;
+    let fogFar = mood.fogFar;
+    let ambIntensity = mood.ambientIntensity;
+    let keyIntensity = mood.keyIntensity;
+
+    if (schematicBlend > 0) {
+      // Crossfade toward paper register.
+      tmpBg.lerp(PAPER_BG, schematicBlend);
+      tmpFog.lerp(PAPER_FOG_COLOR, schematicBlend);
+      // Push fog far away so paper map doesn't haze at distance.
+      fogNear = fogNear + (40 - fogNear) * schematicBlend;
+      fogFar = fogFar + (120 - fogFar) * schematicBlend;
+      // Crank ambient to near-daylight so cream materials render bright.
+      ambIntensity = ambIntensity + (1.6 - ambIntensity) * schematicBlend;
+      // Pull down directional so harsh shadows don't print onto the paper.
+      keyIntensity = keyIntensity + (0.25 - keyIntensity) * schematicBlend;
+    }
+
+    fog.color.copy(tmpFog);
+    fog.near = fogNear;
+    fog.far = fogFar;
+    bgColor.copy(tmpBg);
 
     if (directionalRef.current) {
-      directionalRef.current.intensity = mood.keyIntensity;
+      directionalRef.current.intensity = keyIntensity;
       directionalRef.current.color.set(mood.keyColor);
     }
     if (ambientRef.current) {
-      ambientRef.current.intensity = mood.ambientIntensity;
+      ambientRef.current.intensity = ambIntensity;
     }
   });
 

@@ -77,6 +77,52 @@ function lintFile(filePath: string, glossary: Glossary) {
     }
   }
 
+  // Resident stories — every declared (slug × language) HTML must exist.
+  // Convention: zh canonical = <slug>.html; other langs = <slug>_<lang>.html.
+  for (const entry of fm.residentStories ?? []) {
+    for (const lang of entry.languages) {
+      const filename = lang === "zh" ? `${entry.slug}.html` : `${entry.slug}_${lang}.html`;
+      const assetAbs = path.join(
+        PUBLIC_DIR,
+        "case-studies",
+        fm.slug,
+        "people",
+        filename,
+      );
+      if (!fs.existsSync(assetAbs)) {
+        fail(
+          `${filePath} · residentStories[${entry.slug}].${lang} · missing asset: ${assetAbs} (run \`pnpm sync:resident-stories <sswt-repo>\`)`,
+        );
+      }
+    }
+  }
+
+  // Scene-level mapState.pickup — every pickup.storySlug must be declared
+  // in frontmatter residentStories, and targetAgentIndex must be inside
+  // the sampled-walker count used by AgentsTrajectoriesOverlay.
+  const PEOPLE_SAMPLE_COUNT = 200; // mirror AgentsTrajectoriesOverlay PEOPLE_COUNT
+  const knownStorySlugs = new Set(
+    (fm.residentStories ?? []).map((s) => s.slug),
+  );
+  for (const act of fm.acts) {
+    for (const beat of act.beats) {
+      for (const scene of beat.scenes ?? []) {
+        const pickup = scene.mapState?.pickup;
+        if (!pickup) continue;
+        if (!knownStorySlugs.has(pickup.storySlug)) {
+          fail(
+            `${filePath} · beat ${beat.id} scene ${scene.id} mapState.pickup.storySlug "${pickup.storySlug}" not in frontmatter.residentStories`,
+          );
+        }
+        if (pickup.targetAgentIndex < 0 || pickup.targetAgentIndex >= PEOPLE_SAMPLE_COUNT) {
+          fail(
+            `${filePath} · beat ${beat.id} scene ${scene.id} mapState.pickup.targetAgentIndex ${pickup.targetAgentIndex} out of range [0,${PEOPLE_SAMPLE_COUNT})`,
+          );
+        }
+      }
+    }
+  }
+
   // Terminology lockdown — scan zh + en branches of every claim/hud field
   // plus MDX body. Strip canonical mentions first so forbidden-substring
   // checks don't false-fire on them.
@@ -267,8 +313,18 @@ function lintFile(filePath: string, glossary: Glossary) {
   // 5. Map mode / overlay registration warnings.
   //    foundations: matte / none. cinema-map-modes: + blueprint.
   //    cinema-map-overlays: + agents_trajectories / digital_silos_heatmap.
-  const KNOWN_MODES = new Set(["matte", "blueprint"]);
-  const KNOWN_OVERLAYS = new Set(["none", "agents_trajectories", "digital_silos_heatmap"]);
+  const KNOWN_MODES = new Set(["matte", "blueprint", "schematic"]);
+  const KNOWN_OVERLAYS = new Set([
+    "none",
+    "agents_trajectories",
+    "digital_silos_heatmap",
+    "push_moment",
+    "tie_timelapse",
+    "finding_1_siphon",
+    "finding_2_friction",
+    "finding_3_routine_cliff",
+    "stories_pointers",
+  ]);
   for (const act of fm.acts) {
     for (const beat of act.beats) {
       for (const scene of beat.scenes ?? []) {
@@ -332,7 +388,11 @@ function paragraphsForCharCap(scene: CaseStudyScene): CharCapChunk[] {
     push(scene.text, "primary", "text");
     if (scene.subtitle) push(scene.subtitle, "primary", "subtitle");
   } else if (scene.kind === "lead") {
-    push(scene.text, "primary", "text");
+    // Lead is the act/intro elevator pitch — semantically a *passage*, not a
+    // heading. Treat as body so the strict 30-char primary cap doesn't fire
+    // on multi-paragraph leads (the natural form for an intro that needs to
+    // set up a broader → specific frame).
+    push(scene.text, "body", "text");
   } else if (scene.kind === "body-section") {
     if (scene.paragraphs) {
       scene.paragraphs.forEach((p) => push(p, "body", "paragraph"));

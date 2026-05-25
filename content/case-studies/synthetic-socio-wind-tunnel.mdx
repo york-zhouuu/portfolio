@@ -19,11 +19,10 @@ role:
   en: AI Product Strategy + UX Design + Research Apparatus Design
 year: 2026
 stack:
-  - Multi-agent simulation
-  - LLM agents (Claude Sonnet / Haiku tiered)
-  - OpenStreetMap + Overture
-  - Next.js · React Three Fiber · MDX
-  - Zod content schema
+  - 1,000-agent ABM (14-day protocol, 288 ticks/day)
+  - Tiered LLM agents (plan · daily · turning-point)
+  - OpenStreetMap + Overture · ABS 2021 census
+  - Next.js · React Three Fiber · MDX · Zod
 links:
   repo: https://github.com/york-zhouuu/-Synthetic-Socio-Wind-Tunnel-
   thesis: /pdfs/sswt-thesis.pdf
@@ -33,7 +32,35 @@ atAGlance:
   seeds: 30 seeds
   budget: ~$4 / run
   site: Lane Cove 2066
-cinemaScoreVersion: "0.1.6"
+cinemaScoreVersion: "0.2.0"
+residentStories:
+  - slug: hannah
+    displayName:
+      zh: Hannah
+      en: Hannah
+    role:
+      zh: 36 岁咖啡店老板娘
+      en: 36, café owner
+    languages: [zh, en]
+    agentId: "12"
+  - slug: mary
+    displayName:
+      zh: 老何
+      en: Old He
+    role:
+      zh: 退休教师，每日清晨遛狗
+      en: Retired teacher, walks the loop at dawn
+    languages: [zh, en]
+    agentId: "42"
+  - slug: a0290
+    displayName:
+      zh: 温迪
+      en: Wendy
+    role:
+      zh: 33 岁 ICU 护士
+      en: 33, ICU nurse
+    languages: [zh, en]
+    agentId: "88"
 acts:
   - id: attention-boundary
     title:
@@ -72,184 +99,104 @@ acts:
           en: The Disappearance of the Nearby
         claim:
           zh: |
-            物理空间的极度靠近，并未带来社会网络的真实连接。
-            阻碍邻里连接的不再是混凝土墙壁，而是注意力位移
-            (Attention Displacement)——通勤习惯叠加屏幕注意力捕获，
-            剥夺了人们对周边环境的感知。
+            "附近"还在物理上, 已经不在社会上 ——
+            21 世纪城市里, 这是一条看不见的边界。
+            我们造了一座 1,000 人的虚拟小区, 试着把附近重新带回来。
           en: |
-            Physical proximity does not produce social proximity.
-            The barrier is no longer concrete — it is attention
-            displacement: point-to-point commute habits compound with
-            screen capture to strip awareness of surroundings.
+            The nearby is still physically there but socially absent —
+            a new invisible border in twenty-first-century cities.
+            We built a simulated neighbourhood of one thousand residents
+            to try to bring it back.
         scenes:
-          # 1.1 — Paradox (绝对平视 / 贴地 / 真街道距离)
-          # Y=0.05 + lookAt Y=0.05 → 视线严格水平
-          # Z=3 把镜头拉到城市内部（building 0.5 高 + 街道宽度内），perspective
-          # 让建筑占据 viewport 主体而不是悬浮在远处
-          - id: scene-1-1-paradox
-            kind: title
-            rhythm: still
+          # 1.1 — Cold open. 长慢 "出雾→近城" push-in。
+          # 用 rhythm=tracking (reading-first 10/80/10 fade band + CPS svh)
+          # 而不是 motion: motion 用 30/40/30 fade, 这段文字密度太大读不完.
+          # tracking 下 svh 来自 CPS+linger: ~294 chars 当 body → 3.4s dwell → 344 svh.
+          # Camera 从远端 z=18 推到 z=3.5 (14.5 世界距离) 在这 3.4 screens 内匀速完成,
+          # 配合 dwellEase 在中间 64% 段几乎暂停 — 给读者"画面贴近 + 文字停住"的复合节奏.
+          # 同时给 Act 1 显著更多 svh 预算 → cinema t 推进慢, 避免读者还在 Act 1
+          # 视口里时 t 已经滑到 Act 2 agent 区导致 HUD 漂移 (上轮 user report 的根因).
+          - id: scene-1-intro
+            kind: lead
+            rhythm: tracking
             emphasis: linger
             camera:
-              from: [0, 0.05, 3]
-              to: [0, 0.05, 3]
+              from: [0, 1.0, 18]
+              to: [0, 1.0, 3.5]
               lookAt: [0, 0.05, 0]
             enter: fade
             exit: fade
             text:
               zh: |
-                物理空间的极度靠近，
-                并未带来社会网络的真实连接。
+                21 世纪城市里有一类看不见的边界 ——
+                它不挡身体, 却把"附近"挡走了。
+
+                我们能不能, 把附近重新带回来?
+
+                为了试这件事, 我们造了一座 1,000 人的虚拟小区,
+                让 4 种方案在里面同时跑了 14 天。
               en: |
-                Proximity, no
-                connection.
+                A new kind of border has appeared in 21st-century cities —
+                one that doesn't block your body, but takes the nearby away.
+
+                Can we bring the nearby back?
+
+                To find out, we built a simulated neighbourhood
+                of one thousand residents, and ran four different
+                interventions through it for fourteen days.
             mapState:
               mode: matte
               dim: 0.5
 
-          # 1.2 — Evidence (twin-column · 物理属性 ABS / 社会属性 Deakin)
-          # 绝对平视保持——同样 Y=0.05 街道高度 / lookAt Y=0.05
-          # 仅 Z 轴 dolly 推进 (3 → 2.2)，相当于"沿街道往前走几步"
-          # 不在此处起 lift；lift 延后到 1-3
-          - id: scene-1-2-evidence
-            kind: body-section
-            layout: twin-column
-            rhythm: tracking
-            emphasis: standard
-            camera:
-              from: [0, 0.05, 3]
-              to: [0, 0.05, 2.2]
-              lookAt: [0, 0.05, 0]
-            enter: fade
-            exit: fade
-            heading:
-              zh: 空间共享与社交孤岛
-              en: Shared space, isolated networks
-            twinColumns:
-              left:
-                heading:
-                  zh: 物理属性 · ABS 2021 census
-                  en: Physical · ABS 2021 census
-                paragraphs:
-                  - zh: |
-                      ABS 2021 census 数据显示，Lane Cove LGA 在约 11 平方公里的区域内常住居民 39,438 人，其中 56.7% 居住于 apartment / flat 类型住宅，居住密度约为 3,585 人 / km²，处于悉尼内北 LGA 的高密度区间。该 LGA 的居住形态以中高层住宅为主，私人户外空间占比有限；居民的日常活动半径在主干道、商业中心与公共绿地之间高度重叠，物理基础设施的共享在这种结构下属于结构性默认，而非个体选择的结果。
-                    en: |
-                      The 2021 ABS census records 39,438 usual residents in the Lane Cove LGA across approximately 11 km², 56.7% of whom occupy apartment or flat-type dwellings — a residential density of approximately 3,585 residents per km², placing the LGA within Sydney's high-density inner-north band. The dwelling profile is dominated by medium- to high-rise residential stock with limited private outdoor space; residents' daily activity radii overlap heavily across arterial roads, commercial centers, and public green spaces, rendering the sharing of physical infrastructure a structural default rather than an individual choice.
-                items:
-                  - key:
-                      zh: 居民
-                      en: Population
-                    value:
-                      zh: "39,438"
-                      en: "39,438"
-                  - key:
-                      zh: 公寓占比
-                      en: Apartments
-                    value:
-                      zh: 56.7%
-                      en: 56.7%
-                  - key:
-                      zh: 区域面积
-                      en: Area
-                    value:
-                      zh: ~11 km²
-                      en: ~11 km²
-                  - key:
-                      zh: 居住密度
-                      en: Density
-                    value:
-                      zh: ~3,585 / km²
-                      en: ~3,585 / km²
-              right:
-                heading:
-                  zh: 社会属性 · Deakin Photovoice (Warner & Andrews, 2019)
-                  en: Social · Deakin Photovoice (Warner & Andrews, 2019)
-                paragraphs:
-                  - zh: |
-                      Warner 与 Andrews（Deakin University, 2019）在墨尔本 City of Yarra 的高密度公寓社区开展了一项 Photovoice 研究：研究者向居住于公寓的家庭分发相机并请其撰写日常公寓生活的视觉日志，覆盖共用走廊、电梯、地下停车场、阳台等 daily-encounter 空间。研究得出的核心观察是，物理紧邻并未自动转化为社交连接——相反，在高居住流动率与缺乏共享日常的复合作用下，"匿名"成为公寓社区的默认社会属性。研究 2019 年发表于 The Conversation。下列 verbatim 引文摘自参与者的日记记录。
-                    en: |
-                      Warner & Andrews (Deakin University, 2019) conducted a Photovoice study in the high-density apartment communities of City of Yarra, Melbourne: researchers distributed cameras to apartment-dwelling families and asked them to compile visual journals of daily apartment life, covering shared corridors, lifts, underground car parks, balconies, and other daily-encounter spaces. The central observation is that physical proximity does not automatically translate into social connection — rather, under the combined effects of high residential turnover and the absence of shared daily routines, "anonymity" emerges as the default social register of the apartment community. Published in The Conversation, 2019. The verbatim excerpts below are drawn from participants' journal entries.
-                citations:
-                  - text:
-                      zh: 即使彼此住得极近，匿名感反而极高。
-                      en: "Despite being so close to each other there is a huge level of anonymity."
-                    attribution:
-                      zh: 公寓居民, City of Yarra
-                      en: Apartment resident, City of Yarra
-                  - text:
-                      zh: 这里太匿名，人员流动率也太高——从来无法真正建立任何关系。
-                      en: "It's anonymous and there's a lot of turnover — you never really form relationships."
-                    attribution:
-                      zh: 公寓居民, City of Yarra
-                      en: Apartment resident, City of Yarra
-                  - text:
-                      zh: 站在走廊与人交谈，会让人感觉怪异。
-                      en: "You cannot stand and have a conversation there — you feel weird."
-                    attribution:
-                      zh: 公寓居民, City of Yarra
-                      en: Apartment resident, City of Yarra
-            mapState:
-              mode: matte
-              dim: 0.6
-              overlay: digital_silos_heatmap
-
-          # 1.3 — Attention Displacement (隐形边界的学术概念)
-          # lift 从此开始——从贴地 [0, 0.05, 2.2] 抬升到中尺度 [3, 3, 6]
-          # lookAt 也从街道高度 [0, 0.05, 0] 切到 origin [0, 0, 0]，配合 lift 自然 tilt-down
-          # blueprint 切换 + agents_trajectories 平行直线在抬升过程中显形
-          - id: scene-1-3-attention-displacement
+          # 1.2 — Evidence (Hampton 2025 PNAS · tracking camera lifts from
+          # the exact pos scene-1-intro ended at — [0, 1.0, 3.5] — up to
+          # Act 2 starting position [0, 12, 12]. lookAt 也对齐 intro 的
+          # [0, 0.05, 0], 避免跨 scene 单帧跳动. Camera 在 evidence 内
+          # 平滑抬升, 终点交接到 scene-2-1-0-stingray ([0, 12, 12] · [0, 0, 0]) —
+          # 接续时仅 lookAt Y 漂 0.05, 远低于可感知阈值.
+          - id: scene-1-evidence
             kind: body-section
             layout: right-column
             rhythm: tracking
-            emphasis: standard
-            camera:
-              from: [0, 0.05, 2.2]
-              to: [3, 3, 6]
-              lookAt: [0, 0, 0]
-            enter: slide-side
-            exit: fade
-            heading:
-              zh: 隐形边界 · 注意力的位移
-              en: Invisible boundary · Attention Displacement
-            paragraphs:
-              - zh: 阻碍邻里连接的不再是混凝土墙壁，而是注意力位移 (Attention Displacement)。
-                en: "Barrier: attention displacement, not concrete walls."
-              - zh: 点对点的高效通勤，配合手机屏幕对注意力的持续捕获，剥夺了人们对周边环境的感知。
-                en: Commute plus screens erase awareness of place.
-              - zh: 街道与公共空间随之被降维，沦为仅供快速穿梭的过境走廊。
-                en: Public spaces collapse to mere transit corridors.
-            mapState:
-              mode: blueprint
-              dim: 0.5
-              overlay: agents_trajectories
-
-          # 1.4 — Sandbox-reveal (引入产品 / bridge 至 Act II)
-          # bridge: 从中尺度 [3, 3, 6] 完成最终 ascent 到全局蓝图 [0, 12, 12]
-          # to = [0, 12, 12] 是 Act II.1 atlas-ledger 起点（zero-jump binding）
-          - id: scene-1-4-sandbox-reveal
-            kind: pull-quote
-            rhythm: bridge
             emphasis: dwell
             camera:
-              from: [3, 3, 6]
+              from: [0, 1.0, 3.5]
               to: [0, 12, 12]
-              lookAt: [0, 0, 0]
-            enter: scale-in
+              lookAt: [0, 0.05, 0]
+            enter: fade
             exit: fade
-            text:
-              zh: |
-                面对由习惯与认知构筑的边界，
-                实体空间的改造试错成本极高。
-                我们需要一个计算社会科学沙盘，
-                来测试低成本的「算法干预」如何重建附近性。
-              en: |
-                For boundaries built of habit and cognition,
-                physical-space iteration costs too much.
-                We need a computational social-science sandbox
-                to test how low-cost algorithmic intervention can rebuild proximity.
+            heading:
+              zh: 附近, 不是地图上的事情
+              en: The nearby isn't a thing on the map
+            paragraphs:
+              - zh: |
+                  在公共空间里, 把目光抬起来、 把脚步慢下来、
+                  真正 "进入附近" 的人 —— 从 1970 年代的 5.5%,
+                  跌到 2020 年代的 2%。
+                en: |
+                  In public space, the people who lift their eyes,
+                  slow their step, and actually enter "the nearby" —
+                  5.5% in the 1970s, 2% today.
+              - zh: |
+                  这不是抽象统计。 Hampton 团队 2025 年发表在 PNAS 的
+                  对照研究, 用同样的镜头角度, 重拍了 William H. Whyte
+                  1970 年代记录公共空间的那批影像。 半个世纪, 同一个
+                  广场, 数出来的就是这个数字。
+                en: |
+                  Not an abstract statistic. Hampton et al. (PNAS, 2025)
+                  re-shot William H. Whyte's 1970s public-space films
+                  using the same camera angles. Half a century, the same
+                  plazas — this is what they counted.
+              - zh: |
+                  附近从来没走远。 街道、 公园、 广场, 一公分都没动。
+                  走远的, 是我们投向附近的目光。
+                en: |
+                  The nearby hasn't moved. Not the streets, not the parks,
+                  not the squares — not by an inch.
+                  What moved away is our gaze.
             mapState:
               mode: blueprint
-              dim: 0.3
+              dim: 0.4
               overlay: agents_trajectories
         shotRef: act1.b1
         fallbackFigure: /figures/act1-disappearance.svg
@@ -265,35 +212,265 @@ acts:
       en: The Apparatus
     beats:
       - id: map
+        title:
+          zh: 城市
+          en: The city
         claim:
           zh: |
-            实验室的"地板"是 Lane Cove。真坐标，OSM + Overture，高密度高层
-            住宅区——物理近社会远的悖论在这里最尖锐。
+            悉尼 Lane Cove —— 一座真实存在的内北小区。
+            我们造了它的虚拟版本: 1,000 个居民, 14 个虚拟的日子。
+            这就是仪器。
           en: |
-            The lab floor is Lane Cove. Real coordinates from OSM +
-            Overture, a high-density residential district — where the
-            "physically close, socially distant" paradox is sharpest.
+            Sydney's Lane Cove — a real inner-north suburb.
+            We built a virtual version: 1,000 residents over 14 simulated
+            days. This is the apparatus.
+        scenes:
+          # 2.1 — 城市. From Act 1 end vantage [0, 12, 12] lift to overhead
+          # god-view as Lane Cove materialises (matte mode, OSM footprints
+          # foregrounded). Camera ends at [0, 14, 8] hand-off to 2.2 居民.
+          - id: scene-2-1-city
+            kind: body-section
+            layout: hero
+            rhythm: tracking
+            emphasis: dwell
+            camera:
+              from: [0, 12, 12]
+              to: [0, 14, 8]
+              lookAt: [0, 0, 0]
+            enter: fade
+            exit: fade
+            sectionNumber: "02 · 仪器"
+            heading:
+              zh: 这座城是真的
+              en: This city is real
+            paragraphs:
+              - zh: |
+                  Lane Cove · 悉尼内北的一个小区。 2,070 栋建筑、
+                  12 分钟可走穿的街区半径 (1,000 米)。 这些不是我们捏造的
+                  数字 —— 建筑足迹直接来自 OpenStreetMap, 人口结构对照
+                  ABS 2021 census 的 Lane Cove SA2 区。
+                en: |
+                  Lane Cove — an inner-north suburb in Sydney. 2,070 buildings,
+                  a 1,000-metre walkable radius (12 minutes on foot). None of
+                  this is made up — geometry comes straight from OpenStreetMap,
+                  demographics from the ABS 2021 census, Lane Cove SA2 area.
+              - zh: |
+                  我们造了它的一座虚拟版本。 1,000 个虚拟居民, 各有性格、
+                  各有一天的安排。 让他们在这座城里跑 14 天 ——
+                  4 天默认 · 6 天干预 · 4 天观察恢复。
+                en: |
+                  We built a virtual version. 1,000 simulated residents,
+                  each with their own personality and daily routine.
+                  They live in the city for 14 days — 4 days baseline ·
+                  6 days intervention · 4 days observed recovery.
+            kvList:
+              - key:
+                  zh: 真实建筑
+                  en: Real buildings
+                value:
+                  zh: "2,070"
+                  en: "2,070"
+                note:
+                  zh: 真实 OpenStreetMap footprint, 非占位 mesh。
+                  en: Actual OpenStreetMap footprints, not placeholders.
+              - key:
+                  zh: 半径 · 1,000 米
+                  en: Radius · 1,000 m
+                value:
+                  zh: 12 分钟可步行
+                  en: 12-min walk
+                note:
+                  zh: Jane Jacobs 的街区半径 = hyperlocal 推送半径。
+                  en: Jacobs' block-radius standard — also the hyperlocal push radius.
+              - key:
+                  zh: 居民
+                  en: Residents
+                value:
+                  zh: "1,000"
+                  en: "1,000"
+                note:
+                  zh: 从 ABS 2021 census Lane Cove SA2 抽样合成。
+                  en: Sampled from the ABS 2021 census, Lane Cove SA2.
+              - key:
+                  zh: 时长 · 14 天
+                  en: Duration · 14 days
+                value:
+                  zh: 每天 288 tick
+                  en: 288 ticks / day
+                note:
+                  zh: 每 5 分钟仿真时间一个决策机会。
+                  en: One decision moment every 5 simulated minutes.
+            mapState:
+              mode: matte
+              dim: 0.45
+              overlay: agents_trajectories
         shotRef: act2.b1
         hud:
           kind: in-world-label
           anchor: [0, 0, 0]
           text:
-            zh: Lane Cove · 2066
-            en: Lane Cove · 2066
+            zh: Lane Cove · NSW 2066
+            en: Lane Cove · NSW 2066
         fallbackFigure: /figures/act2-map.svg
         sources:
           - file: data/lanecove_atlas.json
       - id: agent
+        title:
+          zh: 居民
+          en: The resident
         claim:
           zh: |
-            1000 个 agent 居住在沙盘里。personality 八维 / 一日 LLM planner /
-            三层模型预算（Sonnet 10 · mid 200 · Haiku 790）。Rashomon 知觉：
-            同一座沙盘，每个 agent 看到不同的世界。
+            每个居民都是一台小型 LLM 驱动的人 —— 八维性格、 一天的安排、
+            三个层级的决策。 同一座城, 在 1,000 双不同的眼睛里, 是
+            1,000 座不同的城。
           en: |
-            1,000 agents inhabit the sand table. 8-dim personality, daily
-            LLM planner, three-tier model budget (Sonnet 10 · mid 200 ·
-            Haiku 790). Rashomon perception — same sand table, a different
-            perceived city per agent.
+            Each resident is a small LLM-driven person — eight personality
+            dimensions, a daily plan, a three-tier decision stack.
+            One city, through 1,000 different sets of eyes, is 1,000
+            different cities.
+        scenes:
+          # 2.2 — 居民. Descend from god-view [0, 14, 8] (end of 2.1 城市)
+          # to a street-side oblique angle [3, 6, 4]. agents_trajectories
+          # overlay with 32 preserved spotlights — discreet beacons +
+          # enlarged 3-widget internal-state stack above each highlighted
+          # resident.
+          - id: scene-2-2-resident
+            kind: body-section
+            layout: hero
+            rhythm: tracking
+            emphasis: dwell
+            camera:
+              from: [0, 14, 8]
+              to: [3, 6, 4]
+              lookAt: [0, 0, 0]
+            enter: fade
+            exit: fade
+            sectionNumber: "02 · 居民"
+            heading:
+              zh: 每个居民, 一台小型决策器
+              en: Each resident, a small decision engine
+            paragraphs:
+              - zh: |
+                  我们没有用模板复制 1,000 个 NPC。 每个居民铸造一次,
+                  拿到自己独有的八维性格 (开放度、 责任感、 外向 / 内向、
+                  亲和度、 情绪稳定性, 加上对附近、 对手机、 对惯例的
+                  三种倾向); 拿到一周的生活节奏 (上班 / 退休 / 学生 /
+                  夜班); 拿到一份基础记忆 —— 上下文、 邻居、 偏爱的去处。
+                en: |
+                  We did not copy 1,000 NPCs from a template. Each resident
+                  is minted once and walks away with eight personality
+                  dimensions (openness, conscientiousness, extraversion,
+                  agreeableness, emotional stability, plus three leanings —
+                  toward the nearby, toward the phone, toward routine);
+                  a weekly rhythm (working / retired / student / night-shift);
+                  and a starting memory: backstory, neighbours, favourite
+                  places.
+              - zh: |
+                  一天里, 每个居民走一个三层决策栈。 最便宜的一层每 5 分钟
+                  生效, 决定下一步去哪、 看哪、 想什么; 中层每天早上写
+                  "今天的安排"; 最贵的一层只在情绪转折时启动, 处理那种
+                  "推开门, 心里咯噔一下" 的瞬间。
+                en: |
+                  Each day, each resident runs a three-tier decision stack.
+                  The cheapest tier fires every 5 minutes — where to step
+                  next, where to look, what to think about. A middle tier
+                  drafts the day's plan in the morning. The top tier fires
+                  only at emotional turning points — the moment when
+                  "they pushed the door open and something shifted inside".
+              - zh: |
+                  这一套设置造出 Rashomon 城市: 早上 6 点 50 分, 同一条
+                  Longueville 路上经过的 27 个人, 看到的不是同一座城 ——
+                  68 岁的退休教师在数咖啡馆门口的椅子, 27 岁的咖啡师在
+                  心算今天的奶量, 14 岁的中学生在看手机。 同一片附近,
+                  1,000 个不同的视野。
+                en: |
+                  This makes a Rashomon city: 6:50 am, the 27 people walking
+                  past on Longueville Road do not see the same city — a
+                  68-year-old retired teacher counts the chairs at the café,
+                  a 27-year-old barista mentally tallies today's milk order,
+                  a 14-year-old is on their phone. The same nearby, a
+                  thousand different fields of vision.
+            kvList:
+              - key:
+                  zh: 性格 · 八维
+                  en: Personality · 8d
+                value:
+                  zh: 一次性铸造
+                  en: minted once
+                note:
+                  zh: 含对附近 / 对手机 / 对惯例的三种倾向, 决定后续行为风格。
+                  en: Leanings toward the nearby / phone / routine shape everything later.
+              - key:
+                  zh: 计划 · 每日
+                  en: Plan · daily
+                value:
+                  zh: 每天早晨生成
+                  en: drafted each morning
+                note:
+                  zh: 不是固定脚本; 受前一晚经历影响。
+                  en: Not a fixed script — last night's experience changes today.
+              - key:
+                  zh: 决策 · 三层
+                  en: Decision · 3 tiers
+                value:
+                  zh: 5 分钟 / 一天 / 情绪转折
+                  en: 5 min / day / turning-point
+                note:
+                  zh: 三层模型分工, 平衡质量 + 成本 + 仿真时长。
+                  en: Three model tiers split work — quality + cost + run-time balance.
+              - key:
+                  zh: 视野 · Rashomon
+                  en: Vision · Rashomon
+                value:
+                  zh: 1,000 座不同的城
+                  en: 1,000 different cities
+                note:
+                  zh: 同一座 Lane Cove, 每个居民只看见自己愿意看见的那部分。
+                  en: Same Lane Cove — each resident only sees the part they choose to see.
+            mapState:
+              mode: matte
+              dim: 0.45
+              overlay: agents_trajectories
+              # 32 simultaneous resident spotlights — preserved from prior
+              # iteration (bumped from 3 → 8 → 32 per "数量超过 30 个").
+              # Beacon (ring + stalk + cap) discreet position anchor;
+              # 3-widget stack above each beacon enlarged 2.5× — the
+              # "此刻在做什么的标记". See AgentsTrajectoriesOverlay.tsx.
+              # 3 (30 / 75 / 130) carry real dataAgentId → bars driven by
+              # seed_45 events.jsonl; the other 29 mock cycle.
+              spotlights:
+                - { targetAgentIndex: 6, showInternals: true }
+                - { targetAgentIndex: 12, showInternals: true }
+                - { targetAgentIndex: 18, showInternals: true }
+                - { targetAgentIndex: 24, showInternals: true }
+                - { targetAgentIndex: 30, showInternals: true, dataAgentId: a_45_0030 }
+                - { targetAgentIndex: 36, showInternals: true }
+                - { targetAgentIndex: 42, showInternals: true }
+                - { targetAgentIndex: 48, showInternals: true }
+                - { targetAgentIndex: 54, showInternals: true }
+                - { targetAgentIndex: 60, showInternals: true }
+                - { targetAgentIndex: 66, showInternals: true }
+                - { targetAgentIndex: 72, showInternals: true }
+                - { targetAgentIndex: 75, showInternals: true, dataAgentId: a_45_0075 }
+                - { targetAgentIndex: 82, showInternals: true }
+                - { targetAgentIndex: 88, showInternals: true }
+                - { targetAgentIndex: 94, showInternals: true }
+                - { targetAgentIndex: 100, showInternals: true }
+                - { targetAgentIndex: 106, showInternals: true }
+                - { targetAgentIndex: 112, showInternals: true }
+                - { targetAgentIndex: 118, showInternals: true }
+                - { targetAgentIndex: 124, showInternals: true }
+                - { targetAgentIndex: 130, showInternals: true, dataAgentId: a_45_0130 }
+                - { targetAgentIndex: 136, showInternals: true }
+                - { targetAgentIndex: 142, showInternals: true }
+                - { targetAgentIndex: 148, showInternals: true }
+                - { targetAgentIndex: 154, showInternals: true }
+                - { targetAgentIndex: 160, showInternals: true }
+                - { targetAgentIndex: 166, showInternals: true }
+                - { targetAgentIndex: 172, showInternals: true }
+                - { targetAgentIndex: 178, showInternals: true }
+                - { targetAgentIndex: 184, showInternals: true }
+                - { targetAgentIndex: 192, showInternals: true }
         shotRef: act2.b2
         hud:
           kind: hud-panel
@@ -303,34 +480,247 @@ acts:
           - file: synthetic_socio_wind_tunnel/agent/personality.py
           - file: synthetic_socio_wind_tunnel/agent/planner.py
       - id: network
+        title:
+          zh: 一天
+          en: A day
         claim:
           zh: |
-            1000 agent 在沙盘里活动 14 天，弱连接、偶遇、third-place 行为
-            会涌现什么样的网络？社会图谱不是输入，是输出。
+            一天 288 个决策机会, 14 天就是 4,032 次。 走出门 · 经过人 ·
+            抬头 / 不抬头 · 回家 · 反思 —— 14 天后, 一张关系网会从
+            行为里自己长出来。
           en: |
-            1,000 agents move through the sand table for 14 days. What
-            network of weak ties, chance encounters, and third-place
-            behavior emerges? The social graph is not input — it's output.
+            288 decision moments a day, 4,032 across 14 days. Step out ·
+            pass someone · look up / don't · come home · reflect — after
+            14 days a social graph grows out of the behaviour itself.
+        scenes:
+          # 2.3 — 一天. From [3, 6, 4] (end of 居民) pivot to a mid-altitude
+          # observation vantage [-3, 5, 5], ties accumulate via tie_timelapse.
+          - id: scene-2-3-day
+            kind: body-section
+            layout: hero
+            rhythm: tracking
+            emphasis: standard
+            camera:
+              from: [3, 6, 4]
+              to: [-3, 5, 5]
+              lookAt: [0, 0, 0]
+            enter: fade
+            exit: fade
+            sectionNumber: "02 · 一天"
+            heading:
+              zh: 一天怎么跑, 14 天长出一张网
+              en: How a day runs · how a network grows
+            paragraphs:
+              - zh: |
+                  早上, 居民从写好的 "今天安排" 里醒来。 每 5 分钟仿真时间,
+                  最便宜的那一层决策器吐出一个动作 —— 出门、 转弯、
+                  停下、 抬头看一眼。 晚上回家, 一天的经历被一句话总结、
+                  写进记忆, 影响明天的安排。 一天 288 次决策, 14 天
+                  4,032 次。
+                en: |
+                  Morning: a resident wakes up holding a "today's plan".
+                  Every 5 simulated minutes, the cheapest decision tier
+                  outputs one action — step out, turn, stop, glance up.
+                  Evening: the day gets summarised in a single line, written
+                  into memory, and shapes tomorrow's plan. 288 decisions
+                  a day · 4,032 across 14 days.
+              - zh: |
+                  当两个居民走到 5 米以内, 仪器并不直接说 "他们相遇了"。
+                  它先问一个问题: 在那一瞬, 他们的目光在哪里? 是在
+                  路灯杆上、 手机屏幕里、 某件未完成的事上 —— 还是,
+                  真的抬起来, 落在对方脸上? 只有最后这种, 才被仪器
+                  记录为 "看见"。
+                en: |
+                  When two residents come within 5 metres, the instrument
+                  does not declare an encounter. It first asks: where is
+                  the gaze right now? On a lamppost, on the phone, on some
+                  unfinished thought — or actually lifted, landing on the
+                  other person's face? Only the last case counts, in the
+                  instrument's books, as being seen.
+              - zh: |
+                  14 天结束, 沙盘里留下四份证据: 每个人走过的路、 每一次
+                  抬头看见的瞬间、 哪些消息真的在邻里间传开了、 每个居民
+                  自己写下的一天。 这张关系网不是预先编好的, 是 1,000 条
+                  路径在共享时空里碰出来的。
+                en: |
+                  After 14 days, four streams of evidence remain: every
+                  resident's walked paths, every moment one looked up and
+                  saw another, which pieces of news actually spread through
+                  the neighbourhood, and each resident's own account of
+                  each day. The graph is not scripted — it crystallises
+                  out of 1,000 paths colliding in shared space.
+            kvList:
+              - key:
+                  zh: 轨迹
+                  en: Trajectories
+                value:
+                  zh: 1,000 × 14 天
+                  en: 1,000 × 14d
+                note:
+                  zh: 每个居民在沙盘上走过的真实路径。
+                  en: Where each resident walked, day by day.
+              - key:
+                  zh: 关系
+                  en: Ties
+                value:
+                  zh: 抬头 = noticed
+                  en: look-up = noticed
+                note:
+                  zh: 我们数的不是物理同框, 是真的抬头看见的那一瞬。
+                  en: We do not count physical co-presence — we count the moment of being seen.
+              - key:
+                  zh: 扩散
+                  en: Diffusion
+                value:
+                  zh: 14 天传播曲线
+                  en: 14-day spread
+                note:
+                  zh: 哪些消息真的在居民间传开了。
+                  en: Which pieces of news actually moved.
+              - key:
+                  zh: 日记
+                  en: Diaries
+                value:
+                  zh: 1,000 × 14 段
+                  en: 1,000 × 14 entries
+                note:
+                  zh: 每个居民每一天的自述。
+                  en: Each resident's own account of each day.
+            mapState:
+              # 800 real ties reconstructed from encounter events emerge as
+              # scroll advances — top tie first, then weaker ones. By scene
+              # end the actual social graph of seed 45 day-13 is visible.
+              mode: matte
+              dim: 0.45
+              overlay: tie_timelapse
         shotRef: act2.b3
-        hud:
-          kind: letterbox
-          subtitle:
-            zh: 1000 agents · 14 days · 288 ticks/day
-            en: 1000 agents · 14 days · 288 ticks/day
         fallbackFigure: /figures/act2-network.svg
         sources:
           - file: synthetic_socio_wind_tunnel/orchestrator/multiday.py
       - id: intervention
+        title:
+          zh: 四种方案
+          en: Four conditions
         claim:
           zh: |
-            仪器不只是看，还要拨。Policy Hack 4+1 是控制台。
-            Hyperlocal Push（超在地性 / Variant A）：feed item → 500m geo
-            filter → agent attention 响应 → 路径偏转 +302m。用魔法打败魔法。
+            1 个核心实验 + 3 个相互校验。 推附近 (核心) / 推远方 (镜像) /
+            削手机 (反向) / 不干预 (零点) —— 在同一座城里同时跑 14 天,
+            然后比较"看见"的差异。
           en: |
-            The instrument doesn't just observe — it tunes. Policy Hack 4+1
-            is the control panel. Hyperlocal Push (hyperlocal / Variant A):
-            feed item → 500m geo filter → agent attention response → +302m
-            trajectory delta. Beat magic with magic.
+            One core test plus three cross-checks. Push the nearby (core) ·
+            push the far-away (mirror) · dim the phone (inverse) · push
+            nothing (baseline) — all run in the same city for 14 days, then
+            compared by what was actually seen.
+        scenes:
+          # 2.4 — 四种方案. From [-3, 5, 5] (end of 一天) pull back to a
+          # mid god-view [0, 11, 11] so the 1-core + 3-checks structure can
+          # be laid out as four push cards in space. End vantage seeds Act 3
+          # contest-in-progress (act3.b1).
+          - id: scene-2-4-conditions
+            kind: body-section
+            layout: hero
+            rhythm: tracking
+            emphasis: dwell
+            camera:
+              from: [-3, 5, 5]
+              to: [0, 11, 11]
+              lookAt: [0, 0, 0]
+            enter: fade
+            exit: fade
+            sectionNumber: "02 · 四种方案"
+            heading:
+              zh: 不是 4 个并列方案 —— 是 1 个核心 + 3 个相互校验
+              en: Not four parallel options — one core, three cross-checks
+            paragraphs:
+              - zh: |
+                  我们想知道一件具体的事: 当 "附近" 这件事重新进入手机
+                  屏幕, 居民的目光会不会跟着回到附近? 这是 ① 推附近,
+                  我们的核心实验。 但只有一个实验下不了结论 ——
+                  我们需要三个互相牵制的对照。
+                en: |
+                  We want to test one specific thing: when the nearby
+                  reappears on the screen, does the gaze follow it back?
+                  That is ① push the nearby — the core experiment. But one
+                  experiment alone can't settle a claim. We need three
+                  cross-checks holding it in place.
+              - zh: |
+                  ② 推远方 用同样的推送频率, 但内容反方向 (世界新闻 ·
+                  名人 · 别处的事)。 如果推送本身就能让人 "看见附近",
+                  那这一组应该和 ①一样有效; 如果差别巨大, 我们就知道
+                  关键是 "方向", 不是 "数量"。
+                en: |
+                  ② Push the far-away uses the same cadence but with the
+                  content pointing in the opposite direction (world news ·
+                  celebrities · events elsewhere). If the push itself were
+                  what brought the nearby back, this condition should match
+                  ①. If they diverge, we know the lever is direction, not
+                  volume.
+              - zh: |
+                  ③ 削手机 反过来不推任何东西, 只把所有居民对手机的
+                  吸引力调低一半。 测的是: 让附近回来, 是要 "多推一点
+                  附近", 还是 "少拉一点别处"? ④ 不干预 是默认零点 ——
+                  没有它, 上面三组的数字就没有可比的基准。
+                en: |
+                  ③ Dim the phone goes the other way — push nothing, just
+                  halve everyone's pull toward the screen. It tests:
+                  bringing the nearby back, is it about adding local signal
+                  or about subtracting far-away pull? ④ Push nothing is the
+                  zero-point — without it, the other three numbers have
+                  nothing to be measured against.
+              - zh: |
+                  四组同时在一座 Lane Cove 里跑 14 天, 每个居民每天最多
+                  收到 5 条推送, 在 1,000 米半径内。 然后我们比较的
+                  不是 "他们碰到了多少人", 而是 "他们抬起头, 看见了
+                  多少人"。
+                en: |
+                  Four conditions, one Lane Cove, 14 days. Each resident
+                  receives at most 5 pushes a day, within a 1,000-metre
+                  radius. We then compare not "how many people they passed
+                  by" but "how many they looked up and saw".
+            kvList:
+              - key:
+                  zh: ① 核心 · 推附近
+                  en: ① Core · push the nearby
+                value:
+                  zh: 1,000 米半径
+                  en: 1,000 m radius
+                note:
+                  zh: 街角咖啡馆的新品、 邻居走丢的橘猫、 教堂前的市集。
+                  en: A new pastry, a missing cat, a church-front market.
+              - key:
+                  zh: ② 镜像 · 推远方
+                  en: ② Mirror · push the far-away
+                value:
+                  zh: 同频率, 反方向
+                  en: same cadence, opposite direction
+                note:
+                  zh: 世界新闻 · 名人 · 别处发生的事。
+                  en: World news, celebrities, things happening elsewhere.
+              - key:
+                  zh: ③ 反向 · 削手机
+                  en: ③ Inverse · dim the phone
+                value:
+                  zh: 不推 · 吸引力 ×0.5
+                  en: no pushes · screen pull ×0.5
+                note:
+                  zh: 测的是"减远方拉力" vs "增附近信号"哪个真的有用。
+                  en: Tests "less far-pull" vs "more near-signal" — which actually works.
+              - key:
+                  zh: ④ 零点 · 不干预
+                  en: ④ Zero · no intervention
+                value:
+                  zh: 默认城市
+                  en: default city
+                note:
+                  zh: 没有它, 上面三组的数字就没有对照基准。
+                  en: Without it, the other three numbers have no anchor.
+            mapState:
+              # 4-condition push moment overlay: shows real seed-45 day-4
+              # notifications surfacing as cards over Lane Cove, one quadrant
+              # per condition. Data: push-moment.json via `pnpm sync:push-moment`.
+              mode: matte
+              dim: 0.55
+              overlay: push_moment
         shotRef: act2.b4
         hud:
           kind: hud-panel
@@ -345,64 +735,622 @@ acts:
       zh: 探索的结论
       en: Findings
     beats:
-      - id: contest-in-progress
+      # ─── Finding ① — Siphon paradox ─────────────────────────────────
+      - id: siphon-paradox
+        title:
+          zh: 发现 ①
+          en: Finding ①
         claim:
           zh: |
-            4 + 1 variant 的比赛规则：30 seed × 5 variant，median + IQR
-            （非高斯，故不用 mean + SD），14 天协议，5 幕报告。已有证据：
-            Variant A smoke demo target 100% / control 14% / 治理效应 86 pp。
-            其他三 variant + A' 镜像即将揭晓。
+            推附近, 本来是想去中心化 —— 让附近的小事重新进入手机屏幕。
+            结果反而把 83% 的额外注意力虹吸到 5 个聚集点 上。
+            推送, 变成了 accidental urbanist。
           en: |
-            Contest rules: 30 seeds × 5 variants, median + IQR (non-Gaussian,
-            so not mean + SD), a 14-day protocol, a 5-act report. Evidence
-            on hand — Variant A smoke demo: target 100% / control 14% /
-            treatment effect 86 pp. Three more variants + the A' mirror,
-            in queue.
+            Push the nearby — meant to be decentralising. Instead 83% of
+            the lift siphoned onto just 5 anchors. The push became an
+            accidental urbanist.
+        scenes:
+          # 3.1.a — Text scene. Heading + 2 paragraphs (observation +
+          # literature framing) + 2 headline stats. Camera holds shallow
+          # push-in [0,11,11] → [0,10.5,8.5]. Sandbox normal dim 0.5.
+          - id: scene-3-1-siphon
+            kind: body-section
+            layout: hero
+            rhythm: tracking
+            emphasis: dwell
+            camera:
+              from: [0, 11, 11]
+              to: [0, 10.5, 8.5]
+              lookAt: [0, 0, 0]
+            enter: fade
+            exit: fade
+            sectionNumber: "03 · 发现 ①"
+            heading:
+              zh: 推荐器 —— 一个意外的城市规划师
+              en: The recommender as accidental urbanist
+            paragraphs:
+              - zh: |
+                  Hyperlocal push 的设计初衷是去中心化: 让附近被忽略的
+                  小地点重新进入手机屏幕。 14 天后, 居民彼此 "看见" 的
+                  瞬间增加了 2.3 倍, 方向上证实了 "信息稀缺假设" ——
+                  但分布完全反直觉。 83% 的增量集中到 5 个聚集点:
+                  PLC 幼儿园 · Mowbray 公园 · Lane Cove 健身房 ·
+                  area_105 公共空间 · St Aidan's 圣公会教堂。
+                en: |
+                  Hyperlocal push was designed to decentralise: to surface
+                  small overlooked places. After 14 days, mutually-noticed
+                  moments rose by 2.3×, confirming the information-scarcity
+                  hypothesis directionally — yet the distribution defied it.
+                  83% of the lift concentrated on five anchors: PLC
+                  Preschool · Mowbray Park · Lane Cove Fitness · area_105
+                  plaza · St Aidan's Anglican Church.
+              - zh: |
+                  这是推荐系统文献早已识别的 "popularity bias": Bertelli
+                  et al. (2025, Machine Learning) 指出地理推荐器
+                  "会在个体层面提升地点多样性, 但在群体层面把访问压缩
+                  到少数热门 venue"; Sànchez-Moreno et al. (2022, DMKD)
+                  把这种 collective inequality 归为四种 polarisation
+                  之一。 我们的仪器把这种偏差搬到一个可被完整审视的
+                  环境里 —— 推荐器在不知社会语义的情况下, 收敛到的
+                  5 个 venue 恰好是 Lane Cove 的 社区聚集点。
+                en: |
+                  The recommender-system literature already names this:
+                  Bertelli et al. (2025, Machine Learning) show
+                  that location-based recommenders "consistently increase
+                  individual-level diversity in visited venues" while
+                  "amplifying collective inequality by concentrating
+                  visits on a limited subset of popular places";
+                  Sànchez-Moreno et al. (2022, DMKD) classify this as
+                  one of four forms of polarisation. Our instrument
+                  carries the bias into a fully-observable setting —
+                  and the five venues onto which a socially-blind
+                  recommender converged turn out to be Lane Cove's
+                  community anchors.
+              - zh: |
+                  这就让 popularity bias 在文献里第一次有了 social
+                  reading: 在小半径下, 推荐器收敛的不是 "热门",
+                  而是 "聚集点"。 副作用变成了 community-anchor
+                  detection。 推荐器, 在不知不觉中, 扮演了 urbanist。
+                en: |
+                  This re-reads popularity bias with social context for
+                  the first time: at a small radius, what the recommender
+                  converges on is not "popularity" but "anchor". The
+                  side-effect becomes a form of community-anchor
+                  detection. The recommender, unwittingly, takes on the
+                  urbanist's role.
+            kvList:
+              - key:
+                  zh: 抬头看见 vs 基线
+                  en: noticed vs baseline
+                value:
+                  zh: 2.3×
+                  en: 2.3×
+                note:
+                  zh: 比"什么都不推"多 2.3 倍的"真正抬头看见对方"。
+                  en: 2.3× more "actually looked up at each other" moments vs control.
+              - key:
+                  zh: top-5 集中度
+                  en: top-5 share
+                value:
+                  zh: 83%
+                  en: 83%
+                note:
+                  zh: 总增量里 83% 都落到 5 个聚集点 上, 不是均匀分散。
+                  en: 83% of the lift falls on 5 anchors, not evenly spread.
+            mapState:
+              mode: matte
+              dim: 0.5
+              overlay: agents_trajectories
+
+          # 3.1.b — Figure-hero. Extreme god view at [0, 18, 1.0] — camera
+          # Y pushed high so perspective foreshortening flattens to a true
+          # plan view (matching v7 poster_map_*.svg). Material switches to
+          # schematic line drawing. 5 pink anchor rings stand on the
+          # crisp line-drawn Lane Cove.
+          - id: scene-3-1-siphon-figure
+            kind: body-section
+            layout: figure-hero
+            rhythm: tracking
+            emphasis: dwell
+            camera:
+              from: [0, 10.5, 8.5]
+              to: [0, 22, 0.5]
+              lookAt: [0, 0, 0]
+            enter: fade
+            exit: fade
+            sectionNumber: "03 · 发现 ① · 图解"
+            heading:
+              zh: 1,500 个居民, 收敛到 5 个聚集点
+              en: 1,500 residents converging on 5 anchors
+            paragraphs:
+              - zh: |
+                  推荐器在不知社会语义的情况下, 在 2,400 个 venue 里
+                  收敛到 PLC 幼儿园 · Mowbray 公园 · Lane Cove 健身房 ·
+                  area_105 公共空间 · St Aidan's 圣公会教堂 —— 这 5 个
+                  地点恰好是 Lane Cove 居民已经聚集的 社区聚集点。
+                en: |
+                  Without access to social meaning, the recommender
+                  converged onto 5 of 2,400 venues — PLC Preschool ·
+                  Mowbray Park · Lane Cove Fitness · area_105 plaza ·
+                  St Aidan's Anglican Church. These are exactly the
+                  community anchors residents already gather at.
+            kvList:
+              - key:
+                  zh: LLM 自选的聚集点
+                  en: anchors emerged
+                value:
+                  zh: 5 / 2,400
+                  en: 5 / 2,400
+                note:
+                  zh: 5 个出于 2,400 个 atlas POI —— 一个 0.2% 的子集。
+                  en: 5 out of 2,400 atlas POIs — a 0.2% subset.
+              - key:
+                  zh: 收敛到这 5 处的居民
+                  en: residents converging
+                value:
+                  zh: "1.5K"
+                  en: "1.5K"
+                note:
+                  zh: 1,500 居民的增量注意力都汇到这 5 个聚集点。
+                  en: 1,500 residents' lifted attention funnels onto these 5.
+            mapState:
+              # Schematic top-down "plan view" — paper-style line drawing,
+              # white outlines on deep-ink ground. Matches the v7 poster
+              # `poster_map_*.svg` register but built natively in the
+              # cinema sand-table. 5 pink anchor rings (finding_1_siphon)
+              # stand crisply on the line-drawn Lane Cove.
+              mode: schematic
+              dim: 0.92
+              overlay: finding_1_siphon
         shotRef: act3.b1
-        hud:
-          kind: hud-panel
-          slot: beta-rigor
-        fallbackFigure: /figures/act3-contest.svg
+        fallbackFigure: /figures/finding-1-siphon.png
         sources:
-          - file: docs/research/13-research-design.md
-          - file: docs/agent_system/11-smoke-demo-report.md
-      - id: mirror
+          - file: tools/case_studies/build_a0290_longform.py
+            anchor: noticed-口径
+          - file: tools/h17_h19_noticed_redo.py
+            anchor: H17-redo
+
+      # ─── Finding ② — Friction wins ──────────────────────────────────
+      - id: friction-wins
+        title:
+          zh: 发现 ②
+          en: Finding ②
         claim:
           zh: |
-            同样的基础设施反向使用，把人推向更远的孤立。A' Global
-            Distraction 已就位——这不是事后免责，是作品的最终论点：
-            杠杆是对称的。
+            最让人抬头看见对方的方案, 不是 "推附近"。 是 "什么都不推,
+            把手机吸引力削掉一半"。 2.6 倍 —— 比推附近还高 —— 而且
+            人是聚到完全不同的 5 个地方。
           en: |
-            The same infrastructure run in reverse pushes people into
-            deeper isolation. A' Global Distraction is in place — not a
-            disclaimer tacked on at the end, but the work's final claim:
-            the lever is symmetric.
+            The condition that produced the most look-ups wasn't push.
+            It was "push nothing, just halve the phone's pull". 2.6× —
+            even higher than push-the-nearby — and onto a different five
+            anchors.
+        scenes:
+          # 3.2.a — Text scene. Camera descends from F1's god-view top-down
+          # [0,14,0.5] back to a comfortable reading angle [1.5,11,3.5].
+          # Material switches back from schematic → matte (re-enter 3D).
+          - id: scene-3-2-friction
+            kind: body-section
+            layout: hero
+            rhythm: tracking
+            emphasis: dwell
+            camera:
+              from: [0, 22, 0.5]
+              to: [1.5, 11, 3.5]
+              lookAt: [0, 0, 0]
+            enter: fade
+            exit: fade
+            sectionNumber: "03 · 发现 ②"
+            heading:
+              zh: 什么都没推的方案, 反而产生最多新关系
+              en: The route that prescribed nothing produced the most new ties
+            paragraphs:
+              - zh: |
+                  HCI 文献长期把 "推送" 与 "摩擦" 视作两类对称的干预原型 ——
+                  Cox et al. (CHI EA 2016) 将故意制造的小阻力命名为
+                  **microboundaries**; Mejtoft, Parsjö & Norlin (2023, ECCE)
+                  把 friction 和 nudge 明确并列为两种 opposite archetype。
+                  个体层面的 friction-by-removal 证据稳定 (Hunt et al. 2018;
+                  Allcott et al. 2020, NBER w25514), 但 city-population-scale
+                  的直接对照一直缺席。 我们的仪器把两者放进同一座 Lane Cove。
+                en: |
+                  HCI literature has long treated push and friction as two
+                  symmetric intervention archetypes — Cox et al. (CHI EA 2016)
+                  named intentional small obstacles **microboundaries**;
+                  Mejtoft, Parsjö & Norlin (2023, ECCE) explicitly cast
+                  friction and nudge as opposite archetypes. Individual-level
+                  evidence on friction-by-removal is consistent (Hunt et al.
+                  2018; Allcott et al. 2020, NBER w25514), but city-population
+                  scale comparison has been absent. Our instrument places
+                  both within the same Lane Cove.
+              - zh: |
+                  结果对称地令人意外。 **推附近** (hyperlocal push) 把
+                  mutually-noticed pair 抬升 2.3×; **削手机** (phone friction,
+                  0 推送 · 屏幕拉力 ×0.5) 抬升 2.6×。 这是文献里第一次
+                  在同一 baseline 下定量对照: 摩擦, 至少与推送同量级,
+                  甚至略高。
+                en: |
+                  The result is symmetrically surprising. **Hyperlocal push**
+                  lifted mutually-noticed pair counts by 2.3×; **phone
+                  friction** (zero push · screen pull ×0.5) lifted them by
+                  2.6×. This is the first quantitative head-to-head at a
+                  shared baseline: friction matches push at minimum, edges
+                  it out at best.
+              - zh: |
+                  机制并不对称: 推送的效果来自 "信号方向 × 内容供给";
+                  摩擦的效果来自 "屏幕拉力被削弱后, 本就在视野边缘的
+                  附近重新浮上来"。 两条路线汇到同一目标 ——
+                  in-person tie formation —— 但聚集点不一样。 推附近
+                  聚到 PLC · Mowbray · Fitness · area_105 · Anglican Church;
+                  削手机聚到 Anglican Church · Fitness · Longueville Park ·
+                  area_105 · ANZ。 5 个聚集点 里 3 个重合
+                  (Anytime Fitness · Anglican Church · area_105),
+                  剩余 2 个完全不同 —— novelty share 仍部分独立。
+                en: |
+                  The mechanisms are not symmetric. Push's effect derives
+                  from "signal direction × content supply"; friction's
+                  derives from "with screen pull subtracted, the nearby
+                  already at the visual periphery resurfaces". Two routes
+                  converge on the same outcome — in-person tie formation —
+                  but onto different anchors. Push funnels to PLC + Mowbray
+                  + Fitness + area_105 + Anglican Church; friction funnels
+                  to Anglican Church + Fitness + Longueville Park + area_105
+                  + ANZ. 3 of 5 anchors overlap (Anytime Fitness ·
+                  Anglican Church · area_105); the remaining two diverge.
+              - zh: |
+                  policy implication: 让附近回到视野, 不必只走 "做加法"
+                  那条 (内容运营 · 推荐设计)。 "做减法" 路径 (限制屏幕
+                  拉力) 在同一城市同一时间窗内, 是同量级且 ops 成本接近
+                  零的等效杠杆。
+                en: |
+                  Policy implication: bringing the nearby back to view does
+                  not require only an additive route (content ops, recommender
+                  design). The subtractive route (capping screen pull) is,
+                  within the same city over the same window, a same-order
+                  lever at near-zero operating cost.
+            kvList:
+              - key:
+                  zh: 推附近 · noticed
+                  en: Push · noticed
+                value:
+                  zh: 2.3×
+                  en: 2.3×
+                note:
+                  zh: 内容驱动 · 把目光拉到附近的 5 个聚集点。
+                  en: Content-driven — pulls eyes to 5 nearby anchors.
+              - key:
+                  zh: 削手机 · noticed
+                  en: Friction · noticed
+                value:
+                  zh: 2.6×
+                  en: 2.6×
+                note:
+                  zh: 不推任何东西 · 反而抬头次数更多。
+                  en: No push at all — yet more look-ups.
+            mapState:
+              mode: matte
+              dim: 0.5
+              overlay: agents_trajectories
+
+          # 3.2.b — Figure-hero. Camera rises back to god-view top-down
+          # [0, 14, 0.5], material switches to schematic line drawing.
+          # 8 anchor rings (finding_2_friction) reveal: 3 amber HP +
+          # 3 pink PF + 2 oversized warm-white OVERLAP at the centre.
+          - id: scene-3-2-friction-figure
+            kind: body-section
+            layout: figure-hero
+            rhythm: tracking
+            emphasis: dwell
+            camera:
+              from: [1.5, 11, 3.5]
+              to: [0, 22, 0.5]
+              lookAt: [0, 0, 0]
+            enter: fade
+            exit: fade
+            sectionNumber: "03 · 发现 ② · 图解"
+            heading:
+              zh: 两条路, 通向不同的 5 个聚集点
+              en: Two routes, two different sets of five
+            paragraphs:
+              - zh: |
+                  推附近聚到 PLC · Mowbray · Fitness · area_105 ·
+                  Anglican Church; 削手机聚到 Anglican Church · Fitness ·
+                  Longueville Park · area_105 · ANZ —— 5 个聚集点 里
+                  3 个重合 (Anytime Fitness · Anglican Church · area_105),
+                  剩余 2 个完全不同。
+                en: |
+                  Push funnels to PLC · Mowbray · Fitness · area_105 ·
+                  Anglican Church. Friction funnels to Anglican Church ·
+                  Fitness · Longueville Park · area_105 · ANZ. 3 of 5
+                  anchors overlap (Anytime Fitness · Anglican Church ·
+                  area_105); the remaining two diverge.
+            kvList:
+              - key:
+                  zh: 聚集点重合度
+                  en: anchor overlap
+                value:
+                  zh: 3 / 5
+                  en: 3 / 5
+                note:
+                  zh: Anytime Fitness · Anglican Church · area_105 三处都收敛。
+                  en: Anytime Fitness · Anglican Church · area_105 are the 3 shared anchors.
+              - key:
+                  zh: 运营成本
+                  en: Ops cost
+                value:
+                  zh: ~0
+                  en: ~0
+                note:
+                  zh: 削手机不需要内容运营; 推附近需要每天 5 条供应。
+                  en: Friction needs no content ops; push needs 5 items / day.
+            mapState:
+              # Schematic top-down — same paper-style line drawing as F1
+              # for visual continuity. 8 anchor rings overlay:
+              # 3 amber HP-only · 3 pink PF-only · 2 oversized warm-white
+              # OVERLAP (St Aidan's · area_105 — the punchline).
+              mode: schematic
+              dim: 0.92
+              overlay: finding_2_friction
         shotRef: act3.b2
-        hud:
-          kind: hud-panel
-          slot: mirror-toggle
-        fallbackFigure: /figures/act3-mirror.svg
+        fallbackFigure: /figures/finding-2-friction.png
         sources:
-          - file: synthetic_socio_wind_tunnel/policy_hack/mirror.py
-      - id: outro
+          - file: tools/h17_h19_noticed_redo.py
+
+      # ─── Finding ③ — Routine cliff ──────────────────────────────────
+      - id: routine-cliff
+        title:
+          zh: 发现 ③
+          en: Finding ③
         claim:
           zh: |
-            C-tier 探索性研究 + B-tier mirror 展示双面性 + 明确拒绝 A-tier
-            可部署。沙盘缩回到一个台面尺寸。
+            到底是谁响应了这些干预? 不是外向的、 不是开放的, 也不是
+            亲和的 —— 是 "每天走一样路" 的程度。 性格几乎不预测 (1.13×),
+            习惯性的差异却造出 3.1 倍的响应 spread。
           en: |
-            C-tier exploratory research + B-tier mirror revealing duality
-            + an explicit refusal of A-tier "deployable." The sand table
-            shrinks back to a desktop object.
+            Who actually responds to any of these conditions? Not
+            extraversion, not openness, not agreeableness — but how
+            rigidly someone walks the same path. Personality barely
+            predicts (1.13×); routine adherence creates a 3.1× spread.
+        scenes:
+          # 3.3.a — Text scene. Camera descends from F2 god-view top-down
+          # [0,14,0.5] to angle [2, 11, 1.5]. Material returns to matte 3D.
+          - id: scene-3-3-routine
+            kind: body-section
+            layout: hero
+            rhythm: tracking
+            emphasis: dwell
+            camera:
+              from: [0, 22, 0.5]
+              to: [2, 11, 1.5]
+              lookAt: [0, 0, 0]
+            enter: fade
+            exit: fade
+            sectionNumber: "03 · 发现 ③"
+            heading:
+              zh: 习惯性 —— 而非性格 —— 决定干预的覆盖
+              en: Routine adherence, not personality, gates intervention reach
+            paragraphs:
+              - zh: |
+                  心理学文献长期把 Big Five (Costa & McCrae 1992) 当作
+                  行为差异的主轴, 而 Wood & Quinn (2002, JPSP) 与
+                  Verplanken & Orbell (2003) 把 **habit strength** 单独
+                  建模为一个 context-cued automaticity 维度。 在 1,000
+                  居民里同时观察两套维度, 我们得到一个清晰的反差:
+                  五维性格全部加在一起, 响应率 spread 仅 1.13×; 习惯性
+                  单一维度, 响应率 spread 达到 **3.1×** —— 是性格效应的
+                  约 2.7 倍。
+                en: |
+                  Personality psychology has long treated Big Five (Costa &
+                  McCrae 1992) as the primary axis of behavioural variance,
+                  while Wood & Quinn (2002, JPSP) and Verplanken & Orbell
+                  (2003) separately model **habit strength** as a
+                  context-cued automaticity dimension. Tracking both across
+                  the 1,000 residents, a clean contrast emerges: all five
+                  personality dimensions combined produce a spread of only
+                  1.13×; routine adherence alone produces a spread of
+                  **3.1×** — roughly 2.7× the personality effect.
+              - zh: |
+                  这意味着: 是否被 attention-mediated intervention 触动,
+                  几乎与是否外向、 开放、 亲和无关; 取决于此人的一天
+                  是否在结构上 "留出可被打断的余地"。 routine adherence
+                  低的居民, 行为受 push / friction 牵动; routine
+                  adherence 高的居民, 干预如耳边风。 这两组之间不是
+                  连续梯度, 而是一道 cliff —— **310 movable** 对
+                  **690 locked**。
+                en: |
+                  The implication is direct: whether attention-mediated
+                  intervention touches someone is nearly independent of
+                  extraversion, openness, or agreeableness; it depends on
+                  whether the structure of their day leaves room to be
+                  interrupted. Low-adherence residents are nudged by both
+                  push and friction; high-adherence residents are not. The
+                  divide is not a continuous gradient but a cliff —
+                  **310 movable** against **690 locked**.
+              - zh: |
+                  这给出 attention-mediated intervention 的一个结构性
+                  上限: 不管是 hyperlocal push 还是 phone friction,
+                  仪器内的城市 plasticity ceiling 约 31%。 对剩下 69% 的
+                  居民, 任何屏幕端干预都几乎不动其轨迹。 任何更进一步
+                  的杠杆, 必须作用在 daily routine 本身 (工作时间结构、
+                  通勤路线、 一周节律), 而非屏幕。
+                en: |
+                  This yields a structural ceiling for attention-mediated
+                  intervention: whether hyperlocal push or phone friction,
+                  the simulated city's plasticity ceiling is roughly 31%.
+                  For the remaining 69%, no screen-side intervention moves
+                  their trajectories meaningfully. Any further lever must
+                  act on daily routine itself — work-time structure, commute
+                  geometry, weekly rhythm — not on the screen.
+            kvList:
+              - key:
+                  zh: 性格 spread
+                  en: Personality spread
+                value:
+                  zh: 1.13×
+                  en: 1.13×
+                note:
+                  zh: 5 个性格维度全加起来, 响应率差异不到 13%。
+                  en: All 5 personality dims combined produce <13% spread.
+              - key:
+                  zh: 习惯性 spread
+                  en: Routine spread
+                value:
+                  zh: 3.1×
+                  en: 3.1×
+                note:
+                  zh: 习惯性低的人响应率是习惯性高的 3.1 倍, 是性格效应的 2.7 倍。
+                  en: Low-routine residents respond 3.1× more — 2.7× the personality effect.
+            mapState:
+              mode: matte
+              dim: 0.5
+              overlay: agents_trajectories
+
+          # 3.3.b — Figure-hero. Final rise to god-view top-down
+          # [0, 14, 0.5] + schematic. Routine cliff is currently rendered
+          # via agents_trajectories (no dedicated overlay yet — 1,000 dot
+          # split visualisation is a separate build); the line-drawn
+          # Lane Cove still carries the visual register continuity.
+          - id: scene-3-3-routine-figure
+            kind: body-section
+            layout: figure-hero
+            rhythm: tracking
+            emphasis: dwell
+            camera:
+              from: [2, 11, 1.5]
+              to: [0, 22, 0.5]
+              lookAt: [0, 0, 0]
+            enter: fade
+            exit: fade
+            sectionNumber: "03 · 发现 ③ · 图解"
+            heading:
+              zh: 一道 cliff —— 不是一道 gradient
+              en: A cliff, not a gradient
+            paragraphs:
+              - zh: |
+                  把 1,000 个居民按习惯性分布画出来, 两个 cluster 之间
+                  没有平滑过渡: 31% 真正被干预触及 (粉色), 69% 不论
+                  推什么、 削什么, 轨迹基本不动 (灰色)。 这就是 attention-
+                  mediated intervention 的 plasticity ceiling。
+                en: |
+                  Plot all 1,000 residents along routine adherence and the
+                  split is binary: 31% are touched by intervention (pink),
+                  69% barely move regardless of which lever is pulled
+                  (grey). This is the plasticity ceiling of any
+                  attention-mediated intervention.
+            kvList:
+              - key:
+                  zh: 可动的人
+                  en: Movable
+                value:
+                  zh: 310 / 1,000
+                  en: 310 / 1,000
+                note:
+                  zh: 31% —— 任何屏幕端干预触及的总上限。
+                  en: 31% — the ceiling of any screen-side intervention.
+              - key:
+                  zh: 锁死的人
+                  en: Locked
+                value:
+                  zh: 690 / 1,000
+                  en: 690 / 1,000
+                note:
+                  zh: 69% —— 屏幕端无解, 需要去动 daily routine 本身。
+                  en: 69% — beyond screen-side levers; needs daily-routine intervention.
+            mapState:
+              # Schematic + finding_3_routine_cliff — 1,000 dots at each
+              # agent's BL end-position. 310 pink (movable, HP shifted them
+              # ≥100m) + 690 grey (locked, no intervention reached them).
+              # Sandbox-native rendering of `tools/f3_movable_map.py`.
+              mode: schematic
+              dim: 0.92
+              overlay: finding_3_routine_cliff
         shotRef: act3.b3
-        hud:
-          kind: letterbox
-          subtitle:
-            zh: 探索性仪器，不可部署。
-            en: Exploratory instrument. Not a deployable system.
-        fallbackFigure: /figures/act3-outro.svg
+        fallbackFigure: /figures/finding-3-routine.png
         sources:
-          - file: docs/research/13-research-design.md
-            anchor: ethics-posture
+          - file: docs/case-study-data-provenance.md
+            anchor: routine-adherence
+
+      # ─── Outro — closing loop ───────────────────────────────────────
+      - id: outro
+        title:
+          zh: 收尾
+          en: Closing
+        claim:
+          zh: |
+            一台仪器, 不是一个产品。 三个发现, 不是三个答案 ——
+            是三个可以继续问下去的问题。
+          en: |
+            An instrument, not a product. Three findings, not three
+            answers — three questions worth asking again.
+        scenes:
+          # 3.4 — Outro. Descend from F3 figure's god-view top-down
+          # [0,14,0.5] to OUTRO_LOOP [0,0,9.5] — matches PRE_INTRO_FAR,
+          # closes the 构图回环. Material returns to matte for the closing
+          # sandbox dissolve.
+          - id: scene-3-4-outro
+            kind: lead
+            rhythm: tracking
+            emphasis: linger
+            camera:
+              from: [0, 22, 0.5]
+              to: [0, 0, 9.5]
+              lookAt: [0, 0, 0]
+            enter: fade
+            exit: fade
+            text:
+              zh: |
+                附近还在那里。 一公分都没远。
+
+                变远的, 是注意力。
+                而注意力的方向 —— 是可以被设计的。
+              en: |
+                The nearby is still there. Not a centimetre away.
+
+                What moved is attention.
+                And the direction attention takes — can be designed.
+            cta:
+              - text:
+                  zh: 打开完整实验报告
+                  en: Open the full report
+                action: open-full-report
+            mapState:
+              mode: matte
+              dim: 0.7
+
+          # 3.5 — Stories at t=1. Camera HOLDS at OUTRO_LOOP [0, 0, 9.5]
+          # (no movement, pure horizon plane). The DOM-side StoriesCallouts
+          # component (rendered by SceneLead when scene.id matches) draws
+          # three non-crossing slanted leader lines + clickable name labels
+          # at fixed screen positions (TL · TR · BR corners). Figure-
+          # caption pattern. Closing register: long dwell, no scroll past
+          # needed.
+          - id: scene-3-5-stories
+            kind: lead
+            rhythm: still
+            emphasis: linger
+            camera:
+              from: [0, 0, 9.5]
+              to: [0, 0, 9.5]
+              lookAt: [0, 0, 0]
+            enter: fade
+            exit: fade
+            text:
+              zh: |
+                1,000 个居民, 每个都是一个完整的人。
+
+                我们挑了三个, 把他们的 14 天写下来。
+              en: |
+                1,000 residents — each a complete person.
+
+                We picked three, and wrote down their 14 days.
+            mapState:
+              mode: matte
+              dim: 0.55
+        shotRef: act3.b4
+        fallbackFigure: /figures/synthesis-hero.png
+        sources:
+          - file: docs/research/00-thesis.md
+            anchor: nearby-blindness
 ---
 
 {/*

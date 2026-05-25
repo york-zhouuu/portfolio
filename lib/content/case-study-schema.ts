@@ -57,18 +57,36 @@ const RhythmKindEnum = z.enum(["motion", "still", "tracking", "bridge"]);
 const EmphasisKindEnum = z.enum(["brief", "standard", "dwell", "linger"]);
 
 // MapState — all fields optional; unknown mode/overlay strings fall back at render.
+const MapStateSpotlightSchema = z.object({
+  targetAgentIndex: z.number().int().min(0),
+  showInternals: z.boolean().optional(),
+  dataAgentId: z.string().optional(),
+});
+
+const MapStatePickupSchema = z.object({
+  storySlug: z.string().regex(/^[a-z][a-z0-9-]*$/, "pickup.storySlug must be kebab-case"),
+  targetAgentIndex: z.number().int().min(0),
+});
+
 const MapStateSchema = z
   .object({
     mode: z.string().optional(),
     dim: z.number().min(0).max(1).optional(),
     overlay: z.string().optional(),
     highlight: z.array(z.string()).optional(),
+    spotlights: z.array(MapStateSpotlightSchema).optional(),
+    pickup: MapStatePickupSchema.optional(),
   })
   .optional();
 
 const KvItemSchema = z.object({
   key: I18nStringSchema,
   value: I18nStringSchema,
+  /** Optional supporting line — surfaces on hover for params-grid chips,
+   *  otherwise unused by right-column / twin-column. Lets a number expose
+   *  its provenance / "why this value" without inflating the always-visible
+   *  label. Per Act 2 interactivity iteration. */
+  note: I18nStringSchema.optional(),
 });
 
 const CitationSchema = z.object({
@@ -134,16 +152,57 @@ const SceneSchema = z
       kind: z.literal("lead"),
       ...BaseSceneFields,
       text: I18nStringSchema,
+      /** Optional CTA list rendered as a stack of hyperlinks below the
+       *  lead text. Each entry is an action — the SceneLead handler
+       *  dispatches the right event or opens the right reader. Used by
+       *  Act 3 outro to surface 1 link to the full report + N links to
+       *  individual resident stories.
+       *
+       *  Actions:
+       *    open-full-report — dispatches window event for ReportSheet
+       *    open-story       — calls openReader(storySlug) on ReaderContext
+       *    open-stories     — opens the StoriesSheet overview
+       */
+      cta: z
+        .array(
+          z.object({
+            text: I18nStringSchema,
+            action: z.enum(["open-full-report", "open-story", "open-stories"]),
+            storySlug: z.string().optional(),
+          }),
+        )
+        .optional(),
     }),
     z.object({
       kind: z.literal("body-section"),
       ...BaseSceneFields,
-      layout: z.enum(["right-column", "twin-column"]),
+      layout: z.enum([
+        "right-column",
+        "twin-column",
+        "params-grid",
+        "hero",
+        "cinema-subtitle",
+        "process-flow",
+        "attention-mechanism",
+        // figure-hero: dedicated visualisation moment — image takes the
+        // canvas center, sandbox dims behind, accent caption + 0-2 stats
+        // float as small annotation. Used for Act 3 finding "B-moments"
+        // (v7 poster figures fade in beside the cinema sandbox).
+        "figure-hero",
+      ]),
       sectionNumber: z.string().optional(),
       heading: I18nStringSchema,
       paragraphs: z.array(I18nStringSchema).optional(),
       kvList: z.array(KvItemSchema).optional(),
       twinColumns: TwinColumnsSchema.optional(),
+      // Optional figure asset for figure-hero layout. src is a public/ path;
+      // alt is per-locale alt text.
+      figure: z
+        .object({
+          src: z.string(),
+          alt: I18nStringSchema.optional(),
+        })
+        .optional(),
     }),
     z.object({
       kind: z.literal("pull-quote"),
@@ -260,6 +319,24 @@ export const AtAGlanceSchema = z.object({
   site: z.string().min(1),
 });
 
+// ---- Resident stories (resident-stories-reader propose) -------------------
+// Per-case-study declaration of long-read HTML stories that load in the
+// global ResidentStoryReader sheet. The HTML lives in:
+//   public/case-studies/<study-slug>/people/<slug>.html       (zh canonical)
+//   public/case-studies/<study-slug>/people/<slug>_<lang>.html (other langs)
+const LocaleEnum = z.enum(["zh", "en"]);
+
+export const ResidentStoryEntrySchema = z.object({
+  slug: z.string().regex(/^[a-z][a-z0-9-]*$/, "story slug must be kebab-case"),
+  displayName: I18nStringSchema,
+  role: I18nStringSchema,
+  languages: z.array(LocaleEnum).min(1, "story must declare at least one language"),
+  /** Optional agent identifier for sand-table pickup; cross-checked by content-lint. */
+  agentId: z.string().optional(),
+});
+
+export type ResidentStoryEntry = z.infer<typeof ResidentStoryEntrySchema>;
+
 export const CaseStudyFrontmatterSchema = z.object({
   slug: z.string().regex(/^[a-z][a-z0-9-]*$/, "slug must be kebab-case"),
   title: I18nStringSchema,
@@ -271,6 +348,8 @@ export const CaseStudyFrontmatterSchema = z.object({
   links: LinksSchema,
   atAGlance: AtAGlanceSchema,
   cinemaScoreVersion: z.string().min(1),
+  /** Long-read resident stories shown via the global ResidentStoryReader. */
+  residentStories: z.array(ResidentStoryEntrySchema).optional(),
   acts: z
     .array(ActSchema)
     .length(3, "case study must have exactly three acts (注意力边界 / 产品本体 / 探索的结论)"),

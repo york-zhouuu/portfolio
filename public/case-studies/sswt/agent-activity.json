@@ -1,0 +1,1505 @@
+{
+  "schema": "agent-activity.v1",
+  "source": {
+    "repo": "Synthetic-Socio-Wind-Tunnel",
+    "snapshot": "seed_45_pid15611_tick4020.snapshot.json",
+    "variant": "hyperlocal_push",
+    "generated_at": "2026-05-25T05:57:35.376Z"
+  },
+  "tick_span": [
+    0,
+    287
+  ],
+  "bar_classes": [
+    "encounter",
+    "notification",
+    "reflection"
+  ],
+  "agents": [
+    {
+      "agent_id": "a_45_0030",
+      "events": [
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 1,
+          "kind": "encounter"
+        },
+        {
+          "tick": 2,
+          "kind": "encounter"
+        },
+        {
+          "tick": 2,
+          "kind": "encounter"
+        },
+        {
+          "tick": 2,
+          "kind": "encounter"
+        },
+        {
+          "tick": 2,
+          "kind": "encounter"
+        },
+        {
+          "tick": 2,
+          "kind": "encounter"
+        },
+        {
+          "tick": 2,
+          "kind": "encounter"
+        },
+        {
+          "tick": 2,
+          "kind": "encounter"
+        },
+        {
+          "tick": 2,
+          "kind": "encounter"
+        },
+        {
+          "tick": 2,
+          "kind": "encounter"
+        },
+        {
+          "tick": 2,
+          "kind": "encounter"
+        },
+        {
+          "tick": 3,
+          "kind": "encounter"
+        },
+        {
+          "tick": 3,
+          "kind": "encounter"
+        },
+        {
+          "tick": 3,
+          "kind": "encounter"
+        },
+        {
+          "tick": 3,
+          "kind": "encounter"
+        },
+        {
+          "tick": 3,
+          "kind": "encounter"
+        },
+        {
+          "tick": 3,
+          "kind": "encounter"
+        },
+        {
+          "tick": 8,
+          "kind": "encounter"
+        },
+        {
+          "tick": 8,
+          "kind": "encounter"
+        },
+        {
+          "tick": 168,
+          "kind": "encounter"
+        },
+        {
+          "tick": 177,
+          "kind": "encounter"
+        },
+        {
+          "tick": 195,
+          "kind": "encounter"
+        },
+        {
+          "tick": 200,
+          "kind": "encounter"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        }
+      ],
+      "by_kind": {
+        "shared_memory": 12,
+        "life_history": 20,
+        "reflection": 39,
+        "notification": 27,
+        "action": 565,
+        "encounter": 127
+      },
+      "by_day": {
+        "0": 3,
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 8,
+        "5": 6,
+        "6": 8,
+        "7": 7,
+        "8": 8,
+        "9": 8,
+        "10": 3,
+        "11": 3,
+        "12": 355,
+        "13": 340,
+        "-1": 32
+      }
+    },
+    {
+      "agent_id": "a_45_0075",
+      "events": [
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 132,
+          "kind": "encounter"
+        },
+        {
+          "tick": 132,
+          "kind": "encounter"
+        },
+        {
+          "tick": 133,
+          "kind": "encounter"
+        },
+        {
+          "tick": 133,
+          "kind": "encounter"
+        },
+        {
+          "tick": 134,
+          "kind": "encounter"
+        },
+        {
+          "tick": 134,
+          "kind": "encounter"
+        },
+        {
+          "tick": 171,
+          "kind": "encounter"
+        },
+        {
+          "tick": 192,
+          "kind": "encounter"
+        },
+        {
+          "tick": 192,
+          "kind": "encounter"
+        },
+        {
+          "tick": 192,
+          "kind": "encounter"
+        },
+        {
+          "tick": 192,
+          "kind": "encounter"
+        },
+        {
+          "tick": 192,
+          "kind": "encounter"
+        },
+        {
+          "tick": 192,
+          "kind": "encounter"
+        },
+        {
+          "tick": 192,
+          "kind": "encounter"
+        },
+        {
+          "tick": 193,
+          "kind": "encounter"
+        },
+        {
+          "tick": 193,
+          "kind": "encounter"
+        },
+        {
+          "tick": 193,
+          "kind": "encounter"
+        },
+        {
+          "tick": 193,
+          "kind": "encounter"
+        },
+        {
+          "tick": 193,
+          "kind": "encounter"
+        },
+        {
+          "tick": 194,
+          "kind": "encounter"
+        },
+        {
+          "tick": 195,
+          "kind": "encounter"
+        },
+        {
+          "tick": 195,
+          "kind": "encounter"
+        },
+        {
+          "tick": 195,
+          "kind": "encounter"
+        },
+        {
+          "tick": 195,
+          "kind": "encounter"
+        },
+        {
+          "tick": 195,
+          "kind": "encounter"
+        },
+        {
+          "tick": 195,
+          "kind": "encounter"
+        },
+        {
+          "tick": 195,
+          "kind": "encounter"
+        },
+        {
+          "tick": 195,
+          "kind": "encounter"
+        },
+        {
+          "tick": 195,
+          "kind": "encounter"
+        },
+        {
+          "tick": 195,
+          "kind": "encounter"
+        },
+        {
+          "tick": 195,
+          "kind": "encounter"
+        },
+        {
+          "tick": 195,
+          "kind": "encounter"
+        },
+        {
+          "tick": 195,
+          "kind": "encounter"
+        },
+        {
+          "tick": 195,
+          "kind": "encounter"
+        },
+        {
+          "tick": 195,
+          "kind": "encounter"
+        },
+        {
+          "tick": 197,
+          "kind": "encounter"
+        },
+        {
+          "tick": 199,
+          "kind": "encounter"
+        },
+        {
+          "tick": 215,
+          "kind": "encounter"
+        },
+        {
+          "tick": 215,
+          "kind": "encounter"
+        },
+        {
+          "tick": 216,
+          "kind": "encounter"
+        },
+        {
+          "tick": 217,
+          "kind": "encounter"
+        },
+        {
+          "tick": 234,
+          "kind": "encounter"
+        },
+        {
+          "tick": 246,
+          "kind": "encounter"
+        },
+        {
+          "tick": 246,
+          "kind": "encounter"
+        },
+        {
+          "tick": 246,
+          "kind": "encounter"
+        },
+        {
+          "tick": 246,
+          "kind": "encounter"
+        },
+        {
+          "tick": 246,
+          "kind": "encounter"
+        },
+        {
+          "tick": 247,
+          "kind": "encounter"
+        },
+        {
+          "tick": 247,
+          "kind": "encounter"
+        },
+        {
+          "tick": 248,
+          "kind": "encounter"
+        },
+        {
+          "tick": 248,
+          "kind": "encounter"
+        },
+        {
+          "tick": 248,
+          "kind": "encounter"
+        },
+        {
+          "tick": 249,
+          "kind": "encounter"
+        },
+        {
+          "tick": 250,
+          "kind": "encounter"
+        },
+        {
+          "tick": 250,
+          "kind": "encounter"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        },
+        {
+          "tick": 287,
+          "kind": "reflection"
+        }
+      ],
+      "by_kind": {
+        "shared_memory": 12,
+        "life_history": 20,
+        "reflection": 36,
+        "notification": 30,
+        "action": 565,
+        "encounter": 70
+      },
+      "by_day": {
+        "0": 3,
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 8,
+        "5": 8,
+        "6": 5,
+        "7": 8,
+        "8": 8,
+        "9": 8,
+        "10": 3,
+        "11": 3,
+        "12": 301,
+        "13": 337,
+        "-1": 32
+      }
+    },
+    {
+      "agent_id": "a_45_0130",
+      "events": [
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "notification"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        },
+        {
+          "tick": 0,
+          "kind": "encounter"
+        }
+      ],
+      "by_kind": {
+        "notification": 20,
+        "action": 565,
+        "encounter": 2
+      },
+      "by_day": {
+        "4": 4,
+        "5": 3,
+        "6": 3,
+        "7": 4,
+        "8": 2,
+        "9": 4,
+        "12": 289,
+        "13": 278
+      }
+    }
+  ],
+  "note": "Real per-agent event timeline from snapshot. Real LLM-tier-per-agent data does not exist in SSWT (llm.jsonl is system-level, single nano tier). These 3 event classes are the most informative per-agent signal that IS captured."
+}

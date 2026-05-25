@@ -95,7 +95,13 @@ export function CinemaCanvas({
           gl.toneMappingExposure = 1.0;
         }}
       >
-        <Atmosphere theme={theme} score={score} tRef={tRef} />
+        <Atmosphere
+          theme={theme}
+          score={score}
+          tRef={tRef}
+          mapMode={resolvedMap.mode}
+          modeFade={resolvedMap.modeFade}
+        />
         {sandTable ? (
           <SandTable
             geometry={sandTable}
@@ -109,7 +115,10 @@ export function CinemaCanvas({
         <MapOverlay
           name={resolvedMap.overlay}
           progress={resolvedMap.overlayProgress}
+          sceneLocalT={resolvedMap.sceneLocalT}
           sandTable={sandTable}
+          spotlights={resolvedMap.spotlights}
+          pickups={resolvedMap.pickups}
         />
         <CameraRig score={score} acts={acts} tRef={tRef} />
       </Canvas>

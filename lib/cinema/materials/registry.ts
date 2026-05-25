@@ -14,6 +14,7 @@
 
 import type { CinemaTheme } from "@/lib/cinema/theme";
 import { blueprintMaterialFactory } from "./blueprint";
+import { schematicMaterialFactory } from "./schematic";
 
 export type MaterialLayer =
   | "ground"
@@ -59,6 +60,7 @@ export const matteMaterialFactory: MaterialFactory = (theme) => ({
 const MATERIAL_REGISTRY: Record<string, MaterialFactory> = {
   matte: matteMaterialFactory,
   blueprint: blueprintMaterialFactory,
+  schematic: schematicMaterialFactory,
 };
 
 /**

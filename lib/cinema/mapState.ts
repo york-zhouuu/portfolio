@@ -17,7 +17,8 @@ import {
   MAP_STATE_DEFAULT,
   type MapMode,
   type MapOverlayName,
-  type MapState,
+  type MapStatePickup,
+  type MapStateSpotlight,
 } from "./scene-types";
 import {
   buildBeatLayout,
@@ -26,6 +27,22 @@ import {
   type BeatBoundary,
 } from "./scrollCinema";
 import { clamp, lerp, smoothstep } from "./easing";
+
+/**
+ * Resolved spotlight payload — narrative-only highlight on a specific
+ * sampled agent. Same smoothed intensity treatment as pickups.
+ */
+export type ResolvedSpotlight = MapStateSpotlight & {
+  intensity: number;
+};
+
+/**
+ * Resolved pickup payload — visual highlight + click hitbox bound to a
+ * resident story slug. Smoothed intensity 0..1 from the scene fade band.
+ */
+export type ResolvedPickup = MapStatePickup & {
+  intensity: number;
+};
 
 export type ResolvedMapState = {
   mode: MapMode;
@@ -37,7 +54,15 @@ export type ResolvedMapState = {
   overlay: MapOverlayName;
   /** 0..1 — overlay opacity (1 = fully on). Falls back when overlay is "none". */
   overlayProgress: number;
+  /** 0..1 — scene-local scroll position (clamped). Unlike overlayProgress
+   *  this isn't shaped by a fade band; overlays can use it as a clean
+   *  scroll timeline to drive scripted events (e.g. push waves). */
+  sceneLocalT: number;
   highlight: string[];
+  /** Active spotlight target(s) — narrative highlight, no click. */
+  spotlights: ResolvedSpotlight[];
+  /** Active pickup target(s) — highlight + click → reader. */
+  pickups: ResolvedPickup[];
 };
 
 /** Window inside which adjacent-scene `mode` switches do their cross-fade.
@@ -46,14 +71,37 @@ export type ResolvedMapState = {
  *  is now smooth instead of hitching. */
 const MODE_CROSSFADE_WINDOW = 0.12;
 
-function effective(scene: CaseStudyScene | null): Required<MapState> {
-  if (!scene || !scene.mapState) return MAP_STATE_DEFAULT;
+type EffectiveMapState = {
+  mode: MapMode;
+  dim: number;
+  overlay: MapOverlayName;
+  highlight: string[];
+  spotlights: MapStateSpotlight[];
+  pickup: MapStatePickup | null;
+};
+
+function effective(scene: CaseStudyScene | null): EffectiveMapState {
+  if (!scene || !scene.mapState) {
+    return { ...MAP_STATE_DEFAULT, spotlights: [], pickup: null };
+  }
   return {
     mode: scene.mapState.mode ?? MAP_STATE_DEFAULT.mode,
     dim: scene.mapState.dim ?? MAP_STATE_DEFAULT.dim,
     overlay: scene.mapState.overlay ?? MAP_STATE_DEFAULT.overlay,
     highlight: scene.mapState.highlight ?? MAP_STATE_DEFAULT.highlight,
+    spotlights: scene.mapState.spotlights ?? [],
+    pickup: scene.mapState.pickup ?? null,
   };
+}
+
+/**
+ * Compute the pickup intensity at the current scene's localT using the same
+ * 10/80/10 fade band as overlay opacity. localT in [0..1].
+ */
+function pickupIntensityAt(localT: number): number {
+  if (localT < 0.1) return smoothstep(localT / 0.1);
+  if (localT > 0.9) return smoothstep((1 - localT) / 0.1);
+  return 1;
 }
 
 function neighborSceneInBeat(
@@ -89,6 +137,9 @@ export function resolveMapStateAt(
       modePrev: null,
       modeFade: 1,
       overlayProgress: 0,
+      sceneLocalT: 0,
+      spotlights: [],
+      pickups: [],
     };
   }
 
@@ -140,6 +191,41 @@ export function resolveMapStateAt(
     overlayProgress = smoothstep((1 - localT) / 0.10);
   }
 
+  // Spotlight + Pickup — current + neighbor scenes can both contribute
+  // during the fade band (cross-fade between two different highlighted
+  // agents at scene boundaries).
+  const curIntensity = pickupIntensityAt(localT);
+
+  const spotlights: ResolvedSpotlight[] = [];
+  if (curIntensity > 0) {
+    for (const sp of cur.spotlights) {
+      spotlights.push({ ...sp, intensity: curIntensity });
+    }
+  }
+  if (localT < 0.1) {
+    const intensity = 1 - smoothstep(localT / 0.1);
+    if (intensity > 0) {
+      for (const sp of prev.spotlights) spotlights.push({ ...sp, intensity });
+    }
+  } else if (localT > 0.9) {
+    const intensity = 1 - smoothstep((1 - localT) / 0.1);
+    if (intensity > 0) {
+      for (const sp of next.spotlights) spotlights.push({ ...sp, intensity });
+    }
+  }
+
+  const pickups: ResolvedPickup[] = [];
+  if (cur.pickup && curIntensity > 0) {
+    pickups.push({ ...cur.pickup, intensity: curIntensity });
+  }
+  if (localT < 0.1 && prev.pickup) {
+    const intensity = 1 - smoothstep(localT / 0.1);
+    if (intensity > 0) pickups.push({ ...prev.pickup, intensity });
+  } else if (localT > 0.9 && next.pickup) {
+    const intensity = 1 - smoothstep((1 - localT) / 0.1);
+    if (intensity > 0) pickups.push({ ...next.pickup, intensity });
+  }
+
   return {
     mode,
     modePrev,
@@ -147,7 +233,10 @@ export function resolveMapStateAt(
     dim,
     overlay,
     overlayProgress,
+    sceneLocalT: localT,
     highlight: cur.highlight,
+    spotlights,
+    pickups,
   };
 }
 

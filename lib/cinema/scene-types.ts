@@ -100,16 +100,51 @@ export type MapOverlayName = string;
  *   dim       — 0..1 brightness multiplier (1 = full)
  *   overlay   — overlay registry key
  *   highlight — building / road ids (future use)
+ *   spotlight — narrative-only highlight on a specific sampled agent
+ *               (ring + beacon, no click). Used to point the eye at a
+ *               specific resident in the crowd as the camera passes.
+ *   pickup    — same visual highlight, PLUS a click hitbox bound to
+ *               openReader(storySlug). Use when the resident's story
+ *               should be readable in-place. Per resident-stories-reader.
  */
+export interface MapStateSpotlight {
+  targetAgentIndex: number;
+  /** When true, the spotlight agent gets internal-state widgets (3-class
+   *  event flame + decision step indicator + attention bar) floating
+   *  above the beacon. Use for Act 2 agent beat. */
+  showInternals?: boolean;
+  /** Optional real SSWT agent_id (e.g. "a_45_0030"). If set, the 3-bar
+   *  widget reads real encounter/notification/reflection events from
+   *  agent-activity.json (exported via `pnpm sync:agent-activity`) and
+   *  flashes bars based on sceneLocalT-mapped playback tick. When unset,
+   *  the widget falls back to a mock cycle. */
+  dataAgentId?: string;
+}
+
+export interface MapStatePickup {
+  storySlug: string;
+  targetAgentIndex: number;
+}
+
 export interface MapState {
   mode?: MapMode;
   dim?: number;
   overlay?: MapOverlayName;
   highlight?: string[];
+  /** Multiple spotlights — narrative highlights, no click. Single-slot
+   *  callers can pass an array of one. */
+  spotlights?: MapStateSpotlight[];
+  pickup?: MapStatePickup;
 }
 
-/** Default mapState applied when scene doesn't set one. */
-export const MAP_STATE_DEFAULT: Required<MapState> = {
+/**
+ * Default mapState applied when scene doesn't set one. `spotlight` and
+ * `pickup` are intentionally absent from the Required-style baseline;
+ * the resolver carries them as `null` when no scene specifies one.
+ */
+export type MapStateBaseline = Required<Omit<MapState, "spotlights" | "pickup">>;
+
+export const MAP_STATE_DEFAULT: MapStateBaseline = {
   mode: "matte",
   dim: 1,
   overlay: "none",
@@ -119,6 +154,8 @@ export const MAP_STATE_DEFAULT: Required<MapState> = {
 export type KvItem = {
   key: I18nString;
   value: I18nString;
+  /** Optional hover-revealed supporting line for params-grid chips. */
+  note?: I18nString;
 };
 
 /**
@@ -187,13 +224,29 @@ export type SceneLead = SceneBase & {
 
 export type SceneBodySection = SceneBase & {
   kind: "body-section";
-  layout: "right-column" | "twin-column";
+  /**
+   * Layout for the body section:
+   *   right-column — sticky card in the lower-right (default text-card form)
+   *   twin-column  — two opposing columns (data vs verbatim, etc.)
+   *   params-grid  — each kvList item becomes a free-scattered chip floating
+   *                  over the cinema canvas (no card). Heading + paragraphs
+   *                  render as bare text at the bottom. Used for instrument
+   *                  parameters / "HUD-style" numerical displays.
+   */
+  layout:
+    | "right-column"
+    | "twin-column"
+    | "params-grid"
+    | "hero"
+    | "cinema-subtitle"
+    | "process-flow"
+    | "attention-mechanism";
   /** Eyebrow number (e.g. "01"). Optional. */
   sectionNumber?: string;
   heading: I18nString;
   /** Optional intro paragraphs above the kvList / twinColumns. */
   paragraphs?: I18nString[];
-  /** Right-column layout uses kvList. */
+  /** Right-column + params-grid layouts use kvList. */
   kvList?: KvItem[];
   /** Twin-column layout uses twinColumns instead of kvList. */
   twinColumns?: TwinColumns;
