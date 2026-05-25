@@ -240,7 +240,8 @@ export type SceneBodySection = SceneBase & {
     | "hero"
     | "cinema-subtitle"
     | "process-flow"
-    | "attention-mechanism";
+    | "attention-mechanism"
+    | "figure-hero";
   /** Eyebrow number (e.g. "01"). Optional. */
   sectionNumber?: string;
   heading: I18nString;

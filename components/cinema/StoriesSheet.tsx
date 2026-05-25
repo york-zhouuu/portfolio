@@ -145,10 +145,10 @@ export function StoriesSheet() {
                   number is a person: a personality, a weekly routine,
                   4,032 decisions across 14 days, the hesitation before
                   pushing a door open. These three longform pieces rebuild
-                  the simulation's raw data (positions · decisions ·
+                  the simulation’s raw data (positions · decisions ·
                   dialogues · interior monologue) into readable narrative
                   reportage — same shape as a New Yorker profile, but the
-                  source isn't an interview; it's `events.jsonl`.
+                  source isn’t an interview; it’s `events.jsonl`.
                 </>
               )}
             </p>
@@ -164,9 +164,9 @@ export function StoriesSheet() {
                 <>
                   Method: pull every event / location / plan / dialogue /
                   reflection for the agent, sequence chronologically,
-                  smooth out the LLM's tells (repetition, mechanical
-                  voice) without scrubbing emotional detail. The "data
-                  vanity" stat block is in each story's appendix.
+                  smooth out the LLM’s tells (repetition, mechanical
+                  voice) without scrubbing emotional detail. The “data
+                  vanity” stat block is in each story’s appendix.
                 </>
               )}
             </p>

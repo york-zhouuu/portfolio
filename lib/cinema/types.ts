@@ -84,7 +84,10 @@ export type Beat = {
   id: string;
   range: [number, number];
   shotRef: string;
-  hud: Hud;
+  /** HUD overlay descriptor. Optional — Act 3 finding beats render no
+   *  HUD chrome; their visual annotation lives in the SceneBodySection
+   *  figure overlay instead. */
+  hud?: Hud;
   fallbackFigure: string;
 };
 
