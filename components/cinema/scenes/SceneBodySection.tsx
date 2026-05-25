@@ -111,7 +111,7 @@ export function SceneBodySection({
               {scene.sectionNumber}
             </p>
           ) : null}
-          <h2 className="mt-4 text-center font-sans font-medium leading-[1.1] tracking-[-0.025em] text-fg/95 [font-size:clamp(28px,3.6vw,42px)] [text-shadow:0_1px_14px_oklch(var(--bg)/0.6)] [text-wrap:balance]">
+          <h2 className="mt-4 text-center font-sans font-medium leading-[1.1] tracking-[-0.025em] text-fg/95 [font-size:clamp(18px,min(3.6vw,5.5vh),42px)] [text-shadow:0_1px_14px_oklch(var(--bg)/0.6)] [text-wrap:balance]">
             <RenderInline value={scene.heading} />
           </h2>
           {paragraphs.length > 0 ? (
@@ -171,7 +171,7 @@ export function SceneBodySection({
               {scene.sectionNumber}
             </p>
           ) : null}
-          <h2 className="mt-4 text-center font-sans font-medium leading-[1.1] tracking-[-0.025em] text-fg/95 [font-size:clamp(28px,3.6vw,42px)] [text-shadow:0_1px_14px_oklch(var(--bg)/0.6)] [text-wrap:balance]">
+          <h2 className="mt-4 text-center font-sans font-medium leading-[1.1] tracking-[-0.025em] text-fg/95 [font-size:clamp(18px,min(3.6vw,5.5vh),42px)] [text-shadow:0_1px_14px_oklch(var(--bg)/0.6)] [text-wrap:balance]">
             <RenderInline value={scene.heading} />
           </h2>
           {paragraphs.length > 0 ? (
@@ -221,7 +221,7 @@ export function SceneBodySection({
                 {scene.sectionNumber}
               </p>
             ) : null}
-            <h2 className="mt-2 font-sans font-medium leading-[1.15] tracking-[-0.02em] text-fg/95 [font-size:clamp(22px,2.4vw,32px)] [text-shadow:0_1px_12px_oklch(var(--bg)/0.55)] [text-wrap:balance]">
+            <h2 className="mt-2 font-sans font-medium leading-[1.15] tracking-[-0.02em] text-fg/95 [font-size:clamp(15px,min(2.4vw,3.6vh),32px)] [text-shadow:0_1px_12px_oklch(var(--bg)/0.55)] [text-wrap:balance]">
               <RenderInline value={scene.heading} />
             </h2>
             {paragraphs.length > 0 ? (
@@ -279,7 +279,7 @@ export function SceneBodySection({
               <span className="h-px flex-1 bg-fg/15" aria-hidden />
             </div>
           ) : null}
-          <h2 className="mt-3 font-sans font-medium text-fg leading-[1.2] tracking-[-0.018em] [font-size:clamp(22px,2.2vw,28px)] [text-shadow:0_1px_18px_oklch(var(--bg)/0.65)] [text-wrap:balance]">
+          <h2 className="mt-3 font-sans font-medium text-fg leading-[1.2] tracking-[-0.018em] [font-size:clamp(15px,min(2.2vw,3.3vh),28px)] [text-shadow:0_1px_18px_oklch(var(--bg)/0.65)] [text-wrap:balance]">
             <RenderInline value={scene.heading} />
           </h2>
           {paragraphs.length > 0 ? (
@@ -336,7 +336,7 @@ export function SceneBodySection({
             </div>
           ) : null}
           <h2
-            className="mt-5 max-w-[760px] text-center font-sans font-medium text-fg leading-[1.14] tracking-[-0.022em] [font-size:clamp(26px,3.0vw,38px)] [text-shadow:0_1px_18px_oklch(var(--bg)/0.65)] [text-wrap:balance]"
+            className="mt-5 max-w-[760px] text-center font-sans font-medium text-fg leading-[1.14] tracking-[-0.022em] [font-size:clamp(17px,min(3.0vw,4.5vh),38px)] [text-shadow:0_1px_18px_oklch(var(--bg)/0.65)] [text-wrap:balance]"
           >
             <RenderInline value={scene.heading} />
           </h2>
@@ -659,7 +659,7 @@ function ProcessStepFragment({
           <p className="font-mono text-[11px] uppercase tracking-[0.32em] text-fg/45 tabular-nums">
             {String(index).padStart(2, "0")}
           </p>
-          <h3 className="mt-2 font-sans font-medium leading-[1.1] tracking-[-0.015em] text-fg [font-size:clamp(22px,2vw,28px)]">
+          <h3 className="mt-2 font-sans font-medium leading-[1.1] tracking-[-0.015em] text-fg [font-size:clamp(14px,min(2vw,3vh),28px)]">
             <RenderInline value={item.key} />
           </h3>
           <p className="mt-1 font-sans text-[15px] leading-[1.4] text-fg/85">
@@ -736,7 +736,7 @@ function SubtitleStat({
     >
       <div
         className={clsx(
-          "font-sans font-medium leading-[1.1] tracking-[-0.015em] transition-colors duration-200 [font-size:clamp(17px,1.5vw,21px)] [text-shadow:0_1px_8px_oklch(var(--bg)/0.55)]",
+          "font-sans font-medium leading-[1.1] tracking-[-0.015em] transition-colors duration-200 [font-size:clamp(12px,min(1.5vw,2.3vh),21px)] [text-shadow:0_1px_8px_oklch(var(--bg)/0.55)]",
           hover ? "text-fg" : "text-fg/92",
         )}
       >
@@ -793,7 +793,7 @@ function HeroSideStat({
       style={{ opacity, transform: `translateY(${ty}px)` }}
     >
       <span className="h-px w-6 bg-fg/30" aria-hidden />
-      <div className="mt-1 font-sans font-semibold leading-[1.0] tracking-[-0.035em] text-fg [font-size:clamp(30px,3.0vw,42px)] [text-shadow:0_1px_18px_oklch(var(--bg)/0.65)] [text-wrap:balance]">
+      <div className="mt-1 font-sans font-semibold leading-[1.0] tracking-[-0.035em] text-fg [font-size:clamp(20px,min(3.0vw,4.5vh),42px)] [text-shadow:0_1px_18px_oklch(var(--bg)/0.65)] [text-wrap:balance]">
         <RenderInline value={item.value} />
       </div>
       <div className="mt-1 font-sans text-[12px] leading-[1.4] tracking-[0.005em] text-fg/65 [text-shadow:0_1px_8px_oklch(var(--bg)/0.55)] [text-wrap:pretty]">
@@ -841,7 +841,7 @@ function HeroStat({
       <span className="h-px w-6 bg-fg/35" aria-hidden />
       <div
         className={clsx(
-          "font-sans font-semibold leading-[1.0] tracking-[-0.035em] transition-colors duration-200 [font-size:clamp(34px,4.2vw,52px)] [text-shadow:0_1px_18px_oklch(var(--bg)/0.65),_0_0_28px_oklch(var(--bg)/0.4)] [text-wrap:balance]",
+          "font-sans font-semibold leading-[1.0] tracking-[-0.035em] transition-colors duration-200 [font-size:clamp(22px,min(4.2vw,6.5vh),52px)] [text-shadow:0_1px_18px_oklch(var(--bg)/0.65),_0_0_28px_oklch(var(--bg)/0.4)] [text-wrap:balance]",
           hover ? "text-fg" : "text-fg",
         )}
       >
@@ -916,7 +916,7 @@ function ParamChip({
       ) : null}
       <div
         className={clsx(
-          "whitespace-nowrap font-mono leading-[1.05] tracking-tight transition-colors duration-200 [font-size:clamp(20px,2.2vw,30px)] [text-shadow:0_1px_12px_oklch(var(--bg)/0.6)]",
+          "whitespace-nowrap font-mono leading-[1.05] tracking-tight transition-colors duration-200 [font-size:clamp(13px,min(2.2vw,3.3vh),30px)] [text-shadow:0_1px_12px_oklch(var(--bg)/0.6)]",
           hover ? "text-fg" : "text-fg/95",
         )}
       >
@@ -964,7 +964,7 @@ function SectionHeader({
           <span className="h-px flex-1 bg-fg/15" aria-hidden />
         </div>
       ) : null}
-      <h2 className="mt-3 font-sans font-medium leading-[1.22] tracking-[-0.018em] text-fg/96 [font-size:clamp(21px,2.1vw,26px)] [text-wrap:balance]">
+      <h2 className="mt-3 font-sans font-medium leading-[1.22] tracking-[-0.018em] text-fg/96 [font-size:clamp(14px,min(2.1vw,3.2vh),26px)] [text-wrap:balance]">
         <RenderInline value={heading} />
       </h2>
     </div>

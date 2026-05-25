@@ -43,12 +43,12 @@ export function TitleCard({ frontmatter }: { frontmatter: CaseStudyFrontmatter }
         </div>
 
         {/* Title — large but not screaming; supports both EN and ZH */}
-        <h1 className="mt-5 font-sans font-medium text-fg leading-[1.08] tracking-[-0.028em] [font-size:clamp(38px,5.4vw,68px)] [text-wrap:balance] [text-shadow:0_1px_22px_oklch(var(--bg)/0.65)]">
+        <h1 className="mt-5 font-sans font-medium text-fg leading-[1.08] tracking-[-0.028em] [font-size:clamp(24px,min(5.4vw,8.5vh),68px)] [text-wrap:balance] [text-shadow:0_1px_22px_oklch(var(--bg)/0.65)]">
           {title}
         </h1>
 
         {/* Subtitle — one line elevator pitch */}
-        <p className="mt-5 max-w-[640px] font-sans text-fg/78 leading-[1.5] tracking-[-0.005em] [font-size:clamp(15px,1.5vw,18.5px)] [text-wrap:pretty]">
+        <p className="mt-5 max-w-[640px] font-sans text-fg/78 leading-[1.5] tracking-[-0.005em] [font-size:clamp(11px,min(1.5vw,2.3vh),18.5px)] [text-wrap:pretty]">
           {subtitle}
         </p>
 

@@ -122,7 +122,7 @@ export function StoriesSheet() {
             <p className="font-mono text-[10.5px] uppercase tracking-[0.30em] text-fg/55">
               {zh ? "为什么有这些故事" : "Why these stories exist"}
             </p>
-            <h3 className="mt-3 font-sans font-medium text-fg leading-[1.22] tracking-[-0.018em] [font-size:clamp(20px,2.2vw,26px)]">
+            <h3 className="mt-3 font-sans font-medium text-fg leading-[1.22] tracking-[-0.018em] [font-size:clamp(14px,min(2.2vw,3.3vh),26px)]">
               {zh
                 ? "1,000 个居民, 每个都是一个完整的人。 我们挑了三个, 把他们的 14 天写下来。"
                 : "1,000 residents, each a complete person. We picked three and wrote down their 14 days."}

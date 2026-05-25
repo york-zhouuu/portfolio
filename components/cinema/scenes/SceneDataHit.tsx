@@ -32,7 +32,7 @@ export function SceneDataHit({
       className="pointer-events-auto absolute inset-0 flex flex-col items-center justify-center px-6 text-center"
       style={wrapStyle}
     >
-      <div className="font-medium tracking-[-0.05em] text-fg/95 [font-size:clamp(96px,16vw,180px)] leading-none [text-shadow:_0_1px_4px_rgba(0,0,0,0.3),_0_0_30px_rgba(0,0,0,0.16)]">
+      <div className="font-medium tracking-[-0.05em] text-fg/95 [font-size:clamp(60px,min(16vw,24vh),180px)] leading-none [text-shadow:_0_1px_4px_rgba(0,0,0,0.3),_0_0_30px_rgba(0,0,0,0.16)]">
         {scene.number}
       </div>
       <p className="mt-3 font-mono text-caption uppercase tracking-[0.28em] text-muted/95 [text-shadow:_0_1px_2px_rgba(0,0,0,0.25)]">

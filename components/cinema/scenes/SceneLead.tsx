@@ -48,7 +48,7 @@ export function SceneLead({
       style={style}
     >
       <p
-        className="max-w-[42ch] text-center leading-[1.62] tracking-[-0.012em] text-fg/93 [font-size:clamp(22px,2.6vw,29px)] [text-shadow:_0_1px_2px_rgba(0,0,0,0.30),_0_0_22px_rgba(0,0,0,0.16)]"
+        className="max-w-[42ch] text-center leading-[1.62] tracking-[-0.012em] text-fg/93 [font-size:clamp(14px,min(2.6vw,4vh),29px)] [text-shadow:_0_1px_2px_rgba(0,0,0,0.30),_0_0_22px_rgba(0,0,0,0.16)]"
         style={{ whiteSpace: "pre-line" }}
       >
         <T value={scene.text} />
