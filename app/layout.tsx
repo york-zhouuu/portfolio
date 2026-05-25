@@ -5,6 +5,7 @@ import { SiteNav } from "@/components/chrome/SiteNav";
 import { SiteFooter } from "@/components/chrome/SiteFooter";
 import { ReaderProvider } from "@/components/reader/ReaderContext";
 import { ResidentStoryReader } from "@/components/reader/ResidentStoryReader";
+import { OrientationGate } from "@/components/chrome/OrientationGate";
 import { listResidentStories } from "@/lib/content/list-resident-stories";
 import { loadProjectStructure } from "@/lib/content/load-project-structure";
 import "./globals.css";
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <SiteFooter />
             <ResidentStoryReader />
           </ReaderProvider>
+          <OrientationGate />
         </LocaleProvider>
       </body>
     </html>
